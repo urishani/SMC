@@ -2,4 +2,6 @@ target/
 build/
 *.log
 temp-*
+*.swp
+
 
