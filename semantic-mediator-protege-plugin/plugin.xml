@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<plugin>    
+    <extension id="Open from SMC"
+               point="org.protege.editor.core.application.EditorKitMenuAction">
+        <name value="Open from SMC..."/>
+        <class value="com.ibm.haifa.smc.repository.SMCAction"/>
+        <toolTip value="Work with Semantic Mediation (SMC) Ontologies and Rules"/>
+        <path value="org.protege.editor.core.application.menu.FileMenu/SlotAA-G"/>
+        <editorKitId value="OWLEditorKit"/>
+    </extension>
+
+    <extension id="Save to SMC" 
+    			point="org.protege.editor.core.application.EditorKitMenuAction">
+        <name value="Save to SMC..."/>
+        <toolTip value="Set SMC panel ready to save current ontology to SMC"/>
+        <class value="com.ibm.haifa.smc.repository.SaveToSMCAction"/>
+        <path value="org.protege.editor.core.application.menu.FileMenu/SlotAB-B"/>
+        <editorKitId value="OWLEditorKit"/>
+    </extension>
+    
+</plugin>

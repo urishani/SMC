@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<csar xmlns="http://web.cs.opensource.ibm.com/www/osrcrpt/csar/2008">
+    <properties>
+        <property definedAt="scan" id="0">
+            <name>Scanner - Command line invocation</name>
+            <value>-p /Users/shani/git/semantic-mediator-protege-plugin -s disabled -b -o csar.report.smc.protege src</value>
+        </property>
+        <property definedAt="scan" id="1">
+            <name>Scanner - CSAR version</name>
+            <value>3.1.1 rev 1605291244-8738aef  abbreviated</value>
+        </property>
+        <property definedAt="scan" id="2">
+            <name>Scanner - Invoked on</name>
+            <value>September 4, 2017 5:24 PM</value>
+        </property>
+        <property definedAt="scan" id="3">
+            <name>Scanner - Host name</name>
+            <value>shani-mac</value>
+        </property>
+        <property definedAt="scan" id="4">
+            <name>Scanner - User name</name>
+            <value>shani</value>
+        </property>
+        <property definedAt="scan" id="5">
+            <name>Scanner - Java vendor</name>
+            <value>Oracle Corporation</value>
+        </property>
+        <property definedAt="scan" id="6">
+            <name>Scanner - Java version</name>
+            <value>1.8.0_131</value>
+        </property>
+        <property definedAt="scan" id="7">
+            <name>Scanner - OS arch</name>
+            <value>x86_64</value>
+        </property>
+        <property definedAt="scan" id="8">
+            <name>Scanner - OS name</name>
+            <value>Mac OS X</value>
+        </property>
+        <property definedAt="scan" id="9">
+            <name>Scanner - OS version</name>
+            <value>10.12.2</value>
+        </property>
+        <property definedAt="scan" id="10">
+            <name>Scanner - User language</name>
+            <value>en</value>
+        </property>
+        <property definedAt="scan" id="11">
+            <name>Scanner - CSAR home</name>
+            <value>/Applications/csar-3.1.1-rev-1605291246-8738aef-abbreviated-unix</value>
+        </property>
+        <property definedAt="scan" id="12">
+            <name>Scanner - Project home</name>
+            <value>/Users/shani/git/semantic-mediator-protege-plugin</value>
+        </property>
+        <property definedAt="scan" id="13">
+            <name>Scanner - Elapsed time</name>
+            <value>0 secs</value>
+        </property>
+        <property definedAt="scan" id="14">
+            <name>Scanner - Total files</name>
+            <value>3</value>
+        </property>
+        <property definedAt="scan" id="15">
+            <name>Scanner - Total excluded files/directories</name>
+            <value>0</value>
+        </property>
+        <property definedAt="scan" id="16">
+            <name>Scanner - Excluded files by binary file configuration</name>
+            <value>0</value>
+        </property>
+        <property definedAt="scan" id="17">
+            <name>Scanner - Excluded files/directories by exclude filter</name>
+            <value>0</value>
+        </property>
+        <property definedAt="scan" id="18">
+            <name>Scanner - Excluded files by I/O failure</name>
+            <value>0</value>
+        </property>
+        <property definedAt="scan" id="19">
+            <name>Scanner - Scanned files</name>
+            <value>3</value>
+        </property>
+        <property definedAt="scan" id="20">
+            <name>Scanner - Scanned files with hits</name>
+            <value>0</value>
+        </property>
+        <property definedAt="scan" id="21">
+            <name>Scanner - Errors logged</name>
+            <value>0</value>
+        </property>
+    </properties>
+    <codeSets shadowSize="disabled">
+        <projectHome>/Users/shani/git/semantic-mediator-protege-plugin</projectHome>
+        <legalFilter osscApproved="true" searchType="matches">
+            <compositeRegexPattern>(.*Artistic.*)|(.*ASL.*)|(.*BSD.*)|(.*CDDL.*)|(.*copying.*)|(.*copyright.*)|([cme]pl.*)|(.*disclaimer.*)|(.*eula.*)|(.*gpl.*)|(.*legal.*)|(.*lesser.*)|(.*licen[cs]e.*)|(L(?:A|I|ic)(?:[-_][a-z]{2,3})(?:[-_][a-z]{2,3})?(?:\.(?:rtf|txt))?)|(LA\.(?:rtf|txt))|(.*mozilla.*)|(.*notice.*)</compositeRegexPattern>
+            <regexPattern definedAt="scan" id="0">
+                <text>.*\.(bmp|[cho]|class|cpp|dll|dtd|[ejtw]ar|exe|gif|ico|java|jpe?g|mfasl|png|tiff?|zip)</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="1">
+                <text>.*Artistic.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="2">
+                <text>.*ASL.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="3">
+                <text>.*BSD.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="4">
+                <text>.*CDDL.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="5">
+                <text>.*copying.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="6">
+                <text>.*copyright.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="7">
+                <text>[cme]pl.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="8">
+                <text>.*disclaimer.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="9">
+                <text>.*eula.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="10">
+                <text>.*gpl.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="11">
+                <text>.*legal.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="12">
+                <text>.*lesser.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="13">
+                <text>.*licen[cs]e.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="14">
+                <text>L(?:A|I|ic)(?:[-_][a-z]{2,3})(?:[-_][a-z]{2,3})?(?:\.(?:rtf|txt))?</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="15">
+                <text>LA\.(?:rtf|txt)</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="16">
+                <text>.*mozilla.*</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="17">
+                <text>.*notice.*</text>
+            </regexPattern>
+        </legalFilter>
+        <binaryFilter osscApproved="true" searchType="matches">
+            <compositeRegexPattern>(.*\.pdf)</compositeRegexPattern>
+            <regexPattern definedAt="scan" id="0">
+                <text>.*\.pdf</text>
+            </regexPattern>
+        </binaryFilter>
+        <excludeFilter osscApproved="true" searchType="matches">
+            <compositeRegexPattern>(.*/\.svn)|(.*/CVS)|(.*/\.git)|(.*/\.(?:cvs|git|jazz)ignore)|(.*/\.copyarea\.d(?:at|b))|(.*/\.DS_Store)|(.*/core.*\.dmp)|(.*/javacore.*\.txt)</compositeRegexPattern>
+            <regexPattern definedAt="scan" id="0">
+                <text>.*/\.svn</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="1">
+                <text>.*/CVS</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="2">
+                <text>.*/\.git</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="3">
+                <text>.*/\.(?:cvs|git|jazz)ignore</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="4">
+                <text>.*/\.copyarea\.d(?:at|b)</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="5">
+                <text>.*/\.DS_Store</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="6">
+                <text>.*/core.*\.dmp</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="7">
+                <text>.*/javacore.*\.txt</text>
+            </regexPattern>
+        </excludeFilter>
+        <expandFilter osscApproved="true" searchType="matches">
+            <compositeRegexPattern>(.*\.gz)|(.*\.bzip2)|(.*\.ar)|(.*\.cpio)|(.*\.jar)|(.*\.tar)|(.*\.tgz)|(.*\.zip)|(.*\.car)|(.*\.ear)|(.*\.rar)|(.*\.war)|(.*\.pkg)|(.*\.nupkg)</compositeRegexPattern>
+            <regexPattern definedAt="scan" id="0">
+                <text>.*\.gz</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="1">
+                <text>.*\.bzip2</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="2">
+                <text>.*\.ar</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="3">
+                <text>.*\.cpio</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="4">
+                <text>.*\.jar</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="5">
+                <text>.*\.tar</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="6">
+                <text>.*\.tgz</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="7">
+                <text>.*\.zip</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="8">
+                <text>.*\.car</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="9">
+                <text>.*\.ear</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="10">
+                <text>.*\.rar</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="11">
+                <text>.*\.war</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="12">
+                <text>.*\.pkg</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="13">
+                <text>.*\.nupkg</text>
+            </regexPattern>
+        </expandFilter>
+        <scanPatterns osscApproved="true" searchType="contains">
+            <compositeRegexPattern>(?:^|\b)(?:(Numerical[\s*#/\-]{1,8}Recipes)|(public[\s*#/\-]{1,8}domain)|(Affero)|([a-z]{0,8}commercial[a-z]{0,8})|([a-z]{0,8}GPL)|([a-z]{0,8}licen[cs][a-z]{0,8}(?![\s*#/\-]{1,8}Materials?[\s*#/\-]{1,8}Property[\s*#/\-]{1,8}of[\s*#/\-]{1,8}(IBM|International Business Machines)))|(patent[a-z]{0,8}))(?:$|\b)</compositeRegexPattern>
+            <regexPattern displayAs="Numerical Recipes" definedAt="scan" id="0">
+                <text>Numerical[\s*#/\-]{1,8}Recipes</text>
+            </regexPattern>
+            <regexPattern displayAs="public domain" definedAt="scan" id="1">
+                <text>public[\s*#/\-]{1,8}domain</text>
+            </regexPattern>
+            <regexPattern definedAt="scan" id="2">
+                <text>Affero</text>
+            </regexPattern>
+            <regexPattern displayAs="*commercial*" definedAt="scan" id="3">
+                <text>[a-z]{0,8}commercial[a-z]{0,8}</text>
+            </regexPattern>
+            <regexPattern displayAs="*GPL" definedAt="scan" id="4">
+                <text>[a-z]{0,8}GPL</text>
+            </regexPattern>
+            <regexPattern displayAs="*licen[cs]* - non-IBM" definedAt="scan" id="5">
+                <text>[a-z]{0,8}licen[cs][a-z]{0,8}(?![\s*#/\-]{1,8}Materials?[\s*#/\-]{1,8}Property[\s*#/\-]{1,8}of[\s*#/\-]{1,8}(IBM|International Business Machines))</text>
+            </regexPattern>
+            <regexPattern displayAs="patent*" definedAt="scan" id="6">
+                <text>patent[a-z]{0,8}</text>
+            </regexPattern>
+        </scanPatterns>
+        <codeSet definedAt="scan" id="0">
+            <scanBase>src</scanBase>
+            <analyzeBase>src</analyzeBase>
+        </codeSet>
+    </codeSets>
+    <hits>
+        <file baseCodeSet="true" charsetName="ISO-8859-1" codeSetId="0" definedAt="scan" id="0">
+            <name>main/java/com/ibm/haifa/smc/repository/SaveToSMCAction.java</name>
+        </file>
+        <file baseCodeSet="true" charsetName="ISO-8859-1" codeSetId="0" definedAt="scan" id="1">
+            <name>main/java/com/ibm/haifa/smc/repository/SMCAction.java</name>
+        </file>
+        <file baseCodeSet="true" charsetName="ISO-8859-1" codeSetId="0" definedAt="scan" id="2">
+            <name>main/java/com/ibm/haifa/smc/repository/SMCPanel.java</name>
+        </file>
+    </hits>
+    <uniqueContexts size="standard"/>
+    <annotations>
+        <annotation definedAt="scan" id="0">
+            <text>File is legal because of scanner configuration.  Refer to legal filter patterns for details.</text>
+        </annotation>
+        <annotation definedAt="scan" id="1">
+            <text>File/Directory is excluded because of scanner configuration.  Refer to exclude filter patterns for details.</text>
+        </annotation>
+        <annotation definedAt="scan" id="2">
+            <text>File is excluded from scanning because a file I/O error occurred.  Refer to the CSAR log file for details.</text>
+        </annotation>
+        <annotation definedAt="scan" id="3">
+            <text>File is excluded because of scanner configuration.  File is binary and all binary files are excluded.</text>
+        </annotation>
+    </annotations>
+</csar>

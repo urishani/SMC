@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 1.0 (IBM Corporation)
+Bundle-ManifestVersion: 2
+Bundle-Name: SMC
+Bundle-SymbolicName: com.ibm.haifa.smc.repository-dev;singleton:=true
+Bundle-Version: 1.1.0.2016_07_31_0353
+Bundle-ClassPath: .,lib/commons-logging-1.1.1.jar,lib/gson-2.2.2.jar,l
+ ib/httpclient-4.2.2.jar,lib/httpcore-4.2.2.jar,lib/httpmime-4.2.1.jar
+ ,lib/xstream-1.4.1.jar,lib-ibm/com.ibm.haifa.smc.client-1.0.0.jar,cla
+ sses/
+Bundle-Activator: org.protege.editor.core.plugin.DefaultPluginActivato
+ r
+Require-Bundle: org.eclipse.equinox.registry,
+ org.eclipse.equinox.common
+Import-Package: javax.net,javax.net.ssl,javax.security.auth,javax.secu
+ rity.auth.callback,javax.security.auth.kerberos,javax.security.auth.l
+ ogin,javax.security.auth.spi,javax.security.auth.x500,javax.security.
+ cert,javax.security.sasl,javax.swing,javax.swing.border,javax.swing.c
+ olorchooser,javax.swing.event,javax.swing.filechooser,javax.swing.pla
+ f,javax.swing.plaf.basic,javax.swing.plaf.metal,javax.swing.plaf.mult
+ i,javax.swing.plaf.synth,javax.swing.table,javax.swing.text,javax.swi
+ ng.text.html,javax.swing.text.html.parser,javax.swing.text.rtf,javax.
+ swing.tree,javax.swing.undo,javax.xml.parsers,org.apache.log4j,org.os
+ gi.framework,org.w3c.dom,org.w3c.dom.bootstrap,org.w3c.dom.events,org
+ .w3c.dom.ls,org.xml.sax,org.xml.sax.ext,org.xml.sax.helpers
+Bundle-Description: A Plugin allowing direct access to the SMC server
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Category: protege
+Built-By: shani
+Export-Package: com.ibm.haifa.smc.repository
+

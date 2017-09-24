@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Protege-dev"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="4"/>
+<stringAttribute key="deselected_workspace_plugins" value="com.ibm.xtools.sow,com.ibm.xtools.rmps.descriptor2,com.ibm.dm.frontServices.sm.lyo,proxy,com.ibm.haifa.smc.repository,com.ibm.xtools.rmps.descriptor,com.sodius.mdw.dm.sm.container,OlioPlugin,com.ibm.xtools.sow.sample.web,com.sodius.mdw.metamodel.updm,com.ibm.xtools.sow.catalog.web,de.fraunhofer.fokus.sm.resources,Sm.rhapsody.dev,com.ibm.dm.frontServices.danse.sm,com.sodius.mdw.dm.sa.io.updm,com.sodius.mdw.ecore.io.xml,com.sodius.mdw.dm.utils,com.ibm.dm.frontService.sm.web,com.ibm.dm.frontServices.danse.sm.gui.backend,de.fraunhofer.fokus.sm.runtime,com.ibm.xtools.sow.sample.tests,roadrunner,com.ibm.xtools.sow.web,com.ibm.xtools.sow.dependencies,com.ibm.xtools.sow.catalog,com.ibm.dm.frontServices.smc,com.ibm.dm.frontServices.sm,com.ibm.xtools.sow.sample,DB_Learn,FMIPlugin,com.ibm.xtools.rmpx.common,HybridSimulationPlugin,blueMix_env_javaweb,experimenting,com.ibm.xtools.rmps.rmpsdescriptor,sprint.plugin.dm.frontservices.rhp,com.ibm.dm.sm.container.api,com.ibm.xtools.rmps.rmpsdescriptor2,com.ibm.dm.frontServices.sprint.sm,com.sodius.mdw.dm.rhapsody.io.updm,org.coode.dlquery,com.ibm.xtools.sow.externalsources,com.ibm.dm.frontServices.danse.sm.gui"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true&#13;&#10;-Dlog4j.configuration=&quot;file:${workspace_loc}/protege-base/log4j-dev.xml&quot;"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<booleanAttribute key="show_selected_only" value="true"/>
+<stringAttribute key="target_bundles" value="org.eclipse.core.runtime.compatibility.registry*3.3.0.v20100520@default:false,org.eclipse.equinox.common*3.6.0.v20100503@2:true,org.eclipse.equinox.registry*3.5.0.v20100503@default:default,org.eclipse.core.jobs*3.5.1.R36x_v20100824@default:default,org.eclipse.osgi*3.6.3.R36x_v20110629@-1:true,org.eclipse.equinox.common*3.6.0.v20100503@2:true,org.eclipse.core.jobs*3.5.1.R36x_v20100824@default:default,org.eclipse.core.runtime.compatibility.registry*3.3.0.v20100520@default:false,org.eclipse.equinox.servletbridge.extensionbundle@default:false,org.eclipse.equinox.registry*3.5.0.v20100503@default:default"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<stringAttribute key="workspace_bundles" value="com.ibm.haifa.smc.repository-dev@default:default,org.semanticweb.owl.owlapi@default:default,org.protege.common@default:default,org.protege.editor.core.application@default:default,org.protege.jaxb@default:default,org.coode.owlviz@default:default,org.protege.editor.owl@default:default"/>
+</launchConfiguration>

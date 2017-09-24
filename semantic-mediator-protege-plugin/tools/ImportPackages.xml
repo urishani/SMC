@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<project name = "SMC Protege client plugin project" default = "import" basedir = "..">
+	<property name="maven" value="http://central.maven.org/maven2/"/>
+	<property name="lib" value="lib"/>
+
+	<target name="import">
+		<delete dir="${lib}"/>
+		<mkdir dir="${lib}"/>
+		<get src="${maven}/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" 
+			dest="${lib}/commons-logging-1.1.1.jar"/>
+		<get src="${maven}/com/google/code/gson/gson/2.2.2/gson-2.2.2.jar" 
+			dest="${lib}/gson-2.2.2.jar"/>
+		<get src="${maven}org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar" 
+			dest="${lib}/httpclient-4.2.2.jar"/>
+		<get src="${maven}org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar" 
+			dest="${lib}/httpcore-4.2.2.jar"/>
+		<get src="${maven}org/apache/httpcomponents/httpmime/4.2.1/httpmime-4.2.1.jar" 
+			dest="${lib}/httpmime-4.2.1.jar"/>
+		<get src="${maven}/com/thoughtworks/xstream/xstream/1.4.1/xstream-1.4.1.jar"
+			dest="${lib}/xstream-1.4.1.jar"/>
+	</target>
+</project>
