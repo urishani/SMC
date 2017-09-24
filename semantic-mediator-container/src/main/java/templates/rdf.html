@@ -1,0 +1,75 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+ 		<link type="text/css" type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+        <script  type="text/javascript" src="/dm/resources/js/showGraph.js"></script>
+        <script  type="text/javascript" src="/dm/resources/js/rdf.js"></script>
+        <script  type="text/javascript" src="/dm/resources/js/utils.js"></script>
+		<script>
+		// File Name: rdf.html
+		</script>
+    </head>
+    <body onLoad='onLoad("_id_", "_contentType_", "_host_")'>
+        <h1>RDF contents of _header_</h1>
+        <font size='+1'><b>
+        <table><tr><td>
+            <form action='/dm/sm'>
+                <input type='submit' value='Done'/>
+                <input hidden=true name='id' value='_id_'>
+                <input id='listButton' type='submit' name='action' value='ShowList'>
+                <input id='downloadButton' type='submit' name='action' value='Download'>
+            </form>
+            <td>Format of content:
+            <td><form action='/dm/sm'>
+                <input hidden=true name='id' value='_id_'>
+                <input hidden=true name='action' value='ShowRDF'>
+            	<select style='background-color:LightGray' id='contentType' name='contentType' onClick='if (setContentType(this)) form.submit();'>
+					<option>text/turtle</option>
+					<option>application/rdf+xml</option>
+					<option>application/rdf+xml-ABBREV</option>
+					<option>application/n3</option>
+					<option>application/n-triples</option>
+				</select>	
+            </form>
+            </td>
+            <td><form action='/dm/smGraph' target='_blank'>
+                <input type='hidden' name='id' value='_id_'>
+                <button type='submit' name='action' class='button_imageB button_showGraph' value='graph' title='Show Graph for the entire model'></button>
+                </form>
+ 			</td>
+ 			<td><form _hiddenIfRepository_ action='http://ontorule-project.eu/parrot/parrot?' method="post" target='_blank'>
+            	<input type='submit' value='Make Doc' title='Working with Parrot to generate a document from RDF'>
+            	<textarea name='documentText' hidden=true>_rdf_</textarea>
+            	<input hidden=true type='text' name='mimetypeText' value='_contentType_'>
+            	<input hidden=true type='text' name='profile' value='technical'>
+            	<input hidden=true type='text' name='language' value='en'>
+            	<input hidden=true type='text' name='customizeCssUrl' value=''>
+                </form>
+            </td>
+        </table> 
+        </b></font>
+        <div id='textDiv'>
+    	    <font FACE= "Courier New">
+               <textarea rows='30' cols='100' id='text'>
+ 	             _rdf_
+    	       </textarea>
+        	</font>
+ 		</div>        
+    </body>
+</html>

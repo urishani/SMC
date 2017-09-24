@@ -1,0 +1,1494 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:base="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/"
+    xmlns:sm="http://com.ibm.ns/haifa/sm#"
+    xmlns:j.0="http://com.ibm.semantic.mediation/config/property#"
+    xmlns:rhp_model="http://com.ibm.ns/rhapsody/haifa/sm#" > 
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0095">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0007"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0059"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0018"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_10</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0083">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>emergencyStop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0071">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>safetySensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0180">
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0043"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0156"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0152"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0130"/>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0051"/>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0034"/>
+    <dc:description>This block contains the model of the ATS expected behavior, together with a physical world observer.</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <dc:title>ATSContext</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0109">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0004"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chRqstGateOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0149">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>Immediate Stop - used primeraliy for emergency\safety stopping</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>stop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0028">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>cmdOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0137">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0016">
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0116"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0100"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0095"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0013"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0153"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0058"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0113"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0163"/>
+    <dc:title>TB</dc:title>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0055"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0079"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0181"/>
+    <dc:description>TowBot system is a UGV that provides towing services to subscriber vehicles in the ATS Service Area.</dc:description>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0073"/>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0007"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0102"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0146"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0054"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0098"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0123"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0182"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0032"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0175"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0004">
+    <dc:description>change in flowport value</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chRqstGateOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.semantic.mediation/config">
+    <j.0:domain>test_repo</j.0:domain>
+    <j.0:counter>1</j.0:counter>
+    <j.0:counter>184</j.0:counter>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0125">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>interim calculation of desired velocity</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>calculatedVelocity</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0113">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0007"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0013"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0179"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_1</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0068">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0096"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0101">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>cmdOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0177">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0091"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0053"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0048"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0104"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>mechGate_gCntrl</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0056">
+    <dc:description>change in flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chGotoPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0165">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0099"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chUgvPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0044">
+    <dc:description>change in flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chVelocityCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0032">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0150"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0079"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>gotoPositionCmd_vCntrl</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0153">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>distanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0141">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>distanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0020">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>travelingToDest</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0096">
+    <dc:description>change in flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0084">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0026"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chGateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0072">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>velocity</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0181">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0007"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0031"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0097"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_2</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0060">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>used to command an emergency\safety stop</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>safetyStop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0029">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>safetySensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0017">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>rqstGateOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0138">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>safetySensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0126">
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0042"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0023"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0036"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0041"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0066"/>
+    <dc:description>Defines the desired behavior of the ElectroMechanical Gate.
+Should be replaced with a modelica model.</dc:description>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0104"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0002"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0003"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <dc:title>MechGate</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0005">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>gotoPositionCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0114">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>openCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0102">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>positionRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0069">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>distanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0178">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>gotoPositionCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0057">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>gateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0166">
+    <dc:title>GateCntrl</dc:title>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0086"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0122"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0114"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0167"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0169"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0068"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0075"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0082"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0027"/>
+    <dc:description>Embedded controller for electro-mechanical gate</dc:description>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0184"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0080"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0138"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0048"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0143"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0045">
+    <dc:description>change in flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chOpenCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0033">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>travelingToDest</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0154">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>gateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0142">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>rqstGateOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0021">
+    <dc:title>ATSGateSimPkg</dc:title>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0026"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Package"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0162"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0045"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0166"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0050"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0004"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0011"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0126"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0099"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0139"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0096"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0093"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0103"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0180"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0044"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0148"/>
+    <rhp_model:hasEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0056"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0133"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0112"/>
+    <dc:description>This package contains the ATS expected behavior model.</dc:description>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0016"/>
+    <rhp_model:hasBlock rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0088"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0097">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>velocityCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0130">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0051"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0034"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0057"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0183"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>ats_observer</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0085">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>travelingToDest</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0073">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>positionRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0182">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0007"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0089"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0120"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_7</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0061">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0108"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0077"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0101"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0028"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_2</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0170">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>rptOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0139">
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0165"/>
+    <dc:description>This block monitors component blocks in order to generate "real world", or physical, events.</dc:description>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0057"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0141"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0131"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0029"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0081"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0115"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0037"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0159"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0107"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0070"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0173"/>
+    <dc:title>PhysicalWorldObserver</dc:title>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0084"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0018">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>accRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0127">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0016"/>
+    <dc:description>instance of towbot</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>tb</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0006">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>velocityCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0115">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>ugvPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0103">
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0040"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0161"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0076"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0135"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0069"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0090"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0061"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <dc:title>ATS</dc:title>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0012"/>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0108"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0071"/>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0127"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0111"/>
+    <dc:description>This model describes the desired behavior of the entire ATS system in the gate scenario.</dc:description>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0046"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0009"/>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0077"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0063"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0183"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0058">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0007"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0105"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0083"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_13</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0179">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>PhysicalPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0046">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0108"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0077"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0092"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0170"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_3</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0167">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>rptOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0155">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>positionRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0034">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0103"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>ats</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0022">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>ugvPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0143">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>cmdOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0131">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>safetySensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0010">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>positionRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0098">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>rqstGateOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0086">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>openCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0074">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>distanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0183">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>gateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0062">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>acceleration</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0171">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>PhysicalPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0050">
+    <dc:description>change in flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chReportedVel</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0090">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0127"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0054"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0069"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>distanceSensor_tb</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0019">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>used to calculate the current velocity.
+THIS IS NOT A TRUE PHYSICAL MODEL.
+rather it is a very simplistic model (currently matching velocity to velocity command - infinte acceleration for an infetesmal period of time).</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>determineVelocity</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0128">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>myPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0007">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0112"/>
+    <dc:description>Instance of Vehicle Platform</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>vPlatform</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0116">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0102"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0155"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_5</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0104">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#int"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0059">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <dc:description>for debug</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>accRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0168">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>maximum velocity that the control will send in command.</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>maxVelocity</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0047">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>rqstGateOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0156">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0034"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0051"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0069"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0141"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_4</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0011"/>
+    <dc:description>Instance of Vehicle Control Block</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>vCntrl</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0144">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>used to store current velocity immediately prior to performing emergency stop.</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>velocityHistory</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0023">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#int"/>
+    <dc:description>matched to flowport
+percent that the gate is open, ie 100 is completely open.
+assumed that the gate is installed open.
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0099">
+    <dc:description>change in flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chUgvPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0011">
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0089"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0142"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0121"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0150"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0083"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0059"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0074"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0065"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0033"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0014"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0168"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0067"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0006"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0174"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0010"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0094"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0117"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0172"/>
+    <dc:description>Contains the logic used to drive the UGV</dc:description>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0097"/>
+    <dc:title>VehicleControl</dc:title>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0157"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0137"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0164"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0020"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0151"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0060"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0125"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0132"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0110"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0155"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0087"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0119"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0132">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>emergencyStop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0120">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0087">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>report position to C4I</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>reportPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0075">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>rptOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0184">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#int"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0063">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0051">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0139"/>
+    <dc:description>instance of physical world observer</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>observer</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0172">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>accRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0160">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0053"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0091"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0041"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0086"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>gCntrl_mechGate</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0091">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0166"/>
+    <dc:description>instance of Gate Control block</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>gCntrl</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0129">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0091"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0030"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0027"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>gCntrl_safetySensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0008">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0053"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0154"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0042"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>mechGate_gateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0117">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0093"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chDistanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0105">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>emergencyStop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0169">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>closeIfOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0048">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#int"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0157">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>rqstGateOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0036">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>gateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0145">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>IS THIS RELEVANT?
+This may be used to model acceleration that is closer to physical realtiy.</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>calculateAcceleration</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0024">
+    <rhp_model:hasPackage rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0021"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#SysML"/>
+    <dc:title>GateScenario_130213A</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0012">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0108"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0183"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0154"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>gate_gateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0133">
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0109"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0136"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0170"/>
+    <dc:description>Models the desired behavior of the C4I in the gate scenario.</dc:description>
+    <dc:title>C4I</dc:title>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0022"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0047"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0178"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0017"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0038"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0028"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0005"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0176"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0085"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0064"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0121">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0096"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0088">
+    <dc:description>This block defines the desired behavior of the gate, which includes both the control and the electro-mechanical components.</dc:description>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0053"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0101"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0160"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0030"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0008"/>
+    <rhp_model:hasPart rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0091"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0129"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0154"/>
+    <dc:title>Gate</dc:title>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0052"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0134"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0092"/>
+    <rhp_model:hasConnector rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0177"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0076">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0127"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0063"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0013"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_4</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0064">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>rptOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0173">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matches flowport
+ - completely closed
+- completely open</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>gateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0052">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0091"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0101"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0143"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>gCntrl_cmdOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0161">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0077"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0127"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0005"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0079"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_6</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0040">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0077"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0127"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0047"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0098"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_10</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0092">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>rptOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0080">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>cmdOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0009">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0077"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0127"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0136"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0102"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_5</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0118">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0148"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chEmergencyStop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0106">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0044"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chVelocityCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0049">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>velRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0037">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#int"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>distanceUgvGate</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0158">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0025">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>emergencyStop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0146">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>travelingToDest</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0134">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0091"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0167"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0092"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>rptOpen_gCntrl</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0013">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0089">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0122">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0162"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chCmdOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0110">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>reportedVel</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0077">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0133"/>
+    <dc:description>instance of c4i</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>atsCntrl</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0065">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>distanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0053">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0126"/>
+    <dc:description>Object of Electro-Mechanical Gate</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>mechGate</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0174">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0056"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chGotoPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0162">
+    <dc:description>change in flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chCmdOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0041">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>openCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0150">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>gotoPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0093">
+    <dc:description>change in flowport value</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chDistanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0081">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#int"/>
+    <dc:description>Gate location "hardwired" to allow for the calculation and simulation of the "distance sensor".</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>gateLocation</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0119">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>distance to destination: 
+distanceToDest = gotoPosition-position</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>distanceToDest</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0107">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>ugvPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0038">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>travelingToDest</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0159">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>distanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0147">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>velocityCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0026">
+    <dc:description>change in flowport value</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chGateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0135">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0108"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0071"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0030"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_1</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0014">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0050"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chReportedVel</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0123">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>gotoPositionCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0002">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>openCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0078">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>velRpt</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0111">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0077"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0127"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0038"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0146"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_7</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0066">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#int"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>x</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0054">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>distanceSensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0175">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0007"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0110"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0049"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_9</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0163">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0146"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0033"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_8</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0042">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>gateIsOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0030">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>safetySensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0151">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>gotoPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0094">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport
+</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>reportedVel</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0082">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>initReportsToC4I</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0070">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>calcDistanceUgvGate</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0108">
+    <rhp_model:hasType rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0088"/>
+    <dc:description>instance of gate</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <dc:title>gate</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0039">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>Operation used to update position based on current velocity.
+assumed that the operation is called periodically for each unit of time that is used to define the velocity. therefore it is sufficient to add the velocity to the current position.
+It is also assumed that the time is short enough that the velocity is constant. (incorrect assumption, see next statement)
+
+This is used only for "concept testing" and needs to be replaced with a "physically correct" model (modelica?)</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>updatePosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0148">
+    <dc:description>change in emergency stop flowport value</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+    <dc:title>chEmergencyStop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0027">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <dc:description>This flow port represents the safety sensor, which reports on if there is an object in the closing path in the gate.
+The "bool" type needs to be refined.</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>safetySensor</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0136">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>ugvPosition</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0015">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>sets acceleration to 0.</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>stopAcceleration</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0124">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>resume travel after stop() performed.</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>go</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0003">
+    <rhp_model:hasOnEvent rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0045"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+    <dc:title>chOpenCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0079">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>gotoPositionCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0112">
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0128"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0118"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0144"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0106"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0171"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0031"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0019"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0015"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0140"/>
+    <dc:title>VehiclePlatform</dc:title>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0025"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0072"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0039"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0179"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0062"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0078"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0018"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0124"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0049"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0149"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0105"/>
+    <rhp_model:hasOperation rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0145"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <dc:description>This block contains the definition of the expected behavior of the Vehicle Platform.</dc:description>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0147"/>
+    <rhp_model:hasAttribute rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0158"/>
+    <rhp_model:hasPort rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0120"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0100">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0074"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0054"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>distanceSensor_vCntrl</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0067">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#void"/>
+    <dc:description>used when safety\emergency stop is no longer required.</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>releaseSafetyStop</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0176">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#bool"/>
+    <dc:description>matches flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>cmdOpen</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0055">
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0035"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0098"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0157"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_16</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0043">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0051"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0034"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0107"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0063"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_2</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0164">
+    <rhp_model:hasReturnType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>calculate distance to destination</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    <dc:title>calculateDistance</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0152">
+    <rhp_model:hasEndPoint_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0034"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0051"/>
+    <rhp_model:hasPort_2 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0071"/>
+    <rhp_model:hasPort_1 rdf:resource="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0131"/>
+    <rhp_model:hasMultiplicity_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasMultiplicity_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+    <dc:title>connector_1</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0031">
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <dc:title>velocityCmd</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ariel-tp.haifa.ibm.com:9444/dm/sm/repository/test_repo/resource/0140">
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:description>matched to flowport</dc:description>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>accRpt</dc:title>
+  </rdf:Description>
+</rdf:RDF>

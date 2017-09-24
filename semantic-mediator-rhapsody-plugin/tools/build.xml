@@ -1,0 +1,70 @@
+﻿<?xml version = "1.0" encoding = "utf-8"?>
+<project name="Rhapsody.smc.plugin" default="all" basedir="..">
+	<property name="version"  value="smc.2.20"/>
+	<property name="rhapsody_profiles"  value="${user.home}\IBM\Rational\Rhapsody\8.1.3\Share\Profiles"/>
+	<property name="target"	value="${rhapsody_profiles}/Rhp-SMC"/>
+	<property name="client-jars" value="../com.ibm.haifa.smc.client/lib-ibm"/>
+	<property name="jars"	    value="RHAPSODY-ibm"/>
+	<property name="hep"		value="Rhp-SMC.hep"/>
+	<property name="hep2"		value="SMC.hep"/>
+	<property name="sbs"		value="Rhp-SMC.sbs"/>
+	<property name="sbs2"		value="SMC.sbs"/>
+	<property name="zip"		value="build/rhapsody.plugin.zip"/>
+	<property name="about"	value="About - Rhapsody plugin for RDF-SM.txt"/>
+	<property name="sm-shared"	value="../com.ibm.haifa.smc.rhapsody.plugin/build/Rhp-SMC"/>
+	<property name="importer"	value="tools/ImportPackagesFromMavenRepository.xml"/>
+	<property name="client"	value="../Sm.client.dev"/>
+
+
+	<target name="all" depends="copy" />
+
+	<target name="init">
+		<!-- ant antfile="${importer}"/-->
+		<mkdir dir="${target}" />
+		<delete dir="build"/>
+		<mkdir dir="build"/>
+		<delete dir="${target}/RHAPSODY" />
+		<mkdir dir="${target}/RHAPSODY" />
+		<delete dir="${target}/RHAPSODY-ibm" />
+		<mkdir dir="${target}/RHAPSODY-ibm" />
+		<delete dir="${sm-shared}" />
+		<mkdir dir="${sm-shared}" />
+	</target>
+
+	<target name="jar" description="JARs the Task" depends="init">
+		<jar destfile="${jars}/Sm-1.0.0.jar" basedir="bin"/>
+	</target>
+
+	<target name="copy" depends="jar">
+		<copy todir="${target}/RHAPSODY">
+			<fileset dir="RHAPSODY" excludes=".*"/>
+		</copy>
+		<copy todir="RHAPSODY-ibm">
+			<fileset dir="${client}/lib-ibm" excludes=".*"/>
+		</copy>
+		<copy todir="${target}/RHAPSODY-ibm">
+			<fileset dir="RHAPSODY-ibm" excludes=".*"/>
+		</copy>
+		<mkdir dir="${sm-shared}"/>
+		<copy todir="${sm-shared}/RHAPSODY-ibm">
+			<fileset dir="RHAPSODY-ibm" excludes=".*"/>
+		</copy>
+		<copy file="${hep}" tofile="${target}/${hep}"/>
+		<copy file="${hep2}" tofile="${target}/${hep2}"/>
+		<copy file="${sbs}" tofile="${target}/${sbs}"/>
+		<copy file="${sbs2}" tofile="${target}/${sbs2}"/>
+		<copy file="${hep}" tofile="${sm-shared}/${hep}"/>
+		<copy file="${hep2}" tofile="${sm-shared}/${hep2}"/>
+		<copy file="${sbs}" tofile="${sm-shared}/${sbs}"/>
+		<copy file="${sbs2}" tofile="${sm-shared}/${sbs2}"/>
+		<copy file="${about}" tofile="${target}/${about}"/>
+		<copy file="${about}" tofile="${sm-shared}/${about}"/>
+		<copy file="tools/ImportPackagesFromMavenRepository.xml"
+   			tofile="${sm-shared}/tools/build.xml"/>
+		<copy file="tools/build.bat"
+			tofile="${sm-shared}/tools/build.bat"/>
+		<delete file="${zip}"/>
+		<zip file="${zip}" basedir="${sm-shared}/.." excludes=".jazzignore .settings bin" />
+	</target>
+
+</project>

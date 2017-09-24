@@ -1,0 +1,7 @@
+The eclipse.zip file contains a snapshot of the configuration as in My machine.
+Unzip it in the <RTC home>/jazz/client/eclipse/ folder in the RTC eclipse environment. There is where the 
+files version of configuration and repositories work.
+
+
+The sm-dm-2.1.zip is the Rhapsody plugin for model export/import to the sm container on DM.
+Look at the "About - Rhapsody plugin for RDF-SM.txt" file in this zip for more instructions.

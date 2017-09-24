@@ -1,0 +1,48 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+ 		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=yui.2.2.1.css">
+		<script>
+		// File Name: graph.html
+		</script>
+    </head>
+    <body>
+	<h2>Graphical presentation for _purpose_</h2>
+	<pre>_dot-message_</pre><br>
+   		<form  method='post' action='http://www.w3.org/RDF/Validator/rdfval'>
+   		To view the graph, click this:    
+   		<input type='submit' value='Parse RDF' name='PARSE'/>   
+   		<input type='hidden' value='Parse RDF' name='PARSE'/>   
+   		<input type='hidden' value='PRINT_GRAPH' name='TRIPLES_AND_GRAPH'/>   
+   		<input type='hidden' name='FORMAT' value='PNG_LINK'/>   
+
+   		for RDF described in the gray window below.<p>   
+   		Than follow as instructed here:
+   		<ul><li>Click 'continue', on the popup warning.<br>    
+   		<li>Wait for the resulting page and scroll down and click on the link "Get/view the graph's image file (png)".<br>   
+   			&rarr; That will show you a graph.<br>    
+   		<li>Paste the url of that graph onto the input field following the "View" button on the main dialog.<br>   
+
+	   <textarea  readonly='true' style= 'background-color:lightgray;' COLS=80 ROWS=30 name='RDF'>
+   		_graph_   
+   	   </textarea></form> 	   
+    </body>
+</html>

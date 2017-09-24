@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rhp_model="http://ibm.com/rhapsody/model/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-12f8a3a1-854f-42c9-bf29-8b86e009ad3a"
+   rhp_model:name="c4i"
+   rhp_model:UsrClassName="Object"
+   >
+   <rhp_model:Type rdf:resource="http://ibm.com/rhapsody/model/GUID-e3f88ae5-b8a7-4764-adb7-3a3b3e1c7c42"/>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-7aad6368-2a56-4681-917f-764063e9c00e"
+   rhp_model:name="Default"
+   rhp_model:UsrClassName="Package"
+   >
+   <rhp_model:Part rdf:resource="http://ibm.com/rhapsody/model/GUID-a60b9f0a-66ab-469c-a420-0db1a9815e53"/>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-a60b9f0a-66ab-469c-a420-0db1a9815e53"
+   rhp_model:name="ATS"
+   rhp_model:UsrClassName="block"
+   >
+   <rhp_model:Part rdf:resource="http://ibm.com/rhapsody/model/GUID-d74fc50b-76de-4425-9714-61d284ef0c75"/>
+   <rhp_model:Part rdf:resource="http://ibm.com/rhapsody/model/GUID-12f8a3a1-854f-42c9-bf29-8b86e009ad3a"/>
+   <rhp_model:Part rdf:resource="http://ibm.com/rhapsody/model/GUID-bdded439-7c20-4da9-ae4d-d873dbec3f7d"/>
+   <rhp_model:description>
+      description
+   </rhp_model:description>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-e3f88ae5-b8a7-4764-adb7-3a3b3e1c7c42"
+   rhp_model:name="C4I"
+   rhp_model:UsrClassName="block"
+   >
+   <rhp_model:Port rdf:resource="http://ibm.com/rhapsody/model/GUID-2c476289-e20a-40ad-ade3-b6d17a5dbc29"/>
+   <rhp_model:Port rdf:resource="http://ibm.com/rhapsody/model/GUID-4fb34d78-c353-441a-b206-3177f4b8bf7a"/>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-d74fc50b-76de-4425-9714-61d284ef0c75"
+   rhp_model:name="uv"
+   rhp_model:UsrClassName="Object"
+   >
+   <rhp_model:Type rdf:resource="http://ibm.com/rhapsody/model/GUID-246f0a6e-9a2a-413d-a78d-d41b9b800021"/>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-2c476289-e20a-40ad-ade3-b6d17a5dbc29"
+   rhp_model:name="tb"
+   rhp_model:UsrClassName="StandardPort"
+   >
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-246f0a6e-9a2a-413d-a78d-d41b9b800021"
+   rhp_model:name="UserVehicle"
+   rhp_model:UsrClassName="block"
+   >
+   <rhp_model:Port rdf:resource="http://ibm.com/rhapsody/model/GUID-36d78c92-55e7-499c-91a2-9d365edef5fb"/>
+   <rhp_model:Port rdf:resource="http://ibm.com/rhapsody/model/GUID-34dfe6bb-ca90-4230-a825-22bf82745ed2"/>
+   <rhp_model:description>
+      This block models the relevant high level behavior of the user vehicle.
+   </rhp_model:description>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-bdded439-7c20-4da9-ae4d-d873dbec3f7d"
+   rhp_model:name="tb"
+   rhp_model:UsrClassName="Object"
+   >
+   <rhp_model:Type rdf:resource="http://ibm.com/rhapsody/model/GUID-421f7179-f82d-4d09-81cd-e2ba91fed5c4"/>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-421f7179-f82d-4d09-81cd-e2ba91fed5c4"
+   rhp_model:name="TowBot"
+   rhp_model:UsrClassName="block"
+   >
+   <rhp_model:Port rdf:resource="http://ibm.com/rhapsody/model/GUID-5b7d6eaf-30dd-4450-8d15-3773b92d7a16"/>
+   <rhp_model:Port rdf:resource="http://ibm.com/rhapsody/model/GUID-4e7664c6-2ca3-4078-8d6d-8efc75899c84"/>
+   <rhp_model:description>
+      This block represents an abstraction of the relevant high level behavior of the Tow Bot.
+   </rhp_model:description>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-4e7664c6-2ca3-4078-8d6d-8efc75899c84"
+   rhp_model:name="cntrl"
+   rhp_model:UsrClassName="StandardPort"
+   >
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-4fb34d78-c353-441a-b206-3177f4b8bf7a"
+   rhp_model:name="uv"
+   rhp_model:UsrClassName="StandardPort"
+   >
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-2dddc22a-d10d-4521-902c-fbbae273728c"
+   rhp_model:version="2.1"
+   rhp_model:name="TowBotSimpleExample"
+   rhp_model:modifiedTimeStrong="2012-02-19:16:55:27.011+0200"
+   rhp_model:UsrClassName="SysML"
+   >
+   <rhp_model:Part rdf:resource="http://ibm.com/rhapsody/model/GUID-7aad6368-2a56-4681-917f-764063e9c00e"/>
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-5b7d6eaf-30dd-4450-8d15-3773b92d7a16"
+   rhp_model:name="uv"
+   rhp_model:UsrClassName="StandardPort"
+   >
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-36d78c92-55e7-499c-91a2-9d365edef5fb"
+   rhp_model:name="towingCntrl"
+   rhp_model:UsrClassName="StandardPort"
+   >
+   </rdf:Description>
+<rdf:Description rdf:about="http://ibm.com/rhapsody/model/GUID-34dfe6bb-ca90-4230-a825-22bf82745ed2"
+   rhp_model:name="tb"
+   rhp_model:UsrClassName="StandardPort"
+   >
+   </rdf:Description>
+</rdf:RDF>

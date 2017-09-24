@@ -1,0 +1,654 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY base "http://www.sprint-iot.eu/bso/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.sprint-iot.eu/bso/"
+     xml:base="http://www.sprint-iot.eu/bso/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:base="http://www.sprint-iot.eu/bso/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.sprint-iot.eu/bso/">
+        <owl:imports rdf:resource="http://com.ibm.ns/haifa/sm.v2"/>
+        <owl:versionIRI rdf:resource="http://www.sprint-iot.eu/bso.v.2"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/BsoObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&base;BsoObjectProperty"/>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/connectors -->
+
+    <owl:ObjectProperty rdf:about="&base;connectors">
+        <rdfs:label xml:lang="en">connectors</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:range rdf:resource="&base;Connector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/contracts -->
+
+    <owl:ObjectProperty rdf:about="&base;contracts">
+        <rdfs:label xml:lang="en">contracts</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:domain rdf:resource="&base;Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/declared -->
+
+    <owl:ObjectProperty rdf:about="&base;declared">
+        <rdfs:label xml:lang="en">declared</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/direction -->
+
+    <owl:ObjectProperty rdf:about="&base;direction">
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/elements -->
+
+    <owl:ObjectProperty rdf:about="&base;elements">
+        <rdfs:label xml:lang="en">elements</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:domain rdf:resource="&base;Enumeration"/>
+        <rdfs:range rdf:resource="&base;EnumerationElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/fields -->
+
+    <owl:ObjectProperty rdf:about="&base;fields">
+        <rdfs:label xml:lang="en">fields</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:domain rdf:resource="&base;Record"/>
+        <rdfs:range rdf:resource="&base;RecordField"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/formalParameter -->
+
+    <owl:ObjectProperty rdf:about="&base;formalParameter">
+        <rdfs:label xml:lang="en">formalParameter</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:range rdf:resource="&base;Parameter"/>
+        <rdfs:domain rdf:resource="&base;Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/implementations -->
+
+    <owl:ObjectProperty rdf:about="&base;implementations">
+        <rdfs:label xml:lang="en">implementations</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:domain rdf:resource="&base;Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/interactionPoints -->
+
+    <owl:ObjectProperty rdf:about="&base;interactionPoints">
+        <rdfs:label xml:lang="en">interactionPoints</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/interconnectionEnds -->
+
+    <owl:ObjectProperty rdf:about="&base;interconnectionEnds">
+        <rdfs:label xml:lang="en">interconnectionEnds</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:domain rdf:resource="&base;Connector"/>
+        <rdfs:range rdf:resource="&base;InterconnectionEnd"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/part -->
+
+    <owl:ObjectProperty rdf:about="&base;part">
+        <rdfs:label xml:lang="en">part</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:range rdf:resource="&base;ComponentProperty"/>
+        <rdfs:domain rdf:resource="&base;InterconnectionEnd"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/parts -->
+
+    <owl:ObjectProperty rdf:about="&base;parts">
+        <rdfs:label xml:lang="en">parts</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/port -->
+
+    <owl:ObjectProperty rdf:about="&base;port">
+        <rdfs:label xml:lang="en">port</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/ports -->
+
+    <owl:ObjectProperty rdf:about="&base;ports">
+        <rdfs:label xml:lang="en">ports</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/returnType -->
+
+    <owl:ObjectProperty rdf:about="&base;returnType">
+        <rdfs:label xml:lang="en">returnType</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:range rdf:resource="&base;DataType"/>
+        <rdfs:domain rdf:resource="&base;Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/root -->
+
+    <owl:ObjectProperty rdf:about="&base;root">
+        <rdfs:label xml:lang="en">root</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:range rdf:resource="&base;Component"/>
+        <rdfs:domain rdf:resource="&base;System"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/subpackages -->
+
+    <owl:ObjectProperty rdf:about="&base;subpackages">
+        <rdfs:label xml:lang="en">subpackages</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+        <rdfs:range rdf:resource="&base;Package"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/type -->
+
+    <owl:ObjectProperty rdf:about="&base;type">
+        <rdfs:label xml:lang="en">type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/BsoDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&base;BsoDataProperty"/>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/comment -->
+
+    <owl:DatatypeProperty rdf:about="&base;comment">
+        <rdfs:label xml:lang="en">comment</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoDataProperty"/>
+        <rdfs:domain rdf:resource="&base;NamedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/isConjugated -->
+
+    <owl:DatatypeProperty rdf:about="&base;isConjugated">
+        <rdfs:label xml:lang="en">isConjugated</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoDataProperty"/>
+        <rdfs:domain rdf:resource="&base;Port"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/kind -->
+
+    <owl:DatatypeProperty rdf:about="&base;kind">
+        <rdfs:label xml:lang="en">kind</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&base;Flow"/>
+                    <rdf:Description rdf:about="&base;PrimitiveType"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/name -->
+
+    <owl:DatatypeProperty rdf:about="&base;name">
+        <rdfs:label xml:lang="en">name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoDataProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/size -->
+
+    <owl:DatatypeProperty rdf:about="&base;size">
+        <rdfs:label xml:lang="en">size</rdfs:label>
+        <rdfs:domain rdf:resource="&base;Array"/>
+        <rdfs:subPropertyOf rdf:resource="&base;BsoDataProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Array -->
+
+    <owl:Class rdf:about="&base;Array">
+        <rdfs:label xml:lang="en">Array</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/BsoClass -->
+
+    <owl:Class rdf:about="&base;BsoClass"/>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/ComplexPortSpecification -->
+
+    <owl:Class rdf:about="&base;ComplexPortSpecification">
+        <rdfs:subClassOf rdf:resource="&base;PortSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Component -->
+
+    <owl:Class rdf:about="&base;Component">
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ReusableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/ComponentProperty -->
+
+    <owl:Class rdf:about="&base;ComponentProperty">
+        <rdfs:label xml:lang="en">ComponentProperty</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Connector -->
+
+    <owl:Class rdf:about="&base;Connector">
+        <rdfs:label xml:lang="en">Connector</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;BsoClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/DataType -->
+
+    <owl:Class rdf:about="&base;DataType">
+        <rdfs:label xml:lang="en">DataType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ReusableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/DeclarationZone -->
+
+    <owl:Class rdf:about="&base;DeclarationZone">
+        <rdfs:label xml:lang="en">DeclarationZone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Enumeration -->
+
+    <owl:Class rdf:about="&base;Enumeration">
+        <rdfs:label xml:lang="en">Enumeration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/EnumerationElement -->
+
+    <owl:Class rdf:about="&base;EnumerationElement">
+        <rdfs:label xml:lang="en">EnumerationElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Flow -->
+
+    <owl:Class rdf:about="&base;Flow">
+        <rdfs:label xml:lang="en">Flow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;InteractionPoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/FlowDirection -->
+
+    <owl:Class rdf:about="&base;FlowDirection">
+        <rdfs:subClassOf rdf:resource="&base;BsoClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/InputPortSpecification -->
+
+    <owl:Class rdf:about="&base;InputPortSpecification">
+        <rdfs:subClassOf rdf:resource="&base;PortSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/InteractionPoint -->
+
+    <owl:Class rdf:about="&base;InteractionPoint">
+        <rdfs:label xml:lang="en">InteractionPoint</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/InterconnectionEnd -->
+
+    <owl:Class rdf:about="&base;InterconnectionEnd">
+        <rdfs:label xml:lang="en">InterconnectionEnd</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;BsoClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/InterconnectionEnd1 -->
+
+    <owl:Class rdf:about="&base;InterconnectionEnd1">
+        <rdfs:subClassOf rdf:resource="&base;InterconnectionEnd"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/InterconnectionEnd2 -->
+
+    <owl:Class rdf:about="&base;InterconnectionEnd2">
+        <rdfs:subClassOf rdf:resource="&base;InterconnectionEnd"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/NamedElement -->
+
+    <owl:Class rdf:about="&base;NamedElement">
+        <rdfs:label xml:lang="en">NamedElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;BsoClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/OutputPortSpecification -->
+
+    <owl:Class rdf:about="&base;OutputPortSpecification">
+        <rdfs:subClassOf rdf:resource="&base;PortSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Package -->
+
+    <owl:Class rdf:about="&base;Package">
+        <rdfs:label xml:lang="en">Package</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;DeclarationZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Parameter -->
+
+    <owl:Class rdf:about="&base;Parameter">
+        <rdfs:label xml:lang="en">Parameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Port -->
+
+    <owl:Class rdf:about="&base;Port">
+        <rdfs:label xml:lang="en">Port</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/PortSpecification -->
+
+    <owl:Class rdf:about="&base;PortSpecification">
+        <rdfs:label xml:lang="en">PortSpecification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ReusableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/PrimitiveType -->
+
+    <owl:Class rdf:about="&base;PrimitiveType">
+        <rdfs:label xml:lang="en">PrimitiveType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Record -->
+
+    <owl:Class rdf:about="&base;Record">
+        <rdfs:label xml:lang="en">Record</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/RecordField -->
+
+    <owl:Class rdf:about="&base;RecordField">
+        <rdfs:label xml:lang="en">RecordField</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/ReusableElement -->
+
+    <owl:Class rdf:about="&base;ReusableElement">
+        <rdfs:label xml:lang="en">ReusableElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Service -->
+
+    <owl:Class rdf:about="&base;Service">
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;InteractionPoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/SimplePortSpecification -->
+
+    <owl:Class rdf:about="&base;SimplePortSpecification">
+        <rdfs:subClassOf rdf:resource="&base;PortSpecification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&base;interactionPoints"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/System -->
+
+    <owl:Class rdf:about="&base;System">
+        <rdfs:label xml:lang="en">System</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;DeclarationZone"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Boolean -->
+
+    <owl:NamedIndividual rdf:about="&base;Boolean">
+        <rdf:type rdf:resource="&base;PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Float -->
+
+    <owl:NamedIndividual rdf:about="&base;Float">
+        <rdf:type rdf:resource="&base;PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/IN -->
+
+    <owl:NamedIndividual rdf:about="&base;IN">
+        <rdf:type rdf:resource="&base;FlowDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/INOUT -->
+
+    <owl:NamedIndividual rdf:about="&base;INOUT">
+        <rdf:type rdf:resource="&base;FlowDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Integer -->
+
+    <owl:NamedIndividual rdf:about="&base;Integer">
+        <rdf:type rdf:resource="&base;PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/OUT -->
+
+    <owl:NamedIndividual rdf:about="&base;OUT">
+        <rdf:type rdf:resource="&base;FlowDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Other -->
+
+    <owl:NamedIndividual rdf:about="&base;Other">
+        <rdf:type rdf:resource="&base;PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sprint-iot.eu/bso/Void -->
+
+    <owl:NamedIndividual rdf:about="&base;Void">
+        <rdf:type rdf:resource="&base;PrimitiveType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

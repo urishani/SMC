@@ -1,0 +1,92 @@
+I-Logix-RPY-Archive version 8.6.0 * 2071424
+{ CGEMdiWorkspace 
+	- stubList = { IRPYRawContainer 
+		- size = 1;
+		- value = GUID 875eace3-e55f-437d-b02a-3b6dc197d5b6; 
+	}
+	- isLoadOnDemand = 0;
+	- myViewsWithID = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
+				- m_nLeft = 30;
+				- m_nTop = 30;
+				- m_nRight = 469;
+				- m_nBottom = 155;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStructureDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Structure1";
+				- _id = GUID b4ada998-711b-43a4-86e9-09bcbc1bb5fd;
+			}
+			- _UpLeft = 0 21 ;
+			- _DownRight = 438 82 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
+				- m_nLeft = 30;
+				- m_nTop = 30;
+				- m_nRight = 1295;
+				- m_nBottom = 381;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStructureDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "internal block diagram_0";
+				- _id = GUID 634fdccc-e555-4b35-87ac-7fafe4034fed;
+			}
+			- _UpLeft = 65 0 ;
+			- _DownRight = 1455 476 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+		}
+	}
+	- _fullName = "C:\\Users\\shani\\IBM\\Rational\\Rhapsody\\7.6\\TowBotSimpleExample\\TowBotSimpleExample.imported";
+	- m_SearchScopeList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- bUsingCustomBrowserView = 0;
+	- bUsingQueries = 0;
+	- bApplyOnDiagrams = 0;
+	- liQueryIDs = { IRPYRawContainer 
+		- size = 0;
+	}
+	- liElementTypes = { IRPYRawContainer 
+		- size = 0;
+	}
+
+	- m_favoritesTree = {
+		count=1;
+		{ - favoritesItem
+			generation = 0;
+			name = Favorites;
+			idOrFolder = folder;
+		}
+	}
+
+}
+

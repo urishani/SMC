@@ -1,0 +1,134 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://purl.org/dc/terms/"
+    xmlns:j.1="http://com.ibm.semantic.mediation/config/property#"
+    xmlns="http://10.110.40.53:9444/dm/sm/repository/ra/resource#"
+    xmlns:j.2="http://com.ibm.ns/rhapsody/haifa/sm#"
+    xmlns:base="https://10.110.40.53:9444/dm/sm/repository/ra/resource#" > 
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#12">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#4"/>
+    <j.0:title>k2</j.0:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#22">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#13"/>
+    <j.0:title>signal</j.0:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#11">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#SysML"/>
+    <j.2:hasPackage rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#5"/>
+    <j.0:title>BasicImportExportTestWithPorts</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#21">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#17"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <j.2:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <j.0:title>p2a</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#10">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#15"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <j.2:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <j.0:title>p1b</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#20">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <j.0:title>M1</j.0:title>
+    <j.2:hasPort rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#18"/>
+    <j.2:hasPort rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#9">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#3"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <j.2:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <j.0:title>signal</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#8">
+    <j.2:hasPart rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#2"/>
+    <j.0:title>M</j.0:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <j.2:hasPart rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#7">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#13"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <j.2:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <j.0:title>signal</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#6">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <j.2:hasPort rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#9"/>
+    <j.0:title>IntegerOutput</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#5">
+    <j.2:hasOTHER rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#3"/>
+    <j.2:hasOTHER rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#13"/>
+    <j.2:hasBlock rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#17"/>
+    <j.2:hasBlock rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#15"/>
+    <j.0:title>Default</j.0:title>
+    <j.2:hasBlock rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#14"/>
+    <j.2:hasBlock rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#8"/>
+    <j.2:hasBlock rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#6"/>
+    <j.2:hasBlock rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#20"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Package"/>
+    <j.2:hasBlock rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#4">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <j.0:title>M2</j.0:title>
+    <j.2:hasPort rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#21"/>
+    <j.2:hasPort rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#3">
+    <j.0:title>Integer</j.0:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#DataType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#2">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#20"/>
+    <j.0:title>k1</j.0:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.semantic.mediation/config">
+    <j.1:domain>ra</j.1:domain>
+    <j.1:counter rdf:datatype="http://www.w3.org/2001/XMLSchema#long">22</j.1:counter>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#19">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#14"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <j.2:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <j.0:title>p2b</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#18">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#6"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <j.2:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <j.0:title>p1a</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#17">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <j.2:hasPort rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#16"/>
+    <j.0:title>IntegerInput</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#16">
+    <j.2:hasType rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#3"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <j.2:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <j.0:title>signal</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#15">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <j.2:hasPort rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#22"/>
+    <j.0:title>RealInput</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#14">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <j.2:hasPort rdf:resource="https://10.110.40.53:9444/dm/sm/repository/ra/resource#7"/>
+    <j.0:title>RealOutput</j.0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://10.110.40.53:9444/dm/sm/repository/ra/resource#13">
+    <j.0:title>Real</j.0:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#DataType"/>
+  </rdf:Description>
+</rdf:RDF>
+

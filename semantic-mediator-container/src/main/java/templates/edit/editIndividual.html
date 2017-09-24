@@ -1,0 +1,145 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+ 		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=yui.2.2.1.css">
+			
+        <title>Individual Resource Editor</title>
+        <script type="text/javascript" >
+            var objectProperties = _objectProperties_;
+            var dataProperties = _dataProperties_;
+
+            function onload() {
+                setupAlloptions();
+            }
+
+            function setupAlloptions() {
+                setupOptions(objectProperties, 'objectPSwitch', 'newObjectProperty');
+                setupOptions(dataProperties, 'dataPSwitch', 'newDataProperty');
+            }
+
+            function setupOptions(source, id, trId) {
+                var sel = document.getElementById(id);
+                var opKeys = Object.keys(source);
+                var cnt = 0;
+                for (var i in opKeys) {
+                    var opt = new Option(opKeys[i]);
+                    sel.add(opt);
+                    cnt++;
+                }
+                var t = sel.innerHTML;
+                if (0 == cnt)
+                    document.getElementById(trId).hidden = true;
+                //   alert(t);
+            }
+
+            function changeData(td) {
+                td.field.readonly = false;
+                return true;
+            }
+
+            function changeObject(td) {
+                return true;
+                //var choices=_dataObjectsMap_;
+            }
+        </script>
+    </head>
+    <body onload='onload()'>
+        <h1>Editing _subject_ of type _type_ for _id_: _name_</h1>
+        <h2>Using Ontology _ontology_</h2>
+        <form action='/dm/sm'>
+            <button type='submit' name='action' value='EditRepository'>
+                Done
+            </button>
+            <input hidden='true' name='id' value='_id_'>
+        </form>
+
+        Prefixes:
+        <br>
+        <pre>
+_prefixes_
+</pre>
+        <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+            <form target='dm/sm/repositories'>
+                <input hidden='true' name='id' value='_id_'>
+                <input hidden='true' name='subject' value='_subject_'>
+                <tr id='newObjectProperty'>
+                    <td colspan='3'>
+                    <button type='submit' name='action' value='NewObjectProperty'>
+                        New Object Property
+                    </button><select name='property' id='objectPSwitch'></select><select name='object' id='objectOSwitch'></select>
+            </form>
+            _instObjectProperties_
+            <form target='dm/sm/repositories'>
+                <input hidden='true' name='id' value='_id_'>
+                <input hidden='true' name='subject' value='_subject_'>
+                <input hidden='true' name='property' value='_property_'>
+                <input hidden='true' name='object' value='_object_'>
+                <tr>
+                    <td>_i_
+                    <button type='submmit' value='DOP' name='action'
+                    style='background-color:pink'
+                    onClick='return (confirm("Are you sure to DELETE?"))'>
+                        D
+                    </button><td>_property_<td>_object_
+                    <button onClick='return changeObject(this.parentElement)'>
+                        Change
+                    </button>
+            </form>
+            _/instObjectProperties_
+            <form target='dm/sm/repositories'>
+                <input hidden='true' name='id' value='_id_'>
+                <input hidden='true' name='subject' value='_subject_'>
+                <input hidden='true' name='oldObject' value='_oldOject_'>
+                <tr id='newDataProperty'>
+                    <td colspan='3'>
+                    <button type='submit' name='action' value='NewDataProperty'>
+                        New Data Property
+                    </button><select  name='property' id='dataPSwitch'></select>
+                    <input name='value' width='100'/>
+            </form>
+            _instDataProperties_
+            <form target='dm/sm/repositories'>
+                <input hidden='true' name='id' value='_id_'>
+                <input hidden='true' name='subject' value='_subject_'>
+                <input hidden='true' name='property' value='_property_'>
+                <input hidden='true' name='oldValue' value='_oldValue_'>
+                <tr>
+                    <td>_i_
+                    <button type='submmit' value='DDP' name='action'
+                    style='background-color:pink'
+                    onClick='return (confirm("Are you sure to DELETE?"))'>
+                        D
+                    </button>
+                    <button type='submmit' value='UDP' name='action'
+                    style='background-color:pink'
+                    onClick='return (confirm("Are you sure to UPDATE?"))'>
+                        U
+                    </button><td>_property_<td>
+                    <input type='text' readonly id='field'>
+                    _value_
+                    <button onClick='changeData(this.parentElement);return true;'>
+                        Change
+                    </button>
+            </form>
+            _/instDataProperties_
+        </table>
+    </body>
+</html>

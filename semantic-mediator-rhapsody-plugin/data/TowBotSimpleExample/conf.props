@@ -1,0 +1,7 @@
+#SII to GUID and GUID to SII mappings
+#Thu Mar 22 16:52:23 IST 2012
+sii.user=test
+RDF_SERVER=https\://localhost\:9444/dm/rhapsody
+sii.props=C\:\\Users\\shani\\IBM\\Rational\\Rhapsody\\7.6\\TowBotSimpleExample\\conf.props
+sii.pwd=test
+SII_SYSTEM_URI=https\://localhost\:9443/IoSE/resource/1

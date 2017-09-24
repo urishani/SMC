@@ -1,0 +1,91 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">    
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+		<script  type="text/javascript" src="/dm/resources/js/showMediator.js"></script>
+    <script>// File Name: showMediator.html</script>
+    <script>
+    function showHideTrace(but) {
+    	var t = but.innerHTML;
+    	var d = document.getElementById('mediationTrace');
+    	if (0 == t.indexOf('Show')) {
+    		d.hidden=false;
+    		but.innerHTML=t.replace('Show', 'Hide');
+    	} else {
+    		d.hidden=true;
+    		but.innerHTML=t.replace('Hide', 'Show');
+    	}
+    }
+    </script>
+    </head>
+    
+<body onLoad='onLoad("_toDisplayId_", "_fromDisplayId_")'>
+<form action='/dm/sm'>
+    <input type='submit' value='Done'/>
+</form>
+
+<div style='margin-left:5px'>
+<h1 class='h1'>List of contents for _displayId_: [_fromDisplayId_] &larr;&rarr; [_toDisplayId_]</h1>
+_numRows_  associations made.<br>
+Click action to view RDF description of both sides.<br>
+Name spaces:<br>
+<table boundary='0'>
+<tr><td>from:<td>= &lt;_fromNS_&gt;
+<tr><td>to:<td>= &lt;_toNS_&gt;
+</table>
+<table><tr>
+<td>
+<table class='smTable dj_webkit com-ibm-team-workitem queryResultsTable' id='table' >
+    <tr class="com-ibm-team-workitem queryResults">
+       <th class="smTh headerColumnUnsorted">num</th>
+       <th class="smTh headerColumnUnsorted">actions</th>
+       <th class="smTh headerColumnUnsorted">From resource</th>
+       <th>&rarr;
+       <th class="smTh headerColumnUnsorted">To resource</th>
+   </tr>
+_rows_
+<tr class="smRow_evenRow_ com-ibm-team-workitem visibleRow summary"  valign='top'>
+<td>_num_
+<td title='Click to view resources RDF or Graph'>
+<button onclick='load(this, "_fullFResource_", "_fullTResource_","_Fresource_", "_Tresource_")'>Open</button>
+<td>_Fresource_ _FResourceName_
+<td>&rarr;
+<td align='center'>_Tresource_
+
+</tr>
+_/rows_
+</table>
+<td id='graph' valign='top' hidden='true'>
+   <font size='+2'><b><span id='graphResource'>Showing Graphs for:</span></b></font> 
+   <select><option onClick='showGraph(this, 0)'>Radius 0</option>
+   <option onClick='showGraph(this, 1)'>Radius 1</option>
+   <option onClick='showGraph(this, 2)'>Radius 2</option>
+   </select><br>
+   <img id='graphFImg'><br>
+   <img id='graphTImg'>
+<td valign='top'>
+<table>
+<tr><td><button onClick='showHideTrace(this)'>Show Mediation Trace</button></td></tr>
+<tr><td id='mediationTrace' style='overflow:scroll' hidden=true>
+<pre>
+_mediationTrace_
+</pre>
+</td></tr>
+</table>
+</body></html>

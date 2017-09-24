@@ -1,0 +1,84 @@
+	body {
+		margin-left:3px;
+	}
+	.button_images {
+		cursor:pointer;
+	    border:0px;
+	    width:15;
+	    height:10;
+	}
+	.button_image {
+		cursor:pointer;
+	    border:0px;
+	    width:22;
+	    height:15;
+	}
+	.button_imageB {
+		cursor:pointer;
+	    border:0px;
+	    width:30;
+	    height:25;
+	}
+	
+	.anchor-not-active {
+  		pointer-events: none;
+   		cursor: default;
+	}
+	.anchor--active { }
+
+	
+	.button_ { }
+	.button_disabled {
+		cursor:default;
+	}
+	
+	button:disabled { cursor:default;}
+	button:enabled { cursor:pointer;}
+
+	.button_delete { background:url(/dm/resources/graphics/buttons/action_delete.b.png) no-repeat; }
+	.button_delete_small { background:url(/dm/resources/graphics/buttons/action_delete.b.png) no-repeat; background-size: 10px 10px}
+	.button_undelete { background:url(/dm/resources/graphics/buttons/action_undelete.png) no-repeat; }
+	.button_clear { background:url(/dm/resources/graphics/buttons/action_clear.gif) no-repeat; }
+	.button_edit { background:url(/dm/resources/graphics/buttons/action_edit.gif) no-repeat; }
+	.button_import { background:url(/dm/resources/graphics/buttons/action_web_import.gif) no-repeat; }
+	.button_load { background:url(/dm/resources/graphics/buttons/action_upload.gif) no-repeat; }
+	.button_show { background:url(/dm/resources/graphics/buttons/action_show.png) no-repeat; alternative:"S"}
+	.button_test { background:url(/dm/resources/graphics/buttons/action_test.png) no-repeat; background-size: 20px 15px}
+	.button_action_post_ { background:url(/dm/resources/graphics/icons/action-export.png) no-repeat; background-size: 18px 15px}
+	.button_action_get_ { background:url(/dm/resources/graphics/icons/action-import.png) no-repeat; background-size: 18px 15px}
+	.button_action_post_disabled { background:url(/dm/resources/graphics/icons/action-export-disabled.png) no-repeat; background-size: 18px 15px}
+	.button_action_get_disabled { background:url(/dm/resources/graphics/icons/action-import-disabled.png) no-repeat; background-size: 18px 15px}
+	.button_build { background:url(/dm/resources/graphics/buttons/build_obj32.png) no-repeat; background-size: 20px 15px }
+	.button_check { background:url(/dm/resources/graphics/icons/tick.gif) no-repeat; background-size: 20px 15px }
+	.button_plus { background:url(/dm/resources/graphics/icons/plus.ico) no-repeat; background-size: 20px 15px }
+	.button_plus_small { background:url(/dm/resources/graphics/icons/plus.ico) no-repeat; background-size: 12px 12px }
+	.button_plusB { background:url(/dm/resources/graphics/icons/plus.ico) no-repeat; background-size: 25px 25px }
+	.button_minus { background:url(/dm/resources/graphics/icons/minus.ico) no-repeat; background-size: 20px 15px }
+	.button_minusB { background:url(/dm/resources/graphics/icons/minus.ico) no-repeat; background-size: 25px 25px }
+	.button_fullScreen { background:url(/dm/resources/graphics/icons/fullScreen.ico) no-repeat; background-size: 20px 15px }
+	.button_help { background-color:blue; color:white; font-weight:bold }
+	.button_left_arrow { background:url(/dm/resources/graphics/icons/left_arrow_nav.gif) no-repeat; background-size: 15px 35px; height:40px}
+	.button_right_arrow { background:url(/dm/resources/graphics/icons/right_arrow_nav.gif) no-repeat; background-size: 15px 35px; height:40px}
+	.button_showGraph { background:url(/dm/resources/graphics/buttons/showGraph.ico) no-repeat; background-size: 25px 25px }
+	.button_hideGraph { background:url(/dm/resources/graphics/buttons/hideGraph.ico) no-repeat; background-size: 25px 25px }
+	.icon-reversibleYes { background:url(/dm/resources/graphics/icons/reversibleYes-icon.png) no-repeat; background-size: 25px 25px;}
+	.icon-reversibleNo { background:url(/dm/resources/graphics/icons/reversibleNo-icon.png) no-repeat; background-size: 25px 25px;}
+	.icon-repository { background:url(/dm/resources/graphics/icons/archived.gif) no-repeat; margin: 1px; background-size: 20px 15px;}
+	.icon-export { background:url(/dm/resources/graphics/icons/export.gif) no-repeat; background-size: 20px 15px;}
+	.icon-pipe { background:url(/dm/resources/graphics/icons/pipe-icon.gif) no-repeat; background-size: 20px 15px;}
+	.icon-post { background:url(/dm/resources/graphics/icons/right_arrow_nav.gif) no-repeat; background-size: 20px 15px;}
+	.icon-get { background:url(/dm/resources/graphics/icons/left_arrow_nav.gif) no-repeat; background-size: 20px 15px;}
+	.icon-tool { background:url(/dm/resources/graphics/icons/action_test.png) no-repeat; background-size: 20px 15px;}
+	.icon-status-created { background:url(/dm/resources/graphics/icons/status-yellow.png) no-repeat; background-size: 15px 15px;}
+	.icon-status-ready { background:url(/dm/resources/graphics/icons/status-green.png) no-repeat; background-size: 15px 15px;}
+	.icon-status-notReady { background:url(/dm/resources/graphics/icons/status-red.png) no-repeat; background-size: 15px 15px;}
+	.icon-archived { background:url(/dm/resources/graphics/icons/archived.gif) no-repeat; background-size: 20px 15px;}
+	.icon-notArchived { background:url(/dm/resources/graphics/icons/empty.png) no-repeat; background-size: 20px 15px;}
+	.icon-not-active { background:url(/dm/resources/graphics/icons/inactive.png) no-repeat; background-size: 20px 15px;}
+	.icon-active { background:url(/dm/resources/graphics/icons/tick.big.gif) no-repeat; background-size: 20px 15px;}
+	.smTh {text-align:center;font-weight:bold;font-size:larger;border-bottom: 1px solid black;}
+	.smRow0 { background-color:#e0f0e0}
+	.smTable { border-style:dotted;border-spacing:5px 2px }
+   	.about {
+      		display:show;
+   	}

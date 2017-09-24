@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="res"/>
+	<classpathentry kind="src" path="test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="RHAPSODY/log4j-1.2.16.jar" sourcepath="/com.ibm.dm.frontServices.sm/lib1/log4j-1.2.16-sources.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/httpclient-4.2.2.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/httpmime-4.2.1.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/jena-core-2.10.1.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/jena-iri-0.9.6.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/slf4j-log4j12-1.7.5.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="RHAPSODY/commons-lang3-3.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="lib" path="RHAPSODY-ibm/com.ibm.haifa.smc.client-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/rhapsody.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Sm.rhapsody.dev/RHAPSODY.8.1.3.64"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/semantic-mediator-client"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

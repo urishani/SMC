@@ -1,0 +1,38 @@
+@prefix oslc: <http://open-service.net/ns/core#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix smc: <http://com.ibm.ns/haifa/sm#>.
+<_host_/dm/sm/repository/_accessName_> 
+    a oslc:ServiceProvider;
+    smc:id "_id_";
+    oslc:service
+      [ a oslc:Service; 
+        oslc:domain <http://open-services.net/ns/am#>;
+# No factory yet
+#       oslc:creationFactory
+#                [a oslc:CreationFactory;
+#                    oslc:creation <_host_/dm/sm/repository>];
+        oslc:queryCapability
+          [ a oslc:QueryCapability;
+            oslc:queryBase <_host_/dm/sm/repository/_accessName_/resource>;
+            oslc:resourceType <http://open-services.net/xmlns/am/1.0/Resource>;
+            oslc:label "_name_";
+            dcterms:title "_description_"
+          ];
+        oslc:selectionDialog  
+          [ a oslc:Dialog;
+            oslc:dialog <_host_/dm/sm?id=_id_&action=ShowList>;
+            oslc:label "SMC Resource Picker";
+            oslc:resourceType <http://open-services.net/ns/am#Resource>;
+            dcterms:title "Browse Model Resources for _id_ [_accessName_]"
+	      ]
+	  ];
+    
+# Preferred prefixes for this provider:
+_prefixDefinition_
+    oslc:prefixDefinition
+      [ a oslc:PrefixDefinition;
+        oslc:prefix "_prefix_";
+        oslc:prefixBase <_nameSpaceUri_>
+      ]_semicolon_
+_/prefixDefinition_

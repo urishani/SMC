@@ -1,0 +1,36 @@
+{ "extensions": 
+  [
+     {
+            "class":"com.ibm.dm.frontService.sm.service.SmPlainMediationModule",
+            "description":"Null mediation, needs no rules, performs no trnasformation over the input model, produces exactly the same model as the input, should be used only between two models of the same or compatible ontologies.",
+            "name":"NullMediator",
+            "requiresLicense":"false"
+      },
+      {
+            "class":"com.ibm.dm.frontService.sm.interceptor.ExtractInterceptor",
+            "description":"Extracts a model substructure in plain mediation, so both models should be of same ontology.",
+            "licenseText":"This mediator is an IBM (TM) 2013 copyright (R), and is provided by IBM for parties working under a valid agreement with IBM.\n It is used &quot;AS-IS&quot; w/no liabilities from &apos;IBM&apos; ",
+            "name":"ExtractMediator",
+            "requiresLicense":"true"
+      },
+      {
+            "class":"com.ibm.dm.frontService.sm.interceptor.viewMediator",
+            "description":"Mediator of models for visualization purposes.",
+            "name":"ViewMediator"
+      },
+      {
+            "class":"com.ibm.dm.frontService.sm.interceptor.TestMediator",
+            "description":"Mediator of models for testing purposes.",
+            "licenseText":"For use by IBM Only.",
+            "name":"TestMediator_do_not_use",
+            "requiresLicense":"true"
+      },
+      {
+            "class":"com.ibm.dm.frontService.sm.interceptor.HaifaSemanticMediator",
+            "description":"An experimental ontology-and-rule-based mediator",
+            "licenseText":"This mediator is an IBM (TM) 2013 copyright (R), and is provided by IBM for parties working under a valid agreement with IBM.\n It is used &quot;AS-IS&quot; w/no liabilities from &apos;IBM&apos; ",
+            "name":"Haifa Semantic Mediator",
+            "requiresLicense":"true"
+      }
+   ]
+}

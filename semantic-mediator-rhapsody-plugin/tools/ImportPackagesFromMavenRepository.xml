@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<project name = "SMC repository project" default = "import" basedir = "..">
+	<property name="lib" value="RHAPSODY"/>
+	<property name="root1" value="http://search.maven.org/remotecontent?filepath="/>
+	<property name="root2" value="http://central.maven.org/maven2/"/>
+	<property name="maven" value="${root2}"/>
+
+	<target name="import">
+		<delete dir="${lib}"/>
+		<mkdir dir="${lib}"/>
+		<get src="${maven}com/google/guava/guava/14.0.1/guava-14.0.1.jar"
+			dest="${lib}/guava-14.0.1.jar"/>
+		<get src="${maven}org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar"
+			dest="${lib}/httpclient-4.2.2.jar"/>
+		<get src="${maven}org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar"
+			dest="${lib}/httpcore-4.2.2.jar"/>
+		<get src="${maven}org/apache/httpcomponents/httpmime/4.2.1/httpmime-4.2.1.jar"
+			dest="${lib}/httpmime-4.2.1.jar"/>
+		<get src="${maven}org/apache/jena/jena-core/2.10.1/jena-core-2.10.1.jar"
+			dest="${lib}/jena-core-2.10.1.jar"/>
+		<get src="${maven}org/apache/jena/jena-iri/0.9.6/jena-iri-0.9.6.jar"
+			dest="${lib}/jena-iri-0.9.6.jar"/>
+		<get src="${maven}log4j/log4j/1.2.16/log4j-1.2.16.jar"
+			dest="${lib}/log4j-1.2.16.jar"/>
+		<get src="${maven}org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar"
+			dest="${lib}/slf4j-api-1.7.5.jar"/>
+		<get src="${maven}org/slf4j/slf4j-log4j12/1.7.5/slf4j-log4j12-1.7.5.jar"
+			dest="${lib}/slf4j-log4j12-1.7.5.jar"/>
+		<get src="${maven}commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"
+			dest="${lib}/commons-logging-1.1.1.jar"/>
+		<get src="http://central.maven.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar"
+			dest="${lib}/commons-lang3-3.1.jar"/>
+	</target>
+</project>
+

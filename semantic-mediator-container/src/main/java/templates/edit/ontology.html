@@ -1,0 +1,161 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">    
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+        <script  type="text/javascript" src="/dm/resources/js/viewConfig.js"></script>
+        <script  type="text/javascript" src="/dm/resources/js/utils.js"></script>
+        <script>
+        var autoInit_ = false;
+        var namespace = '_defaultNamespace_/ontology/def/';
+        var prefixElement = document.getElementById('prefix');
+        function getPrefix() {
+        	return document.getElementById('prefix').value
+        }
+        function getVersion() {
+        	return document.getElementById('version').value
+        }
+        function autoInit(but) {
+        	but.disabled = true;
+        	autoInit_ = true;
+        	autoFill();
+        }
+        function autoFill() {
+        	if (! autoInit_)
+        		return;
+        	var minsElement = document.getElementById('modelInstanceNamespace')
+        	var ns = namespace + getPrefix()
+        	minsElement.value = ns
+        	var minsvElement = document.getElementById('versionIRI')
+        	var minsv_Element = document.getElementById('versionIRI_')
+        	var nameElement = document.getElementById('nameField')
+        	var name_Element = document.getElementById('nameField_')
+        	ns += '/' + getVersion();
+        	minsvElement.value = ns
+        	minsv_Element.innerHTML = ns
+        	nameElement.value = getPrefix();
+        	name_Element.innerHTML = getPrefix();
+        }
+        </script>
+    </head>
+    <body onLoad='vc_onLoad()'>
+        <h1>Configure Ontology for id [_id_]</h1> 
+        <font color='red'>Comments:</font> _comments_<br>
+        <form>
+            <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+                <tr _hideOSLCchoice_ border='0'>
+                   <td>Initialize for OSLC<td aligh='left'><input checked=_OSLCDefaultChoice_ type='checkbox' name='initializeForOSLC'/>
+                </tr>
+                <tr _hideOSLCchoice_ border='0'>
+                   <td>Auto initialize name space<td aligh='left'><input onClick='autoInit(this)' type='button' value='Auto Init'/></td>
+                </tr>
+				<tr class="com-ibm-team-workitem queryResults">
+					<th class="headerColumnUnsorted" align='left'>Field
+					<th class="headerColumnUnsorted" align='left'>Value
+				</tr>
+                <tr>
+                    <td>Prefix<td>
+                    <input placeholder='Must enter a simple prefix (e.g., myowl)' id='prefix' _hideOSLCchoice_ size='40' type='text' value='_prefix_' name='prefix' onkeyup='autoFill()'/>
+                    <span _notHideOSLCchoice_>_prefix_</span>
+                </tr>
+                <tr>
+                    <td>Model Instance Namespace<td>
+                    <input id='modelInstanceNamespace' _hideOSLCchoice_ size='40' type='text' value='_modelInstanceNamespace_' name='modelInstanceNamespace'/>
+                    <span _notHideOSLCchoice_>_modelInstanceNamespace_</span>
+                </tr>
+                <tr>
+                    <td>Version IRI<td>
+                    <input id='versionIRI' hidden=true _hideOSLCchoice_ size='40' type='text' value='_version_' name='version'/>
+                    <span id='versionIRI_' >_version_</span>
+                </tr>
+               <tr>
+                    <td>Version<td>
+                    <input placeholder='Enter simple version term (e.g., v0.1)' id='version' _hideOSLCchoice_ size='40' type='text' value='_versionSuffix_' onkeyup='autoFill()'/>
+                    <span _notHideOSLCchoice_>_versionSuffix_</span>
+                </tr>
+                 <tr>
+                    <td>Name<td>
+                    <input id='nameField' hidden=true size='40' type='text' value='_name_' name='name'/>
+					<span id='nameField_'>_name_</span>
+                </tr>
+                <tr>
+                    <td>Tags<td>
+                    <input placeholder='Comma separated terms to tag this item' size='40' type='text' value='_tags_' name='tags'/>
+                </tr>
+                <tr>
+                    <td title='Select this to archive this element. Than it can also be deleted.'>Archived<td align='left'><input _archived_ type='checkbox' value='true' name='archived' />
+                </tr>
+			</table>
+ <div>
+ <hr>
+			<div hidden='true' id='viewConfigMessage'>Using default View configuration.</div>
+			<button onClick='return vc_toggleViewTable(this);'>Customize the View Configuration</button>
+            <table hidden='true' id='viewConfigTable' class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+				<tr>
+				    <td>View Configuration
+				    <button onclick='showViewConfig(this);return false;' name='showHideButton' value='show'>show</button>
+				    <td id='viewConfigTd' hidden='true' >
+				    <textarea style='background-color:lightGray' id='actualViewConfig' readonly rows='5' cols='60'>_actualViewConfig_</textarea>
+				    <textarea hidden='true'  name='viewConfig' id='savedViewConfig'>_savedViewConfig_</textarea>
+				<tr>    
+				    <td>View Configuration Editing
+				    <button hidden='true' class='button_help' title='Select predicates for text search or list display of related models associated with this ontology.'>?</button>
+				    <td>Select predicates for text search or list display of related models associated with this ontology.
+                            <table id='predicateTable' border="1">
+                            <tr>
+                            <th title='URL of the predicate'>Predicate
+                            <th title='Mark this field for text search, and for direct editing when repository is edited.'>For Text Search
+                            <th title='Mark that this field is displayed'>For display
+                            <th title='String to be used as column title when displayed'>Display Title
+                            <th title='Format html pattern for the text, with % marking the texual content of the field'>Display Tag
+                            <th title='Actions such as delete and add new'>Action</tr>
+                                <tr hidden='true'>
+                                <td style='text-wrap:unrestricted'>predicate
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);'>
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);'>
+                                <td><input  value="new title here">
+                                <td><input  value="%">
+                                <td align='center'><button title='Delete this row' class='button_image button_delete' onClick='vc_removeRow(this);return false;'></button>
+                                </tr>
+                                _viewPredicates_
+                                <tr _hiddenRow_>
+                                <td style='text-wrap:unrestricted'>_predicate_
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);' _tchecked_>
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);' _lchecked_>
+                                <td><input _pdisabled_ value="_ptitle_">
+                                <td><input _pdisabled_  value="_ptag_">
+                                <td align='center'><button  title='Delete this row' class='button_image button_delete' onClick='vc_removeRow(this);return false;'></button>
+                                _/viewPredicates_
+							 <tr title="Enter a new predicate URL in the input field, and click the [+] button">
+                             <td>Enter a new predicate to add: 
+                             <td colspan='4'><input style='background-color:lightGray;width:100%' type="text" value="a new predicate here">
+                             <td colspan='4'><input style='background-color:lightGray;width:100%' type="text" placeholder="predicate URL (use prefix for shorthand)">
+                             <td align='center'><button id='addBut' title='Add new predicate' class='button_image button_plus' onclick="vc_addRow(this); return false;"></button></tr>                            
+                             </table>
+				    </td>
+				</tr>
+            </table>
+ <hr>
+ </div>
+ 			<br> <input type='submit' name='update' id='updateButton' value='Update' onClick='vc_doUpdate();'>
+ 				 <input	type='button' name='abort' value='Cancel' onClick='doCancel()'> 
+ 				 <input	type='hidden' name='id' value='_id_'>
+                 <input hidden=true name='initialize' value='_initialize_'/>
+		</form>
+</body>
+</html>

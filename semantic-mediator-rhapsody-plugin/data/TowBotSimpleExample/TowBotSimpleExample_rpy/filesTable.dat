@@ -1,0 +1,12 @@
+I-Logix-RPY-Archive version 8.6.0 * 2071424
+
+- filesTable = { IRPYRawContainer 
+	- size = 5;
+	- value = "TowBotSimpleExample.rpy" ""
+	"TowBotSimpleExample_rpy\\CGCompatibilityPre76Cpp.sbs" "CGCompatibilityPre76Cpp"
+	"TowBotSimpleExample_rpy\\Default.sbs" "Default"
+	"TowBotSimpleExample_rpy\\DefaultComponent.cmp" "DefaultComponent"
+	"TowBotSimpleExample_rpy\\Pre76GESkin.sbs" "Pre76GESkin"
+	
+}
+

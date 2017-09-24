@@ -1,0 +1,133 @@
+<rdf:RDF
+    xmlns:rules="http://rules#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sm="http://com.ibm.ns/haifa/sm#"
+    xmlns:rhp_model="http://com.ibm.ns/rhapsody/haifa/sm#"
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:j.0="http://com.ibm.semantic.mediation/config/property#"
+    xmlns:base="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#"
+    xmlns="http://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" > 
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#18">
+    <dc:title>M1</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <rhp_model:hasFlow rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#13"/>
+    <rhp_model:hasFlow rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#16"/>
+    <rhp_model:hasPort rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#14"/>
+    <rhp_model:hasPort rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#19">
+    <dc:title>p2a</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:isReversed rdf:datatype="http://www.w3.org/2001/XMLSchema#xsd:boolean">false</rhp_model:isReversed>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasType rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#2">
+    <dc:title>k1</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <rhp_model:hasType rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#6">
+    <dc:title>int</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Type"/>
+    <dc:description>Predefined int</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#16">
+    <dc:title>p1a_p2a_0</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Flow"/>
+    <rhp_model:hasPort_1 rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#14"/>
+    <rhp_model:hasPort_2 rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#19"/>
+    <rhp_model:hasFlowDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ToEnd2Direction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#17">
+    <dc:title>p2b</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:isReversed rdf:datatype="http://www.w3.org/2001/XMLSchema#xsd:boolean">false</rhp_model:isReversed>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasType rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#5">
+    <dc:title>Default</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Package"/>
+    <rhp_model:hasBlock rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#15">
+    <dc:title>p2b_p1b</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Flow"/>
+    <rhp_model:hasPort_1 rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#17"/>
+    <rhp_model:hasPort_2 rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#8"/>
+    <rhp_model:hasFlowDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ToEnd2Direction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#3">
+    <dc:title>double</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Type"/>
+    <dc:description>Predefined double</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#4">
+    <dc:title>M2</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <rhp_model:hasFlow rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#9"/>
+    <rhp_model:hasFlow rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#15"/>
+    <rhp_model:hasPort rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#17"/>
+    <rhp_model:hasPort rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#14">
+    <dc:title>p1a</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:isReversed rdf:datatype="http://www.w3.org/2001/XMLSchema#xsd:boolean">false</rhp_model:isReversed>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <rhp_model:hasType rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#7">
+    <dc:title>M</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+    <rhp_model:hasPart rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#12"/>
+    <rhp_model:hasPart rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#2"/>
+    <rhp_model:hasBlock rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#18"/>
+    <rhp_model:hasBlock rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#11">
+    <dc:title>BasicImportExportTestWithPorts</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#SysML"/>
+    <rhp_model:hasPackage rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#5"/>
+    <rhp_model:hasPackage rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#10">
+    <dc:title>PredefinedTypesCpp</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Package"/>
+    <rhp_model:hasOTHER rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#6"/>
+    <rhp_model:hasOTHER rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#8">
+    <dc:title>p1b</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:isReversed rdf:datatype="http://www.w3.org/2001/XMLSchema#xsd:boolean">false</rhp_model:isReversed>
+    <rhp_model:hasMultiplicity rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity"/>
+    <rhp_model:hasPortDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <rhp_model:hasType rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#12">
+    <dc:title>k2</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <rhp_model:hasType rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#9">
+    <dc:title>p2b_p1b_0</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Flow"/>
+    <rhp_model:hasPort_1 rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#17"/>
+    <rhp_model:hasPort_2 rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#8"/>
+    <rhp_model:hasFlowDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ToEnd2Direction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#13">
+    <dc:title>p1a_p2a</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Flow"/>
+    <rhp_model:hasPort_1 rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#14"/>
+    <rhp_model:hasPort_2 rdf:resource="https://SHANI1-TP.haifa.ibm.com:9444/dm/sm/repository/rhapsody/resource#19"/>
+    <rhp_model:hasFlowDirection rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ToEnd2Direction"/>
+  </rdf:Description>
+</rdf:RDF>
+

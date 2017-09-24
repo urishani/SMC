@@ -1,0 +1,101 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">    
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+       <style>
+      </style>
+        
+        <script>
+		// File Name: rdfShortList.html
+		
+         var prefixes = [];
+        _prefixes_ prefixes['_prefix_'] = '_ns_';_/prefixes_
+         var sav =[];
+         var cont =[];
+          function load(a, r)
+          {
+           if (r.indexOf(':') < 0)
+              return false;
+           var pref = prefixes[r.split(':')[0]];
+           if (!pref) return false;
+           var p = a.parentNode;
+           var nr =  pref + r.split(':')[1];
+           sav[r] = p.innerHTML;
+           if (cont[r]) {
+              p.innerHTML = cont[r];
+              return false;
+           }
+           p.innerHTML= 'loading...';
+           var xmlhttp;
+           if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+              xmlhttp=new XMLHttpRequest();
+           } else {// code for IE6, IE5
+              xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+           }
+           xmlhttp.onreadystatechange=function()  {
+              if (xmlhttp.readyState==4 && xmlhttp.status==200)   {
+                 var resp = xmlhttp.responseText;
+                 resp = resp.replace(/</g,'&lt;');
+                 resp = resp.replace(/>/g,'&gt;');
+                 var iH = '<a href="" onclick="return myDone(this,\'' + r + '\')">close</a><br><pre>' + resp + '</pre>';
+                 cont[r] = iH;
+                 p.innerHTML= iH;
+			} else if (xmlhttp.readyState == 4 && xmlhttp.status != 200)
+				p.innerHTML = 'ERROR !! ';
+           }
+           xmlhttp.open("GET",nr,true);
+           xmlhttp.setRequestHeader("Accept","application/xml+rdf");
+           xmlhttp.send();
+           return false;
+        }
+        
+        function myDone(a, r) {
+           var p = a.parentNode;
+           p.innerHTML = sav[r];
+           sav[r] = null;
+           return false;
+        }
+        
+        </script>
+    </head>
+<body>
+<h1 class='h1'>List of contents for _id_:_domain_</h1>
+_numRows_  resources found.<br>
+Click selectable <b>resource</b> to view its RDF description.<br>
+<table class='smTable dj_webkit com-ibm-team-workitem queryResultsTable' id='table' >
+    <tr class="com-ibm-team-workitem queryResults">
+       <th class="smTh headerColumnUnsorted">num</th>
+       <th class="smTh headerColumnUnsorted">resource</th>
+       <th class="smTh headerColumnUnsorted">type</th>
+	    _titles_
+		<th class="smTh headerColumnUnsorted">_title_</th> 
+		_/titles_
+   </tr>
+_rows_
+<tr class="smRow_evenRow_ com-ibm-team-workitem visibleRow summary">
+<td>_num_
+<td title='Click to view resource RDF'><a href='_fullResource_' onclick='return load(this, "_resource_")'>_resource_</a>
+<td>_type_
+_contents_
+<td align='left'>_content_
+_/contents_
+</tr>
+_/rows_
+</table>
+</body></html>

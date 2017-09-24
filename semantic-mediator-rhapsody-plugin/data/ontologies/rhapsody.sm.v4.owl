@@ -1,0 +1,985 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY sm "http://com.ibm.ns/haifa/sm#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY oslc-am "http://open-services.net/ns/am#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://com.ibm.ns/rhapsody/haifa/sm#"
+     xml:base="http://com.ibm.ns/rhapsody/haifa/sm"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oslc-am="http://open-services.net/ns/am#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:sm="http://com.ibm.ns/haifa/sm#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#">
+        <owl:imports rdf:resource="http://com.ibm.ns/haifa/sm#"/>
+        <owl:versionIRI rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm.v4"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&terms;title">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#common"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&terms;description">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#common"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&terms;created">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#common"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&sm;hasSMResource"/>
+    <rdf:Description rdf:about="&rdfs;comment">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#common"/>
+    </rdf:Description>
+    <owl:AnnotationProperty rdf:about="&terms;modified">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#common"/>
+    </owl:AnnotationProperty>
+    <rdf:Description rdf:about="&rdfs;label">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#common"/>
+    </rdf:Description>
+    <owl:AnnotationProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#common"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://com.ibm.ns/haifa/sm#hasSMResource -->
+
+    <rdf:Description rdf:about="&sm;hasSMResource">
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhapsodyElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#actsOnEvent -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#actsOnEvent">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Reception"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#flow -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#flow"/>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#flowsViaPort -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#flowsViaPort">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasAttribute">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Classification"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasAttributeType -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasAttributeType">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasBaseClass -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasBaseClass">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Interface"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Realization"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasBlock -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasBlock">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Container"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasConnector -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasConnector">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Connector"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Container"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasContract -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasContract">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Interface"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasEndPoint -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasEndPoint">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasEvent">
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Container"/>
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasFlow -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasFlow">
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Container"/>
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Flow"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasFlowDirection -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasFlowDirection">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#flowsViaPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasInterface -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasInterface">
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Container"/>
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Interface"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity_1 -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity_1">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasEndPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity_2 -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity_2">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasEndPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasOperation -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasOperation">
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Classification"/>
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Operation"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasPackage -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPackage">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Package"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#SysML"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPart">
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Container"/>
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasPort -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPort">
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StandardPort"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasPortDirection -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPortDirection">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PortDirection"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasPort_1 -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPort_1">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#flowsViaPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasPort_2 -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPort_2">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#flowsViaPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasProvided -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasProvided">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Interface"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StandardPort"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasRealization -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasRealization">
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Realization"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasRequired -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasRequired">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Interface"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StandardPort"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasReturnType -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasReturnType">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasSystem -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasSystem">
+        <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+        <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Package"/>
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasType"/>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#hasVisibility -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasVisibility">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#isReversed -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#isReversed">
+        <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#operations -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#structure -->
+
+    <owl:ObjectProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#structure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#common -->
+
+    <owl:DatatypeProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#common"/>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#flow -->
+
+    <owl:DatatypeProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#flow"/>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#isReversed -->
+
+    <owl:DatatypeProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#isReversed"/>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#operations -->
+
+    <owl:DatatypeProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#operations"/>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#valueType -->
+
+    <owl:DatatypeProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#valueType">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#version -->
+
+    <owl:DatatypeProperty rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#version">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Attribute -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Attribute">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OperationElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasVisibility"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Visibility"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasAttributeType"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+                            <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+                            <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Literal"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Block -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Block">
+        <rdfs:label>Block</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Classification"/>
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Container"/>
+        <rdfs:comment>Block is a class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Classification -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Classification">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StructureElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Connector -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Connector">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPort_2"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StandardPort"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity_2"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPort_1"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StandardPort"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity_1"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Container -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Container">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StructureElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasOperation"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Direction -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Direction">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Enumerations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Enumerations -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Enumerations">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhapsodyElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Event -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Event">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OperationElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Flow -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Flow">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPort_1"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasFlowDirection"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Direction"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPort_2"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#FlowElement -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#FlowElement">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhapsodyElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#FlowPort -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#isReversed"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasType"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ReturnType"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Interface -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Interface">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Classification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasOperation"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Operation"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Literal -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Literal">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ReturnType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Enumerations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Object -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Object">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StructureElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasType"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Operation -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Operation">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OperationElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasVisibility"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Visibility"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#OperationElement -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#OperationElement">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhapsodyElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Package -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Package">
+        <rdfs:label>Package</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Container"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#PortDirection -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#PortDirection">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Enumerations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ValuedOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Realization -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Realization">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OperationElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Reception -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Reception">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#ReturnType -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#ReturnType">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OperationElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#RhapsodyElement -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#RhapsodyElement">
+        <rdfs:subClassOf rdf:resource="&sm;SmResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#StandardPort -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#StandardPort">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasVisibility"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Visibility"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasMultiplicity"/>
+                <owl:onClass rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#StructureElement -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#StructureElement">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhapsodyElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#SysML -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#SysML">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#StructureElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#version"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#TriggeredOperation -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#TriggeredOperation">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ValuedOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#ValuedOperation -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#ValuedOperation">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Operation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasReturnType"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Block"/>
+                            <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Event"/>
+                            <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Literal"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Visibility -->
+
+    <owl:Class rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Visibility">
+        <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Enumerations"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#AnyMultiplicity -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#AnyMultiplicity">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#AtMostOneMultiplicity -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#AtMostOneMultiplicity">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#BiDirectionalPort -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#BiDirectionalPort">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PortDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#Bidirectional -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Bidirectional">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Direction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#ExactlyOneMultiplicity">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#InputPort -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#InputPort">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PortDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#OneOrMoreMultiplicity -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#OneOrMoreMultiplicity">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Multiplicity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#OutputPort -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#PortDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#PrimitiveOperation"/>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#PrivateVisibility -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#PrivateVisibility">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Visibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#ProtectedVisibility -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#ProtectedVisibility">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Visibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#PublicVisibility">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Visibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#ToEnd1Direction -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#ToEnd1Direction">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Direction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#ToEnd2Direction -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#ToEnd2Direction">
+        <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Direction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://com.ibm.ns/rhapsody/haifa/sm#TrigerredOperation -->
+
+    <owl:NamedIndividual rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#TrigerredOperation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

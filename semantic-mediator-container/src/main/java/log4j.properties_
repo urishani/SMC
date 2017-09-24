@@ -1,0 +1,21 @@
+log4j.rootLogger=INFO,SMC_STDOUT
+# here you can control how much the spring framework logs at different levels: TRACE, DEBUG, ALL, etc.
+log4j.category.org.springframework.*=INFO
+#javax.servlet=DEBUG
+
+log4j.logger.com.ibm.dm.frontService.sm.utils.SMCLogger=INFO, SMC_STDOUT 
+# , SMC_HTML
+log4j.additivity.com.ibm.dm.frontService.sm.utils.SMCLogger=false
+
+log4j.appender.SMC_STDOUT=org.apache.log4j.ConsoleAppender
+log4j.appender.SMC_STDOUT.layout=org.apache.log4j.PatternLayout
+log4j.appender.SMC_STDOUT.layout.ConversionPattern=[%-5p %d] %M - %m%n 
+    
+log4j.appender.SMC_HTML=com.ibm.dm.frontService.sm.utils.SMCRollingFileAppender
+log4j.appender.SMC_HTML.layout=com.ibm.dm.frontService.sm.utils.SMCLayout
+log4j.appender.SMC_HTML.File=_smcLogFile_ 
+log4j.appender.SMC_HTML.MaxFileSize=1MB
+log4j.appender.SMC_HTML.MaxBackupIndex=99
+log4j.appender.SMC_HTML.layout.LocationInfo=false
+
+   

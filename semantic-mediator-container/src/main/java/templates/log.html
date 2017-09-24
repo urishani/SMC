@@ -1,0 +1,178 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+#header#
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ 		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=yui.2.2.1.css">
+<script>
+// File Name: log.html
+
+function filter(td, n) {
+   var tbl = document.getElementById('table');
+   var val = td.innerHTML;
+   var filter = document.getElementById('filter');
+   filter.innerHTML = val;
+   var button = document.getElementById('button');
+   button.disabled=false;
+   var trs = tbl.rows;
+   for (var i=0; i < trs.length; i++) {
+      var tr = trs[i];
+      var tds = tr.cells;
+      var atd = tds[n];
+      if ('th' == atd.localName) continue;
+      var tdVal = atd.innerHTML;
+      if (tdVal == val)
+         tr.hidden=0;
+      else
+         tr.hidden=1;
+   }
+}
+function filterTh(what, n) {
+   var tbl = document.getElementById('table');
+   var filter = document.getElementById('filter');
+   var f = filter.innerHTML;
+   if (f == "No filter") f = "*";
+   filter.innerHTML = what + '[' + f + ']';
+   var button = document.getElementById('button');
+   button.disabled=false;
+   var trs = tbl.rows;
+   var items = {};
+   for (var i=0; i < trs.length; i++) {
+      var tr = trs[i];
+      var tds = tr.cells;
+      var atd = tds[n];
+      if ('th' == atd.localName) continue;
+      var tdVal = atd.innerHTML;
+      if (items[tdVal]) {
+         tr.hidden=1;
+         continue;
+      }
+      items[tdVal]=1;
+   }
+}
+
+function showAll() {
+   var filter = document.getElementById('filter');
+   filter.innerHTML = 'No filter';
+   var button = document.getElementById('button');
+   button.disabled=true;
+   var tbl = document.getElementById('table');
+   var trs = tbl.rows;
+   for (var i=0; i < trs.length; i++) {
+      var tr = trs[i];
+      tr.hidden=0;
+   }
+}
+   
+var current = _current_;
+var pages = _pages_;
+   
+function onLoad() {
+   pages++;
+   current = pages - current;
+   var p = document.getElementById('prev');
+   var n = document.getElementById('next');
+   var pp = document.getElementById('oldest');
+   var nn = document.getElementById('newest');
+   var ind = document.getElementById('indicator');
+   ind.innerHTML = 'Page ' + current + ' Out of ' + pages + ' Pages.';
+   if (current > 1) { 
+      var c = pages - (current - 1);
+      p.value= '' + c
+      p.disabled = false;
+   }
+   if (current < pages) { 
+      n.disabled = false;
+      var c = pages - (current + 1);
+      if (c == 0)
+         c = '';
+      n.value = '' + c; 
+   }
+   c = pages - 1;
+   if (c == 0)
+      c = '';
+   pp.value = '' + c; 
+   if (current == pages)
+      nn.disabled = true;
+   if (current == 1)
+      pp.disabled = true;  
+}
+
+</script>
+<title>_title_</title>
+</head>
+<body onload='onLoad()'>
+<a href='/dm/smLogs?UpgradeLog=all' target='_blank'>View Configuration Upgrades Log</a>
+<hr size="1" noshade>
+<h2>_title_</h2>
+<table class='dj_webkit com-ibm-team-workitem queryResultsTable' cellspacing="1">
+<tr class="com-ibm-team-workitem visibleRow summary">
+<td>Log session start time _logStartTime_.&nbsp;&nbsp;&nbsp;
+<td>Filter (by Job or Task): 
+<td><div id='filter'>No filter</div>
+<td><form><button disabled id='button' onClick='showAll();return false;'>Show All</button></form>
+<td>
+<td id='indicator'>Page current Out of pages pages.
+<td>Navigate: 
+<td><form action='/dm/smLogs'><button id='oldest' type='submit' name='ShowLog'>&lt;&lt;</button></form>
+<td><form action='/dm/smLogs'><button id='prev' type='submit' name='ShowLog' disabled>Prev</button></form>
+<td><form action='/dm/smLogs'><button id='next' type='submit' name='ShowLog' disabled>Next</button></form>
+<td><form action='/dm/smLogs'><button id='newest' type='submit' name='ShowLog' value=''>&gt;&gt;</button></form>
+</table>
+<table class='dj_webkit com-ibm-team-workitem queryResultsTable' id='table' cellspacing="0" cellpadding="4" border="1" width="100%">
+    <tr class="com-ibm-team-workitem queryResults">
+       <th class="headerColumnUnsorted">Time</th>
+       <th class="headerColumnUnsorted">Category</th>
+       <th class="headerColumnUnsorted">Id</th>
+       <th class="headerColumnUnsorted">Duration (ms)</th>
+       <th class="headerColumnUnsorted">Level</th>
+       <th class="headerColumnUnsorted" 
+       		onClick='filterTh("Jobs",5);'>Job 
+       		<font style='color:white; background-color:blue; style:bold;' title='Click an entry to filter on that Job. Click here to show one line per job.'>
+       		&nbsp;?&nbsp;</font></th>
+       <th class="headerColumnUnsorted" 
+       		onClick='filterTh("Tasks",6);'>Task 
+       		<font style='color:white; background-color:blue; style:bold; width:1' title='Click an entry to filter on that Task. Click here to show one line per task/job.'>
+       		&nbsp;?&nbsp;</font></th>
+       <th class="headerColumnUnsorted">Phase</th>
+       <th class="headerColumnUnsorted">Info</th>
+       <th class="headerColumnUnsorted">Thread</th>
+</tr>
+#/header#
+#row#
+<tr  class="com-ibm-team-workitem visibleRow summary">
+<td>_time_</td>
+<td title="category">_category_</td>
+<td>_id_</td>
+<td title="processing duration">_duration_</td>
+<td title="Level" onClick='alert(this);'>_level_</td>
+<td onClick='filter(this,5);'>_job_</td>
+<td onClick='filter(this,6);'>_task_</td>
+<td>_phase_</td>
+<td title="Message"><b>_info_</b></td>
+<td title="main thread">_thread_</td>
+</tr>
+#/row#
+#footer#
+</table>
+</doc>
+</html>
+#/footer#

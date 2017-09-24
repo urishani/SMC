@@ -1,0 +1,113 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+<body>
+	<h1>
+		Edit Mediator for id [Mdt-253]
+		<form>
+			<table border='1'>
+				<tr>
+					<th>Field
+					<th>Value
+				</tr>
+				<tr>
+					<td>Version
+					<td><input size='40' type='text' value='1.0' name='version' />
+				</tr>
+				<tr>
+					<td>Name
+					<td><input size='40' type='text'
+						value='RhP Production Get (#2)' name='name' />
+				</tr>
+				<tr>
+					<td>Input Port Id
+					<td align='center'><select value='Prt-260' name='inputPortId'>
+
+							<option>Prt-245:RhP Production</option>
+							<option>Prt-247:RhP Production Repository</option>
+							<option>Prt-248:BSO Production Repository</option>
+							<option>Prt-249:SystemModeler Production Repository</option>
+							<option>Prt-250:SystemModeler Production #2</option>
+							<option selected>Prt-260:RhP Production Repository #2</option>
+							<option>Prt-261:BSO Production Repository #2</option>
+							<option>Prt-262:SystemModeler Production Repository #2</option>
+
+
+							<option>NaN</option>
+					</select>
+				</tr>
+				<tr>
+					<td>Output Port Id
+					<td align='center'><select value='Prt-246' name='outputPortId'>
+
+							<option selected>Prt-246:RhP Production #2</option>
+							<option>Prt-247:RhP Production Repository</option>
+							<option>Prt-248:BSO Production Repository</option>
+							<option>Prt-249:SystemModeler Production Repository</option>
+							<option>Prt-251:SystemModeler Production</option>
+							<option>Prt-260:RhP Production Repository #2</option>
+							<option>Prt-261:BSO Production Repository #2</option>
+							<option>Prt-262:SystemModeler Production Repository #2</option>
+
+
+							<option>NaN</option>
+					</select>
+				</tr>
+				<tr>
+					<td>Rule Set Id
+					<td align='center'><select value='Rul-133' name='ruleSetId'>
+
+							<option selected>Rul-133:Rhapsody Import extraction
+								rules w/connectors</option>
+							<option>Rul-199:System Modeler extraction rules</option>
+							<option>Rul-200:Modelica/BSO mediation</option>
+							<option>Rul-201:Rhapsody/BSO mediation</option>
+
+
+							<option>NaN</option>
+					</select>
+				</tr>
+				<tr>
+					<td>Interceptor Name
+					<td align='center'><select value='NullMediator'
+						name='interceptorName'>
+
+							<option>ViewMediator</option>
+							<option>FraunhoferMediator</option>
+							<option>ExtractMediator</option>
+							<option selected>NullMediator</option>
+
+
+							<option>NaN</option>
+					</select>
+				</tr>
+
+				<tr>
+					<td>Tags
+					<td><input size='40' type='text' value='rhp-bso-sm'
+						name='tags' />
+				</tr>
+				<tr>
+					<td>Archived
+					<td align='center'><input checked type='checkbox' value='true'
+						name='archived' />
+				</tr>
+			</table>
+			<br> <input type='submit' name='update' value='Update'><input
+				type='submit' name='abort' value='Cancel'> <input
+				type='hidden' name='id' value='Mdt-253'>
+		</form>
+</body>
+</html>

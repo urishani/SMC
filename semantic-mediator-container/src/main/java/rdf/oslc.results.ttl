@@ -1,0 +1,7 @@
+@prefix oslc: <http://open-service.net/ns/core#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix smc: <http://com.ibm.ns/haifa/sm#>.
+_results_
+<_resource_> oslc:label "_label_".
+_/results_

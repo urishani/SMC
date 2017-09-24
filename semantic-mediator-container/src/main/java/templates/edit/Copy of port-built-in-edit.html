@@ -1,0 +1,134 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+        <link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=yui.2.2.1.css">    
+        <script  type="text/javascript" src="/dm/resources/js/viewConfig.js"></script>
+	</head>
+	<script>
+	// This is an array of objects, each having properties: 
+	//  -  title, tag, 
+	//  - content (array of properties), 
+	//  - forText and forView are booleans.
+	var viewConfig = _viewConfig_; 
+	
+	window.addEventListener("message", receiveMessage, false);
+    function receiveMessage(e) {
+        var parent = e.source;
+        if (e.data == 'update') {
+          var but = document.getElementById('update');
+          but.form.submit();
+//          alert("submit finished");
+          parent.postMessage("updateDone", e.origin);
+          alert("Posted to parent. Done");
+        }
+    };
+
+	
+	</script>
+<body>
+	<h1>
+		Edit Port for id [_id_]
+		<form>
+            <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+				<tr class="com-ibm-team-workitem queryResults">
+					<th class="headerColumnUnsorted">Field
+					<th class="headerColumnUnsorted">Value
+				</tr>
+				<tr>
+					<td>Version
+					<td><input size='40' type='text' value='_version_'
+						name='version' />
+				</tr>
+				<tr>
+					<td>Name
+					<td><input size='40' type='text' value='_name_' name='name' />
+				</tr>
+
+				<tr>
+					<td>Access Name
+					<td><input size='40' type='text' value='_accessName_'
+						name='accessName' />
+				</tr>
+				<tr>
+					<td>Ontology Id
+					<td align='center'><select value='_selectedOntologyId_'
+						name='ontologyId'> _ontologyId_
+							<option _selected_>_idName_</option>_/ontologyId_
+
+							<option _selectedNaNOntologyId_>NaN</option>
+					</select>
+				</tr>
+
+				<tr>
+					<td>Tags
+					<td><input size='40' type='text' value='_tags_' name='tags' />
+				</tr>
+				<tr _showIsDirect_ ><td>Is direct <font style='background-color:blue;color:white;font-style:bold'
+				      title='Flags this port as directly accessible Post over the internet by tools'>&nbsp;?&nbsp;</font>
+				    <td align='left'><input _isDirect_ type='checkbox'
+				    	value='true' name='isDirect' >
+				<tr>
+					<td>Archived
+					<td align='left'><input _archived_ type='checkbox'
+						value='true' name='archived' >
+				</tr>
+			</table>
+ <div _hideIfNotRepository_>
+ <hr>
+			<button onClick='return toggleViewTable(this);'>Show View Configuration</button>
+            <table hidden='true' id='viewConfigTable' class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+				<tr>
+				    <td>View Configuration<button onclick='showViewConfig(this);return false;' name='showHideButton' value='show'>show</button>
+				    <td id='viewConfigTd' hidden='true'><textarea style='background-color:lightGray' id='viewConfig' readonly rows='5' cols='60' name='viewConfig'>_viewConfig_</textarea>
+				    <button hidden='true' onClick='resetViewConfig(); return false;'>Reset to Default</button>
+				<tr>    
+				    <td>View Configuration Editing
+				    <button hidden='true' class='button_help' title='Select predicates for text search or list display of related models associated with this ontology.'>?</button>
+				    <td>Select predicates for text search or list display of related models associated with this ontology.
+                            <table id='predicateTable' border="1">
+                            <tr><th>Predicate<th>For Text Search<th>For display<th>Display Title<th>Display Tag<th>Action</tr>
+                                _viewPredicates_
+                                <tr _hiddenRow_>
+                                <td style='text-wrap:unrestricted'>_predicate_
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);' _tchecked_>
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);' _lchecked_>
+                                <td><input _pdisabled_ value="_ptitle_">
+                                <td><input _pdisabled_  value="_ptag_">
+                                <td><button style='background-color:red;color:white;style=bold' onClick='removeRow(this);return false;'>&nbsp;X&nbsp;</button>
+                                _/viewPredicates_
+							 <tr title="Enter a new predicate URL in the input field, and click the [+] button">
+                             <td>Enter a new predicate to add: 
+                             <td colspan='4'><input style='background-color:lightGray;width:100%' type="text" value="a new predicate here" name='newPredicate'>
+                             <td><button id='addBut' style="background-color:blue;color:white;font-style:bold" onclick="addRow(this); return false;">&nbsp;+&nbsp;</button></tr>                            
+                             </table>
+				    </td>
+				</tr>
+            </table>
+ <hr>
+ </div>
+ <div>
+ 			<br> <input id='update' type='submit' name='update' value='Update'><input
+				type='submit' name='abort' value='Cancel'> <input
+				type='hidden' name='id' value='_id_'>
+<div>
+		</form>
+</body>
+</html>

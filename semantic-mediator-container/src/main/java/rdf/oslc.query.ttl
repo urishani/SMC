@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix oslc: <http://open-service.net/ns/core#>.
+# only partially. TBD.
+<_url_> _uriType_
+_members_
+   rdfs:member
+_resources_    <_resource_>_comma__/resources_
+_/members_
+_nextPage_
+<_url_?oslc:paging=true> oslc:nextPage <_url_?page=_next_>.
+_/nextPage_

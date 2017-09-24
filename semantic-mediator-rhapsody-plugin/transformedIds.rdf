@@ -1,0 +1,168 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rhp_model="http://com.ibm.rhapsody/sprint/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" > 
+  <rdf:Description rdf:about="http://sprint/ID-2dddc22a-d10d-4521-902c-fbbae273728c">
+    <rhp_model:hasPackage rdf:resource="http://sprint/ID-7aad6368-2a56-4681-917f-764063e9c00e"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/SysML"/>
+    <rhp_model:hasPackage rdf:resource="http://com.ibm.rhapsody/sprint/OLDID-3-1"/>
+    <dc:title>TowBotSimpleExample</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-fa3d717a-a9c5-4f6e-bca4-0cf9217b502b">
+    <dc:title>towRqstRefused</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Reception"/>
+    <rhp_model:hasOnEvent rdf:resource="http://sprint/ID-eea9afca-1e31-450e-b370-e49739f16a2e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.rhapsody/sprint/OLDID-3-1">
+    <rhp_model:hasOTHER rdf:resource="http://sprint/ID-e6c263cc-4bc5-4a11-b32d-02148c93add0"/>
+    <rhp_model:hasOTHER rdf:resource="http://sprint/ID-6024c6ab-fe9e-402e-954f-27aca6d3b5e4"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Package"/>
+    <dc:title>PredefinedTypesCpp</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-4ca43462-ee37-46a9-b8a2-ef170832de07">
+    <dc:title>towCmd</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-e3f88ae5-b8a7-4764-adb7-3a3b3e1c7c42">
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-1e5a3a61-2b3e-47d4-9099-5df94fd93aa4"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Block"/>
+    <rhp_model:hasPort rdf:resource="http://sprint/ID-2c476289-e20a-40ad-ade3-b6d17a5dbc29"/>
+    <rhp_model:hasAttribute rdf:resource="http://sprint/ID-80be9fcc-061b-4c74-8fc0-fb1a701e8cbb"/>
+    <dc:title>C4I</dc:title>
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-fa3d717a-a9c5-4f6e-bca4-0cf9217b502b"/>
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-87f5c267-7cf1-4854-a70c-97100d769176"/>
+    <rhp_model:hasPort rdf:resource="http://sprint/ID-4fb34d78-c353-441a-b206-3177f4b8bf7a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-84fc7d9b-df03-4a48-9fb8-867a7d751f33">
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-e77041eb-4ce1-4b95-9cd1-f013d055d2b2"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Interface"/>
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-6984853e-7f16-4c92-9eb9-f89df4cd9574"/>
+    <dc:title>iUV</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-7aad6368-2a56-4681-917f-764063e9c00e">
+    <rhp_model:hasEvent rdf:resource="http://sprint/ID-a9013c45-34d8-486b-9e19-ecd3c9d3815c"/>
+    <rhp_model:hasInterface rdf:resource="http://sprint/ID-6d39514e-8c09-49e8-a978-01f1557a9b1a"/>
+    <rhp_model:hasInterface rdf:resource="http://sprint/ID-84fc7d9b-df03-4a48-9fb8-867a7d751f33"/>
+    <rhp_model:hasBlock rdf:resource="http://sprint/ID-e3f88ae5-b8a7-4764-adb7-3a3b3e1c7c42"/>
+    <dc:title>Default</dc:title>
+    <rhp_model:hasBlock rdf:resource="http://sprint/ID-a60b9f0a-66ab-469c-a420-0db1a9815e53"/>
+    <rhp_model:hasEvent rdf:resource="http://sprint/ID-4ca43462-ee37-46a9-b8a2-ef170832de07"/>
+    <rhp_model:hasEvent rdf:resource="http://sprint/ID-091bae86-547e-48b9-af61-a9878e52ea88"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Package"/>
+    <rhp_model:hasInterface rdf:resource="http://sprint/ID-71ed683b-7e90-4a3c-9a55-27ed2b16208b"/>
+    <rhp_model:hasEvent rdf:resource="http://sprint/ID-eea9afca-1e31-450e-b370-e49739f16a2e"/>
+    <rhp_model:hasEvent rdf:resource="http://sprint/ID-dc1e8e37-73c7-4e20-8312-d08e6851abf9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-03bd71d1-80dd-43fd-9aec-da342ec23eeb">
+    <rhp_model:hasReturnType rdf:resource="http://sprint/ID-e6c263cc-4bc5-4a11-b32d-02148c93add0"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/PrimitiveOperation"/>
+    <dc:title>statusCheck</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-dc1e8e37-73c7-4e20-8312-d08e6851abf9">
+    <dc:title>rqstDenied</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-eea9afca-1e31-450e-b370-e49739f16a2e">
+    <dc:title>towRqstRefused</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-4fb34d78-c353-441a-b206-3177f4b8bf7a">
+    <dc:title>uv</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/StandardPort"/>
+    <rhp_model:hasContract rdf:resource="http://sprint/ID-84fc7d9b-df03-4a48-9fb8-867a7d751f33"/>
+    <rhp_model:hasProvided rdf:resource="http://sprint/ID-84fc7d9b-df03-4a48-9fb8-867a7d751f33"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-87cc4de7-6ee8-4220-8d76-8b534f9b9312">
+    <dc:title>towCmd</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Reception"/>
+    <rhp_model:hasOnEvent rdf:resource="http://sprint/ID-4ca43462-ee37-46a9-b8a2-ef170832de07"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-1e5a3a61-2b3e-47d4-9099-5df94fd93aa4">
+    <dc:title>towRqstAck</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Reception"/>
+    <rhp_model:hasOnEvent rdf:resource="http://sprint/ID-a9013c45-34d8-486b-9e19-ecd3c9d3815c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-60152e6f-de3a-4254-be35-c3f7f455f447">
+    <dc:title>towRqstAck</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Reception"/>
+    <rhp_model:hasOnEvent rdf:resource="http://sprint/ID-a9013c45-34d8-486b-9e19-ecd3c9d3815c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-a9013c45-34d8-486b-9e19-ecd3c9d3815c">
+    <dc:title>towRqstAck</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-42aec2ee-f09f-41d2-a4b2-c5c3d46f13df">
+    <rhp_model:hasOnEvent rdf:resource="http://sprint/ID-eea9afca-1e31-450e-b370-e49739f16a2e"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Reception"/>
+    <dc:title>towRqstRefused</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-87f5c267-7cf1-4854-a70c-97100d769176">
+    <rhp_model:hasOnEvent rdf:resource="http://sprint/ID-091bae86-547e-48b9-af61-a9878e52ea88"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Reception"/>
+    <dc:title>towingRqst</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-091bae86-547e-48b9-af61-a9878e52ea88">
+    <dc:title>towingRqst</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-80be9fcc-061b-4c74-8fc0-fb1a701e8cbb">
+    <dc:title>towCmdTimer</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Attribute"/>
+    <rhp_model:hasVisibility rdf:resource="http://com.ibm.rhapsody/sprint/PublicVisibility"/>
+    <rhp_model:hasAttributeType rdf:resource="http://sprint/ID-6024c6ab-fe9e-402e-954f-27aca6d3b5e4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-6984853e-7f16-4c92-9eb9-f89df4cd9574">
+    <dc:title>rqstDenied</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Reception"/>
+    <rhp_model:hasOnEvent rdf:resource="http://sprint/ID-dc1e8e37-73c7-4e20-8312-d08e6851abf9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-2c476289-e20a-40ad-ade3-b6d17a5dbc29">
+    <rhp_model:hasRequired rdf:resource="http://sprint/ID-6d39514e-8c09-49e8-a978-01f1557a9b1a"/>
+    <rhp_model:hasContract rdf:resource="http://sprint/ID-71ed683b-7e90-4a3c-9a55-27ed2b16208b"/>
+    <rhp_model:hasProvided rdf:resource="http://sprint/ID-84fc7d9b-df03-4a48-9fb8-867a7d751f33"/>
+    <dc:title>tb</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/StandardPort"/>
+    <rhp_model:hasProvided rdf:resource="http://sprint/ID-71ed683b-7e90-4a3c-9a55-27ed2b16208b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-a60b9f0a-66ab-469c-a420-0db1a9815e53">
+    <rhp_model:hasPart rdf:resource="http://sprint/ID-12f8a3a1-854f-42c9-bf29-8b86e009ad3a"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Block"/>
+    <dc:description>
+      description
+   </dc:description>
+    <dc:title>ATS</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-e6c263cc-4bc5-4a11-b32d-02148c93add0">
+    <dc:title>bool</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-12f8a3a1-854f-42c9-bf29-8b86e009ad3a">
+    <dc:title>c4i</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Object"/>
+    <rhp_model:hasType rdf:resource="http://sprint/ID-e3f88ae5-b8a7-4764-adb7-3a3b3e1c7c42"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-71ed683b-7e90-4a3c-9a55-27ed2b16208b">
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-87cc4de7-6ee8-4220-8d76-8b534f9b9312"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Interface"/>
+    <dc:title>iTBCntrl</dc:title>
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-03bd71d1-80dd-43fd-9aec-da342ec23eeb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-6d39514e-8c09-49e8-a978-01f1557a9b1a">
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-60152e6f-de3a-4254-be35-c3f7f455f447"/>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Interface"/>
+    <dc:title>iTB</dc:title>
+    <rhp_model:hasOperation rdf:resource="http://sprint/ID-42aec2ee-f09f-41d2-a4b2-c5c3d46f13df"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-e77041eb-4ce1-4b95-9cd1-f013d055d2b2">
+    <dc:title>towingRqst</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Reception"/>
+    <rhp_model:hasOnEvent rdf:resource="http://sprint/ID-091bae86-547e-48b9-af61-a9878e52ea88"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sprint/ID-6024c6ab-fe9e-402e-954f-27aca6d3b5e4">
+    <dc:title>int</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.rhapsody/sprint/Type"/>
+    <dc:description>
+      Predefined int
+   </dc:description>
+  </rdf:Description>
+</rdf:RDF>

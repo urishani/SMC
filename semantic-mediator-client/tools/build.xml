@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="SMC Client Library" default="all" basedir="..">
+	<property name="jars" value="lib-ibm" />
+	<property name="about" value="About - SMC Client Library.txt" />
+	<property name="sm-shared" value="../com.ibm.haifa.smc.client" />
+	<property name="sm-rhp-dev" value="../Sm.rhapsody.dev" />
+	<property name="sm-protege-dev" value="../Sm.protege.plugin.dev" />
+	
+	<property name="importer" value="tools/ImportPackagesFromMavenRepository.xml" />
+
+	<target name="all" depends="copy" />
+
+	<target name="init">
+		<ant antfile="${importer}" />
+		<delete dir="${sm-shared}/lib" />
+		<mkdir dir="${sm-shared}/lib" />
+	</target>
+
+	<target name="jar" description="JARs the Task" depends="init">
+		<jar destfile="${jars}/com.ibm.haifa.smc.client-1.0.0.jar" basedir="bin" />
+	</target>
+
+	<target name="copy" depends="jar">
+		<copy todir="${sm-shared}/lib-ibm">
+			<fileset dir="lib-ibm" />
+		</copy>
+		<copy todir="${sm-rhp-dev}/RHAPSODY-ibm">
+			<fileset dir="lib-ibm" />
+		</copy>
+		<copy todir="${sm-protege-dev}/lib-ibm">
+			<fileset dir="lib-ibm" />
+		</copy>
+		<copy file="${about}" tofile="${sm-shared}/${about}" />
+		<copy file="tools/ImportPackagesFromMavenRepository.xml" todir="${sm-shared}/tools" />
+	</target>
+</project>

@@ -1,0 +1,101 @@
+[Helpers]
+numberOfElements=8
+#REM: Definition of the plug-in
+name1=Generate RDF
+JavaMainClass1=com.ibm.rhapsody.sm.plugin.RhpPlugin
+JavaClassPath1=RHAPSODY/commons-lang3-3.1.jar;RHAPSODY/commons-logging-1.1.1.jar;RHAPSODY/guava-14.0.1.jar;RHAPSODY/httpclient-4.2.2.jar;RHAPSODY/httpcore-4.2.2.jar;RHAPSODY/httpmime-4.2.1.jar;RHAPSODY/jena-core-2.10.1.jar;RHAPSODY/jena-iri-0.9.6.jar;RHAPSODY/log4j-1.2.16.jar;RHAPSODY/slf4j-api-1.7.5.jar;RHAPSODY/slf4j-log4j12-1.7.5.jar;RHAPSODY-ibm/com.ibm.haifa.smc.client-1.0.0.jar;RHAPSODY-ibm/Sm-1.0.0.jar;
+#JavaClassPath1=ToolNet/SMC/RHAPSODY/commons-lang3-3.1.jar;ToolNet/SMC/RHAPSODY/commons-logging-1.1.1.jar;ToolNet/SMC/RHAPSODY/guava-14.0.1.jar;ToolNet/SMC/RHAPSODY/httpclient-4.2.2.jar;ToolNet/SMC/RHAPSODY/httpcore-4.2.2.jar;ToolNet/SMC/RHAPSODY/httpmime-4.2.1.jar;ToolNet/SMC/RHAPSODY/jena-core-2.10.1.jar;ToolNet/SMC/RHAPSODY/jena-iri-0.9.6.jar;ToolNet/SMC/RHAPSODY/log4j-1.2.16.jar;ToolNet/SMC/RHAPSODY/slf4j-api-1.7.5.jar;ToolNet/SMC/RHAPSODY/slf4j-log4j12-1.7.5.jar;ToolNet/SMC/RHAPSODY-ibm/com.ibm.haifa.smc.client-1.0.0.jar;ToolNet/SMC/RHAPSODY-ibm/Sm-1.0.0.jar;
+isPlugin1=1
+isVisible1=1
+
+#REM: Add pop-up menu for export to SMC
+name2=SMC\Export to SMC
+isPluginCommand2=1
+command2=Generate RDF
+isVisible2=1
+applicableTo2=block,Block,Package,SysML,Project,System,system
+
+#REM: Add pop-up menu for export to file
+name5=SMC\Export to FILE
+isPluginCommand5=1
+command5=Generate RDF
+isVisible5=1
+applicableTo5=block,Block,Package,SysML,Project,UPDM2_DoDAF20,Danse,System,system
+
+#REM: Add pop-up menu for export project to SysML RDF.
+#name8=SMC\SysML
+#isPluginCommand8=1
+#command8=Generate RDF
+#isVisible8=1
+#applicableTo8=SysML
+
+#REM: Add pop-up menu for export FMU
+name7=SMC\Export FMU to SMC
+isPluginCommand7=1
+command7=Generate RDF
+isVisible7=1
+applicableTo7=block,Block,System,system
+
+#REM: Add pop-up menu for imports
+name3=SMC\Import from SMC
+isPluginCommand3=1
+command3=Generate RDF
+isVisible3=1
+applicableTo3=SysML,Project,UPDM2_DoDAF20,Danse
+
+#REM: Add pop-up menu for imports from file.
+name6=SMC\Import from FILE
+isPluginCommand6=1
+command6=Generate RDF
+isVisible6=1
+applicableTo6=SysML,Project,UPDM2_DoDAF20,Danse
+
+#REM: Add pop-up menu for reset
+name4=SMC\Reset state with SMC
+isPluginCommand4=1
+command4=Generate RDF
+isVisible4=1
+applicableTo4=SysML,Project,UPDM2_DoDAF20,Danse
+
+
+[Toolbars Layout-Summary]
+Bars=3
+ScreenCX=1680
+ScreenCY=1050
+[PROFILE]
+Auto Run Macro Delay Time=1
+PC Keyboard Type=5
+Keyboard=Default
+IND$FILE Parms=0,0,1,1,0,0,0,257,253,2048,200,430,430,0,1252,"IND$FILE","","","",0
+SSL/TLS Version=3
+SSL/TLS Current User Certificate=1
+Window Title=%s - %p (%h)
+WinInfo Default Restored=0 0 0 0 10 10 600 400 0 0 0=16 9 0 0 400 0 0 0 0 3 2 2 0 HE_Bitmap| 0 0
+WinInfo Default Maximized=0 0 0 0 0 0 0 0 0 0 0=999 999 0 0 400 0 0 0 0 3 2 2 0 HE_Bitmap| 0 0
+QuickKey=Default
+[Toolbars]
+ToolBarVersion=5
+bar0=Default 3270 ToolBar.TB3
+[Toolbars Layout-Bar0]
+BarID=59393
+[Toolbars Layout-Bar1]
+BarID=59419
+Bars=3
+Bar#0=0
+Bar#1=59440
+Bar#2=0
+[Toolbars Layout-Bar2]
+BarID=59440
+XPos=-2
+YPos=-2
+Docking=1
+MRUDockID=0
+MRUDockLeftPos=4
+MRUDockTopPos=24
+MRUDockRightPos=492
+MRUDockBottomPos=52
+MRUFloatStyle=8196
+MRUFloatXPos=-1879048192
+MRUFloatYPos=0
+[Hotspots]
+ShowTips=1

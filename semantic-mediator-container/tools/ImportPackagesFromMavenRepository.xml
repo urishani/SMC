@@ -1,0 +1,57 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<project name = "SMC repository project" default = "import" basedir = "">
+	
+	<property name="root" value="http://search.maven.org/remotecontent?filepath="/>
+	<property name="root2" value="http://central.maven.org/maven2"/>
+	<property name="lib" value="../lib"/>
+	<target name="import">
+	  	<delete dir="${lib}"/>
+		<mkdir dir="${lib}"/>
+		<get src="${root2}/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar" 
+			dest="${lib}/commons-beanutils-1.8.3.jar"/>
+		<get src="${root2}/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" 
+			dest="${lib}/commons-codec-1.6.jar"/>
+		<get src="${root2}/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar" 
+			dest="${lib}/commons-lang3-3.1.jar"/>	
+		<get src="${root2}/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" 
+			dest="${lib}/commons-logging-1.1.1.jar"/>
+		<get src="${root2}/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" 
+			dest="${lib}/gson-2.2.4.jar"/>
+		<get src="${root2}/com/google/guava/guava/14.0.1/guava-14.0.1.jar" 
+			dest="${lib}/guava-14.0.1.jar"/>
+		<get src="${root2}/com/thoughtworks/xstream/xstream/1.4.1/xstream-1.4.1.jar"
+			dest="${lib}/xstream-1.4.1.jar"/>
+		<get src="${root2}/org/json/json/20080701/json-20080701.jar"
+			dest="${lib}/json-20080701.jar"/>
+		<get src="${root2}/net/lingala/zip4j/zip4j/1.2.3/zip4j-1.2.3.jar"
+			dest="${lib}/zip4j-1.2.3.jar"/>
+		<get src="http://jenabean.googlecode.com/files/jenabean-1.0.6.jar"
+			dest="${lib}/jenabean-1.0.6.jar"/>
+		<get src="${root2}/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar" 
+			dest="${lib}/httpcore-4.2.2.jar"/>
+		<get src="${root2}/log4j/log4j/1.2.16/log4j-1.2.16.jar"
+			dest="${lib}/log4j-1.2.16.jar"/>
+		<get src="${root2}/org/apache/lucene/lucene-core/4.4.0/lucene-core-4.4.0.jar"
+			dest="${lib}/lucene-core-4.4.0.jar"/>
+		<get src="${root2}/org/apache/lucene/lucene-analyzers-common/4.4.0/lucene-analyzers-common-4.4.0.jar"
+			dest="${lib}/lucene-analyzers-common-4.4.0.jar"/>
+		<get src="${root2}/org/apache/lucene/lucene-queryparser/4.4.0/lucene-queryparser-4.4.0.jar"
+			dest="${lib}/lucene-queryparser-4.4.0.jar"/>
+		<get src="${root2}/org/antlr/antlr-runtime/3.1.3/antlr-runtime-3.1.3.jar"
+					dest="${lib}/antlr-runtime-3.1.3.jar"/>
+		</target>
+	<target name="import2">
+		<get src="http://www.eclipse.org/downloads/download.php?file=/lyo/releases/2.0.0/org.eclipse.lyo.oslc4j-2.0.0.zip"
+				dest="${lib}/org.eclipse.lyo.oslc4j-2.0.0.zip"/>
+	</target>
+	<target name="unzip" depends="import2">
+		<unzip 
+			src="${lib}/org.eclipse.lyo.oslc4j-2.0.0.zip"
+			dest="${lib}">
+		    <patternset>
+		        <include name="**/*.jar"/>
+		        <exclude name="**/*.jar"/>
+		    </patternset>
+		</unzip>	
+	</target>
+</project>

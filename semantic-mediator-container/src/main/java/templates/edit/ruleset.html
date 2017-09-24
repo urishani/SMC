@@ -1,0 +1,234 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">    
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+        <script  type="text/javascript" src="/dm/resources/js/viewConfig.js"></script>
+        <script  type="text/javascript" src="/dm/resources/js/utils.js"></script>
+        
+        <script>
+            var registration = {};
+            var licenseText = {};
+            function register(id, flag, desc) {
+                registration[id] = flag;
+                licenseText[id] = desc;
+            }
+    
+            function confirmLicense() {
+                var interceptorNameSelector = document.getElementById('interceptor');
+                var id = interceptorNameSelector.value;
+                var flag = registration[id];
+                var requiresLicense = (flag == true);
+                if (requiresLicense) {
+                    var text = "Need to confirm licensed use of this mediator.\n";
+                    if (licenseText[id])
+                        text += licenseText[id] + "\n";
+                    text += "Please confirm:";
+                    var confirmed = confirm(text);
+                    if (confirmed)
+                        return true;
+                    interceptorNameSelector.value = 'NaN';
+                    return false;
+                } else
+                    return true;
+            }
+            function api(field) {
+            	var tfield = document.getElementById('apiAccessName');
+//            	alert("tfield[" + tfield.text + "].disabled= " + tfield.disabled);
+            	tfield.disabled =  ! field.checked;
+            }
+            function api_onLoad() {
+            	var cf = document.getElementById('hasApi');
+                cf.click();
+            }
+            
+        </script>
+        
+        <script>
+        var autoInit_ = false;
+        var namespace = '_defaultNamespace_/ontology/def/rule/';
+        var prefixElement = document.getElementById('prefix');
+        function getPrefix() {
+        	return document.getElementById('prefix').value
+        }
+        function getVersion() {
+        	return document.getElementById('version').value
+        }
+        function autoInit(but) {
+        	but.disabled = true;
+        	autoInit_ = true;
+        	autoFill();
+        }
+        function autoFill() {
+        	if (! autoInit_)
+        		return;
+        	var minsElement = document.getElementById('modelInstanceNamespace')
+        	var ns = namespace + getPrefix()
+        	minsElement.value = ns
+        	var minsvElement = document.getElementById('versionIRI')
+        	var minsv_Element = document.getElementById('versionIRI_')
+        	var nameElement = document.getElementById('nameField')
+        	var name_Element = document.getElementById('nameField_')
+        	ns += '/' + getVersion();
+        	minsvElement.value = ns
+        	minsv_Element.innerHTML = ns
+        	nameElement.value = getPrefix();
+        	name_Element.innerHTML = getPrefix();
+        }
+        </script>
+ 
+        
+    </head>
+    <body onLoad='api_onLoad(); vc_onLoad()'>
+        <h1>Configure RuleSet for id [_id_]</h1> 
+        <font color='red'>Comments:</font> _comments_<br>
+        <form>
+            <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+                <tr _hideOSLCchoice_ border='0'>
+                   <td>Auto initialize name space<td aligh='left'><input onClick='autoInit(this)' type='button' value='Auto Init'/></td>
+                </tr>
+				<tr class="com-ibm-team-workitem queryResults">
+					<th class="headerColumnUnsorted">Field
+					<th class="headerColumnUnsorted">Value
+				</tr>
+                <tr title='A short single word RDF prefix for the namespace of this rules ontology.'>
+                    <td>Prefix<td>
+                    <input placeholder='Must enter a simple prefix (e.g., myowl)' id='prefix' _hideOSLCchoice_ size='40' type='text' value='_prefix_' name='prefix' onkeyup='autoFill()'/>
+                    <span _notHideOSLCchoice_>_prefix_</span>
+                </tr>
+                <tr title='A URI to identify this rules ontology and serve as base for all the concepts defined in it .'>
+                    <td>Model Instance Namespace<td>
+                    <input id='modelInstanceNamespace' _hideOSLCchoice_ size='40' type='text' value='_modelInstanceNamespace_' name='modelInstanceNamespace'/>
+                    <span _notHideOSLCchoice_>_modelInstanceNamespace_</span>
+                </tr>
+                <tr title='A URI for the rules ontology version. Usually, append version identification to the Model Instance Namespace.'>
+                    <td>Version IRI<td>
+                    <input id='versionIRI' hidden=true _hideOSLCchoice_ size='40' type='text' value='_version_' name='version'/>
+                    <span id='versionIRI_' >_version_</span>
+                </tr>
+               <tr>
+                    <td>Version<td>
+                    <input placeholder='Enter simple version term (e.g., v0.1)' id='version' _hideOSLCchoice_ size='40' type='text' value='_versionSuffix_' onkeyup='autoFill()'/>
+                    <span _notHideOSLCchoice_>_versionSuffix_</span>
+                </tr>
+                <tr title='A short mnemonic name for this item.'>
+                    <td>Name<td>
+                    <input id='nameField' hidden=true size='40' type='text' value='_name_' name='name'/>
+					<span id='nameField_'>_name_</span>
+                </tr>
+                 <tr title='Selection tags for this item that are used to filter the dashboard details.'>
+                   <td>Tags<td>
+                    <input placeholder='Comma separated terms to tag this item' size='40' type='text' value='_tags_' name='tags'/>
+                </tr>
+               <tr title='Indication if this item is to be archived so it is possible to delete.'>
+                    <td>Archived<td align='left'><input _archived_ type='checkbox' value='true' name='archived' />
+                </tr>
+                <tr title='indication if this ontology can serve as an API for instant model mediation. If enabled, an access URL is constructed with a choice of a name for it, can be entered, or the default item id can be used.'>
+			       <td>API<td>
+			       <input id='hasApi'  _hasApi_ type='checkbox' value='true' name='hasApi' onClick='api(this)'/>
+			       <input id='apiAccessName' size='40' type='text' value='_apiAccessName_' name='apiAccessName' />   
+			    </tr>
+			</table>
+ <div>
+ <hr>
+ 		Constraints:
+ 		<table class='dj_webkit com-ibm-team-workitem queryResultsTable'>
+				<tr class="com-ibm-team-workitem queryResults">
+					<th class="headerColumnUnsorted">Field
+					<th class="headerColumnUnsorted">Value
+				</tr>
+					<tr><td title='Ontology for first end point, or "ANY"'>End Point 1 Ontology Id
+					<td align='center'><select value='_selectedOntologyId-1_'
+						name='EndPointA'> _ontologyId-1_
+							<option _selected_>_idName_</option>_/ontologyId-1_
+							<option _selectedNaNOntologyId-1_>ANY</option>
+					</select>
+
+					<tr><td title='Ontology for second end point, or "ANY"'>End Point 2 Ontology Id
+					<td align='center'><select value='_selectedOntologyId-2_'
+						name='EndPointB'> _ontologyId-2_
+							<option _selected_>_idName_</option>_/ontologyId-2_
+							<option _selectedNaNOntologyId-2_>ANY</option>
+					</select>
+					
+					<tr><td title='Specify if the rules are reversible'>
+						Reversible
+                        <td align='left'><input _reversible_ type='checkbox' value='true' name='Reversible' />
+                   <tr><td title='Select an intercepter mediation engine to be used with these rules'>
+                    Intercepter Name
+                    <td align='center'>
+                    <select id='interceptor' value='_selectedInterceptorName_' name='interceptorName'>
+                        _interceptorName_
+                        <script>
+                            register('_idName_', _requiresLicense_, '_licenseText_')
+                        </script>
+                        <option _selected_ title='_interceptorDescription_'>_idName_</option>_/interceptorName_
+                        <option _selectedNaNInterceptorName_>NaN</option>
+                    </select>
+                    
+                    </table>
+ <hr>
+			<div hidden='true' id='viewConfigMessage'>Using default View configuration.</div>
+			<button onClick='return vc_toggleViewTable(this);'>Customize the View Configuration</button>
+            <table hidden='true' id='viewConfigTable' class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+				<tr>
+				    <td>View Configuration
+				    <button onclick='showViewConfig(this);return false;' name='showHideButton' value='show'>show</button>
+				    <td id='viewConfigTd' hidden='true' >
+				    <textarea style='background-color:lightGray' id='actualViewConfig' readonly rows='5' cols='60'>_actualViewConfig_</textarea>
+				    <textarea hidden='true'  name='viewConfig' id='savedViewConfig'>_savedViewConfig_</textarea>
+				<tr>    
+				    <td>View Configuration Editing
+				    <button hidden='true' class='button_help' title='Select predicates for text search or list display of related models associated with this ontology.'>?</button>
+				    <td>Select predicates for text search or list display of related models associated with this ontology.
+                            <table id='predicateTable' border="1">
+                            <tr><th>Predicate<th>For Text Search<th>For display<th>Display Title<th>Display Tag<th>Action</tr>
+                                <tr hidden='true'>
+                                <td style='text-wrap:unrestricted'>predicate
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);'>
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);'>
+                                <td><input  value="new title here">
+                                <td><input  value="%">
+                                <td align='center'><button title='Delete this row' class='button_image button_delete' onClick='vc_removeRow(this);return false;'></button>
+                                </tr>
+                                _viewPredicates_
+                                <tr _hiddenRow_>
+                                <td style='text-wrap:unrestricted'>_predicate_
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);' _tchecked_>
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);' _lchecked_>
+                                <td><input _pdisabled_ value="_ptitle_">
+                                <td><input _pdisabled_  value="_ptag_">
+                                <td align='center'><button  title='Delete this row' class='button_image button_delete' onClick='vc_removeRow(this);return false;'></button>
+                                _/viewPredicates_
+							 <tr title="Enter a new predicate URL in the input field, and click the [+] button">
+                             <td>Enter a new predicate to add: 
+                             <td colspan='4'><input style='background-color:lightGray;width:100%' type="text" value="a new predicate here">
+                             <td align='center'><button id='addBut' title='Add new predicate' class='button_image button_plus' onclick="vc_addRow(this); return false;"></button></tr>                            
+                             </table>
+				    </td>
+				</tr>
+            </table>
+ <hr>
+ </div>
+ 			<br> <input type='submit' name='update' id='updateButton' value='Update' onClick='vc_doUpdate();return confirmLicense()'>
+ 				 <input	type='submit' name='abort' value='Cancel'> 
+ 				 <input	type='hidden' name='id' value='_id_'>
+                 <input hidden=true name='initialize' value='_initialize_'/>
+		</form>
+</body>
+</html>

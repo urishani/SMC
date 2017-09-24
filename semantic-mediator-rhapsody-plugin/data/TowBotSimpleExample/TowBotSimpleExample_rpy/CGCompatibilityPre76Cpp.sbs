@@ -1,0 +1,85 @@
+I-Logix-RPY-Archive version 8.6.0 C++ 2071424
+{ IProfile 
+	- _id = GUID 38e0ad24-bc5e-45a0-9df2-1d0a857d19ad;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 2;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CPP_CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Event";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "InitializationStyle";
+								- _Value = "ByAssignment";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "ByInitializer,ByAssignment";
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "General";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "<<Friend>>ImplementationScheme";
+								- _Value = "UML1.3";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "UML1.3,Rhapsody2.3";
+							}
+						}
+					}
+				}
+			}
+			{ IPropertySubject 
+				- _Name = "Eclipse";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Project";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "AllowRoundtripForAllFiles";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "CGCompatibilityPre76Cpp";
+	- weakCGTime = 4.2.2011::16:49:23;
+	- strongCGTime = 4.2.2011::16:49:23;
+	- _defaultComposite = GUID c81d27ee-7bb7-4027-9318-33293d4b4676;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID c81d27ee-7bb7-4027-9318-33293d4b4676;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 4.2.2011::16:49:23;
+			- strongCGTime = 4.2.2011::16:49:23;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

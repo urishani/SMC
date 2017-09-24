@@ -1,0 +1,236 @@
+<rdf:RDF
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sm="http://www.sprint-iot.eu/owl/ontologies/sm.owl#"
+    xmlns:RhapsodyAndBSO="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://purl.org/dc/dcam/"
+    xmlns:sm2="http://com.ibm.ns/rhapsody/haifa/sm#" > 
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasPortTypeComplex">
+    <owl:equivalentProperty rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#portType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPortType"/>
+    <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowSpecification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#portType">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/bso/type"/>
+    <rdfs:range rdf:resource="http://www.sprint-iot.eu/bso/ComplexPortSpecification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort">
+    <owl:sameAs rdf:resource="http://www.sprint-iot.eu/bso/OUT"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPort">
+    <owl:equivalentProperty rdf:resource="http://www.sprint-iot.eu/bso/ports"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Object">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/ComponentProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#InputFlowPort">
+    <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <owl:equivalentClass rdf:nodeID="A0"/>
+    <owl:equivalentClass rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesClasses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#other">
+    <owl:sameAs rdf:resource="http://www.sprint-iot.eu/bso/Other"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Connector">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/Connector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPort_1">
+    <sm:inhibitProperty rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasPort_1Inhibit"/>
+    <sm:rangeProperty rdf:resource="http://www.sprint-iot.eu/bso/port"/>
+    <sm:domainProperty rdf:resource="http://www.sprint-iot.eu/bso/interconnectionEnds"/>
+    <sm:propertyClass rdf:resource="http://www.sprint-iot.eu/bso/InterconnectionEnd1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#SysML">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:hasValue rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#OutputPort"/>
+    <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPortDirection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#bool">
+    <owl:sameAs rdf:resource="http://www.sprint-iot.eu/bso/Boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasAttributeInteractionPoint">
+    <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasAttribute"/>
+    <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowSpecification"/>
+    <sm:derivedDomain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowSpecification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasEndPoint_1">
+    <sm:inhibitProperty rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasEndPoint_1Inhibit"/>
+    <sm:rangeProperty rdf:resource="http://www.sprint-iot.eu/bso/part"/>
+    <sm:domainProperty rdf:resource="http://www.sprint-iot.eu/bso/interconnectionEnds"/>
+    <sm:propertyClass rdf:resource="http://www.sprint-iot.eu/bso/InterconnectionEnd1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#DataType">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/PrimitiveType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/bso/Float">
+    <rdfs:subClassOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasPort_2">
+    <sm:inhibitProperty rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasPort_2Inhibit"/>
+    <sm:rangeProperty rdf:resource="http://www.sprint-iot.eu/bso/port"/>
+    <sm:domainProperty rdf:resource="http://www.sprint-iot.eu/bso/interconnectionEnds"/>
+    <sm:propertyClass rdf:resource="http://www.sprint-iot.eu/bso/InterconnectionEnd2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#void">
+    <owl:sameAs rdf:resource="http://www.sprint-iot.eu/bso/Void"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#InputPort">
+    <owl:sameAs rdf:resource="http://www.sprint-iot.eu/bso/IN"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:complementOf rdf:resource="http://www.sprint-iot.eu/bso/SimplePortSpecification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/Port"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasEndPoint_1Inhibit">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasEndPoint_2Inhibit">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasEndPoint_2">
+    <sm:inhibitProperty rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasEndPoint_2Inhibit"/>
+    <sm:rangeProperty rdf:resource="http://www.sprint-iot.eu/bso/part"/>
+    <sm:domainProperty rdf:resource="http://www.sprint-iot.eu/bso/interconnectionEnds"/>
+    <sm:propertyClass rdf:resource="http://www.sprint-iot.eu/bso/InterconnectionEnd2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasPortTypeSimple">
+    <sm:rangeProperty rdf:resource="http://www.sprint-iot.eu/bso/type"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <sm:propertyClass rdf:resource="http://www.sprint-iot.eu/bso/SimplePortSpecification"/>
+    <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPortType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <rdfs:range rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#DataType"/>
+    <sm:domainProperty rdf:resource="http://www.sprint-iot.eu/bso/type"/>
+    <sm:inhibitProperty rdf:resource="http://www.sprint-iot.eu/owl/ontologies/RhapsodyAndBSO.owl#portTypeInhibit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#float">
+    <owl:sameAs rdf:resource="http://www.sprint-iot.eu/bso/Float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasPort_1Inhibit">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasPort_2Inhibit">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal">
+    <rdfs:subClassOf rdf:resource="http://www.sprint-iot.eu/bso/Float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#attributeType">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/bso/type"/>
+    <rdfs:domain rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#int">
+    <owl:sameAs rdf:resource="http://www.sprint-iot.eu/bso/Integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Block">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/Component"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:hasValue rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#InputPort"/>
+    <owl:onProperty rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPortDirection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#Normal">
+    <rdfs:subClassOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesClasses"/>
+    <owl:equivalentClass rdf:nodeID="A3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#otherType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#FlowProperty">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#isTypeOf">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl">
+    <owl:versionIRI rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.v.2"/>
+    <owl:imports rdf:resource="http://www.sprint-iot.eu/bso.v.2"/>
+    <owl:imports rdf:resource="http://com.ibm.ns/rhapsody/haifa/rhp.v9"/>
+    <owl:imports rdf:resource="http://www.sprint-iot.eu/owl/ontologies/sm.owl.v.2"/>
+    <terms:title xml:lang="en">Rules Ontology for bi-directoinal mediation of BSO and Rhapsody SysML</terms:title>
+    <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-09-24</terms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#FlowSpecification">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/ComplexPortSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#ContainedPackage">
+    <rdfs:subClassOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesClasses"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasTypeNormal">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#hasType">
+    <owl:equivalentProperty rdf:resource="http://www.sprint-iot.eu/bso/type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#OutputFlowPort">
+    <rdfs:subClassOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <owl:equivalentClass rdf:nodeID="A4"/>
+    <owl:equivalentClass rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#ownsPort">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#hasPort"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/bso/interactionPoints">
+    <owl:equivalentProperty rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#hasAttributeInteractionPoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:someValuesFrom rdf:resource="http://www.sprint-iot.eu/bso/InputPortSpecification"/>
+    <owl:onProperty rdf:resource="http://www.sprint-iot.eu/bso/type"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:someValuesFrom rdf:resource="http://www.sprint-iot.eu/bso/OutputPortSpecification"/>
+    <owl:onProperty rdf:resource="http://www.sprint-iot.eu/bso/type"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#Package">
+    <owl:equivalentClass rdf:resource="http://www.sprint-iot.eu/bso/Package"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#portTypeInhibit">
+    <rdfs:subPropertyOf rdf:resource="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sprint-iot.eu/owl/ontologies/2014/RhapsodyAndBSO.owl#RulesObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#BiDirectionalPort">
+    <owl:sameAs rdf:resource="http://www.sprint-iot.eu/bso/INOUT"/>
+  </rdf:Description>
+</rdf:RDF>

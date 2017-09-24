@@ -1,0 +1,107 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+ 		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=yui.2.2.1.css">
+       <script>
+       // source file: compare.html
+            var base = '_base_';
+            var basePref = "_basePref_";
+            function onLoad() {
+                var rdfE = document.getElementById('text');
+                var rdf = rdfE.value;
+                rdf = rdf.split('\n');
+                for ( i = 0; i < rdf.length; i++) {
+                    rdf[i] = makeLink(rdf[i].replace(/\</g, '&lt;').replace(/\>/g, '&gt;'));
+                }
+
+                rdfE.hidden = 'true';
+                var div = document.getElementById('textDiv');
+                div.innerHTML = rdf.join('<br>');
+            }
+
+            // answer with modified text so all subtexts between markers ma and mb, in input text,
+            // input text is rdf format.
+            // which start ancor are made into an <a> link with same contents.
+            function makeLink(text) {
+                var newText = '';
+                var p, p1;
+                while (text.length > 0) {
+                    var p = text.indexOf('_basePref_');
+                    if (p < 0)
+                        break;
+                    var p1 = text.indexOf(':', p);
+                    if (p1 < 0)
+                        break;
+                    var p2 = text.indexOf(' ', p);
+                    if (p2 < 0)
+                        break;
+                    var str = text.substring(p1 + 1, p2)
+                    var s2 = '<a href="_base_' + str + '">_basePref_:' + str + '</a>';
+                    newText += text.substring(0, p).replace(/\ /g, '&nbsp;') + s2;
+                    text = text.substring(p2);
+                }
+                newText += text.replace(/\ /g, '&nbsp;')
+                return newText;
+            }
+
+        </script>
+    </head>
+    <body onLoad='onLoad();'>
+        <h1>Comparing triples of item [_id_: _name_] of type [_collection_]</h1>
+            <form action='/dm/sm'>
+                <input type='submit' value='Done'/>
+                <input hidden=true name='id' value='_id_'>
+                <input id='listButton' type='submit' name='action' value='ShowList'>
+                <input id='downloadButton' type='submit' name='action' value='Download'>
+            </form>
+            
+        <h2>Statistics:</h2>
+        <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+             <tr class="com-ibm-team-workitem queryResults" align='center'>
+                <th class="headerColumnUnsorted">Version
+                <th class="headerColumnUnsorted">Total triples
+                <th class="headerColumnUnsorted">Triples with blank nodes
+                <th class="headerColumnUnsorted">Compared triples
+                <tr align='center'>
+                    <td>_first_<td>_firstT_<td>_firstN_<td>_firstG_
+                    <tr align='center'>
+                        <td>_second_<td>_secondT_<td>_secondN_<td>_secondG_
+        </table>
+        [_match_] triples match exactly.
+<table ><tr><td><font size='-2'><pre>
+Report format:
+ Triples only in [_first_] version have &lt;: prefix
+ Triples only in [_second_] version have &gt;: prefix
+ Triples with changed object (value) have &lt;&gt; prefix.
+ 
+Prefixes:
+_prefixes_
+</pre></font></td></tr></table>
+
+<div id='textDiv'>
+  <font FACE= "Courier New">
+  <textarea rows='30' cols='100' id='text'>
+      _report_
+  </textarea>
+</font>
+</div>
+</body>
+</html>

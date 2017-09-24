@@ -1,0 +1,68 @@
+I-Logix-RPY-Archive version 8.10.0 C++ 8169320
+{ IProfile 
+	- _id = GUID 875eace3-e55f-437d-b02a-3b6dc197d5b6;
+	- _myState = 8192;
+	- _name = "Rhp-SMC";
+	- _modifiedTimeWeak = 21.2.2016::13:52:00;
+	- Tags = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ITag 
+			- _id = GUID eacccae9-251a-48b1-8f87-7644f56e53dd;
+			- _myState = 8192;
+			- _name = "version";
+			- _modifiedTimeWeak = 21.2.2016::13:52:00;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 This is a plugin adaptor to the IBM Semantic Mediation Container server (SMC). To export a model, select an element (Block, Package or Project), right click and follow one of the SMC... submenus.\\par
+Export is an RDF structure which can also be saved into a file.\\par
+SMC can also import models from file or the SMC server.\\par
+Working with UPDM export, and SysML export/import.\\par
+}
+";
+			}
+			- ValueSpecifications = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ILiteralSpecification 
+					- _id = GUID 860e62fa-bc77-4e06-8b06-183f9ca054be;
+					- _modifiedTimeWeak = 21.2.2016::13:52:00;
+					- _value = "version 2.20 - Feb 21 2016";
+				}
+			}
+			- _typeOf = { IHandle 
+				- _m2Class = "IType";
+				- _filename = "PredefinedTypes.sbs";
+				- _subsystem = "PredefinedTypes";
+				- _class = "";
+				- _name = "RhpString";
+				- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+			}
+			- _isOrdered = 0;
+		}
+	}
+	- _lastID = 1;
+	- weakCGTime = 21.2.2016::13:52:00;
+	- strongCGTime = 21.2.2016::13:52:00;
+	- _defaultComposite = GUID ec61a965-0b6e-4953-864b-a5189b7334c9;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID ec61a965-0b6e-4953-864b-a5189b7334c9;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 21.2.2016::13:52:00;
+			- weakCGTime = 21.2.2016::13:52:00;
+			- strongCGTime =21.2.2016::13:52:00;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

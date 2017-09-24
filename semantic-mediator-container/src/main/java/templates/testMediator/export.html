@@ -1,0 +1,43 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<div class='legend'>Export test</div>
+<script> 
+ // File Name: templates/testMediator/export.html
+</script>
+<form enctype='multipart/form-data' action='/dm/sm/tool/_exportAccess_'
+	method='post' accept-charset='UTF-8'>
+	<input type='checkbox' name='apply'>Apply to repository<br>
+	<button type='submit'>Test Export</button>
+	<br> Content of model will be parsed according to: <select
+		name='contentType' value='application/rdf+xml'>
+		<option _rdf+xml_>application/rdf+xml</option>
+		<option _rdf+xmlAbr_>application/rdf+xml-ABBREV</option>
+		<option _n3_>application/n3</option>
+		<option _turtle_ >text/turtle</option>
+		<option _n-triples_>application/n-triples</option>
+	</select><br> Format for displaying the resulting output model: <select
+		name='acceptType' value='application/rdf+xml'>
+		<option _rdf+xml_>application/rdf+xml</option>
+		<option _rdf+xmlAbr_>application/rdf+xml-ABBREV</option>
+		<option _n3_>application/n3</option>
+		<option _turtle_ >text/turtle</option>
+		<option _n-triples_>application/n-triples</option>
+	</select><br> Input model may be empty, or from a file: <input type='file'
+		name='fileName' size='40'><br> Input may be inserted as
+	text here: <br>
+	<textArea style='height: 10em; width: 100em; overflow: scroll;'
+		name='model'></textArea>
+</form>
+<br>

@@ -1,0 +1,94 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+ 		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+ <script type='text/javascript'>
+    var items = _data_;
+    var selected = [];
+
+	function process(item) {	
+	   var id = item.value;   
+	   var p = selected.indexOf(id);
+	   if (item.checked && p < 0)
+	   	   selected[selected.length]=id;
+	   else if (!item.checked && p >= 0) 
+           selected.splice(p, 1);
+	   var ids = document.getElementById('ids');
+	   ids.value = String(selected);
+	   var but = document.getElementById('execute');
+       but.disabled= ids.value == "";	      
+	}
+	 
+    function setRows() {
+       var t = document.getElementById('table');
+       var trs = t.rows;
+       for (var i=1; i < trs.length; i++) {
+          var c = "smRow" + (i % 2); 
+          trs[i].className=c
+          var inp = trs[i].children[0].firstChild;
+          inp.checked=false;
+       } 
+	   var ids = document.getElementById('ids');
+	   ids.value = "";
+    }
+</script>
+</head>
+<body onload='setRows()'>
+	<h1>
+		Import _what_ from Friend _friend_ @ [_friendIp_ ] 
+	</h1>
+	
+	           <table id='table' class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+				<tr class="com-ibm-team-workitem queryResults">
+					<th class="headerColumnUnsorted">Select
+					<th class="headerColumnUnsorted">Id
+					<th class="headerColumnUnsorted">Prefix
+					<th class="headerColumnUnsorted">Name Space
+					<th class="headerColumnUnsorted">Version
+					<th class="headerColumnUnsorted">Date Modified
+					<th class="headerColumnUnsorted">Name
+					<th class="headerColumnUnsorted">Comment
+				</tr>
+				_items_
+                <tr class='smRow0'>
+                    <td><input _hidden_ type='checkbox' id='item_i_' value='_id_' onclick='process(this)'>
+                    <td>_id_
+                    <td>_prefix_
+                    <td>_modelInstanceNamespace_
+                    <td>_version_
+                    <td>_dateModified_
+                    <td>_name_
+                    <td>_comment_
+                </tr>
+                _/items_
+			</table>
+
+			<form action='/dm/sm'>
+			<input hidden=true name='create' value='_what_'>
+			<input hidden=true name='importFromFriend' value='_friendId_'>
+			<input hidden=true name='createWithTags' value='_createWithTags_'>
+			IDs: <input readonly id='ids' name='ids' value=''><br>
+			<input id='execute' disabled type='submit' name='import' value='Import all selected'>
+			</form>
+			
+			<form action='/dm/sm'>		
+			<input type='submit' value='Cancel'>
+			</form>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">    
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+        <script  type="text/javascript" src="/dm/resources/js/viewConfig.js"></script>
+        <script  type="text/javascript" src="/dm/resources/js/utils.js"></script>
+	</head>
+	<script>
+	// file name templates.edit/tool.html
+	
+	var ontologyPrefix = "_ontologyPrefix_";
+	var ontologyNameSpace = "_ontologyNameSpace_";
+	function checkPredicate(input) {
+	   var v = input.value;
+	   if (v.startsWith(ontologyPrefix + ":")) {
+	      v = ontologyNameSpace + v.substring(ontologyPrefix.length + 1)
+	      input.value = v;
+	   }
+	}
+	</script>
+    <body onLoad='vc_onLoad()'>
+        <h1>Configure TOOL for id [_id_]</h1> 
+        <font color='red'>Comment:</font> _comments_<br>
+		<form>
+            <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+				<tr class="com-ibm-team-workitem queryResults">
+					<th class="headerColumnUnsorted">Field
+					<th class="headerColumnUnsorted">Value
+				</tr>
+				<tr>
+                    <td>Version<td>
+                    <input size='40' type='text' value='_version_' name='version'/>
+				</tr>
+				<tr>
+                    <td>Name<td>
+                    <input size='40' type='text' value='_name_' name='name'/>
+				</tr>
+
+				<tr>
+					<td>Access Name
+					<td align=''left''>_accessName_
+				</tr>
+				<tr>
+					<td>Ontology Id
+					<td align=''left''>_selectedOntologyId_
+				</tr>
+				<tr>
+					<td>Works With 
+					<td align='left'>Repository [_associatedRepositoryId_]
+  			</tr>
+				<tr>
+					<td>Tags
+					<td><input size='40' type='text' value='_tags_' name='tags' />
+				</tr>
+				<tr _showAccessibility_><td>Access Options<font style='background-color:blue;color:white;font-style:bold'
+				      title='Marks this tool access options to its repository: Export/Import/Both or No Service'>&nbsp;?&nbsp;</font>
+				    <td align='left'>_accessibility_
+				<tr>
+                    <td>Archived<td align='left'><input _archived_ type='checkbox' value='true' name='archived' />
+				</tr>
+			</table>
+ <div _hideIfNotRepository_>
+ <hr>
+			<div hidden='true' id='viewConfigMessage'>Using default View configuration from Ontology.</div>
+			<button onClick='return vc_toggleViewTable(this);'>Customize the View Configuration</button>
+            <table  hidden='true' id='viewConfigTable' class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+				<tr>
+				    <td>View Configuration
+				    <button onclick='showViewConfig(this);return false;' name='showHideButton' value='show'>show</button>
+				    <td id='viewConfigTd' hidden='true'>
+				    <textarea style='background-color:lightGray' id='actualViewConfig' readonly rows='5' cols='60'>_actualViewConfig_</textarea>
+				    <textarea  hidden='true' name='viewConfig' id='savedViewConfig'>_savedViewConfig_</textarea>
+				<tr>    
+				    <td>View Configuration Editing
+				    <button hidden='true' class='button_help' title='Select predicates for text search or list display of related models associated with this ontology.'>?</button>
+				    <td>Select predicates for text search or list display of related models associated with this ontology.
+                            <table id='predicateTable' border="1">
+                            <tr>
+                            <th title='URL of the predicate'>Predicate
+                            <th title='Mark this field for text search, and for direct editing when repository is edited.'>For Text Search
+                            <th title='Mark that this field is displayed'>For display
+                            <th title='String to be used as column title when displayed'>Display Title
+                            <th title='Format html pattern for the text, with % marking the texual content of the field'>Display Tag
+                            <th title='Actions such as delete and add new'>Action</tr>
+                                <tr hidden='true'>
+                                <td style='text-wrap:unrestricted'>predicate
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);'>
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);'>
+                                <td><input  value="new title here">
+                                <td><input  value="%">
+                                <td align='center'><button  title='Delete this row' class='button_image button_delete' onClick='vc_removeRow(this);return false;'></button>
+                                </tr>
+                                _viewPredicates_
+                                <tr _hiddenRow_>
+                                <td style='text-wrap:unrestricted'>_predicate_
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);' _tchecked_>
+                                <td align='center'><input type='checkbox' onclick='updateViewConfig(this);' _lchecked_>
+                                <td><input _pdisabled_ value="_ptitle_">
+                                <td><input _pdisabled_  value="_ptag_">
+                                <td align='center'><button  title='Delete this row' class='button_image button_delete' onClick='vc_removeRow(this);return false;'></button>
+                                _/viewPredicates_
+							 <tr title="Enter a new predicate URL in the input field, and click the [+] button">
+                             <td>Enter a new predicate to add: 
+                             <td colspan='4'><input style='background-color:lightGray;width:100%' type="text" onkeypress="checkPredicate(this)" placeholder="predicate URL (use prefix for shorthand)">
+                             <td align='center'><button id='addBut' title='Add new predicate' class='button_image button_plus' onclick="vc_addRow(this); return false;"></button></tr>                            
+                             </table>
+				    </td>
+				</tr>
+            </table>
+ <hr>
+ </div>
+ 			<br> <input type='submit' name='update' id='updateButton' value='Update' onClick='vc_doUpdate();'>
+ 				 <input	type='button' name='abort' value='Cancel' onClick='doCancel()'> 
+ 				 <input	type='hidden' name='id' value='_id_'>
+                 <input hidden=true name='initialize' value='_initialize_'/>
+		</form>
+</body>
+</html>

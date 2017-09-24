@@ -1,0 +1,215 @@
+I-Logix-RPY-Archive version 8.6.0 C++ 2071424
+{ ISubsystem 
+	- _id = GUID db83feca-4579-4a3d-ac42-e254ea6d467a;
+	- _myState = 10240;
+	- _name = "package_1";
+	- _lastID = 1;
+	- weakCGTime = 7.16.2012::15:35:24;
+	- strongCGTime = 7.16.2012::15:35:23;
+	- _defaultComposite = GUID ee1986e1-897c-47cb-8d33-1266751badd6;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IClass 
+			- _id = GUID ee1986e1-897c-47cb-8d33-1266751badd6;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 1.1.1970::2:0:0;
+			- strongCGTime = 1.1.1970::2:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID d1e532b3-b09c-4ed5-acfd-8f87c2bdcba3;
+			- _myState = 10240;
+			- _name = "block_0";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "$OMROOT\\Profiles\\SysML\\SysMLProfile_rpy\\SysML.sbs";
+					- _subsystem = "SysML::Blocks";
+					- _class = "";
+					- _name = "block";
+					- _id = GUID f685432f-691e-4ff1-be70-4d09d19457e1;
+				}
+			}
+			- _lastID = 2;
+			- Declaratives = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IClass 
+					- _id = GUID e9fe3cd5-fe2e-4eba-a691-dd47ba80fe40;
+					- _myState = 10240;
+					- _name = "block_1";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "$OMROOT\\Profiles\\SysML\\SysMLProfile_rpy\\SysML.sbs";
+							- _subsystem = "SysML::Blocks";
+							- _class = "";
+							- _name = "block";
+							- _id = GUID f685432f-691e-4ff1-be70-4d09d19457e1;
+						}
+					}
+					- _lastID = 4;
+					- Declaratives = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IInformationFlow 
+							- _id = GUID c001ec24-a6c3-4f11-9da6-955529085706;
+							- _myState = 2048;
+							- _name = "flow_2";
+							- end1_ = { IHandle 
+								- _m2Class = "";
+							}
+							- end2_ = { IHandle 
+								- _m2Class = "";
+							}
+							- direction_ = toEnd2;
+						}
+						{ IInformationFlow 
+							- _id = GUID 1fc8564c-50f6-4653-b2be-57e8118bb7b9;
+							- _myState = 2048;
+							- _name = "flow_3";
+							- end1_ = { IHandle 
+								- _m2Class = "";
+							}
+							- end2_ = { IHandle 
+								- _m2Class = "";
+							}
+							- direction_ = toEnd2;
+						}
+					}
+					- weakCGTime = 7.16.2012::15:35:24;
+					- strongCGTime = 7.16.2012::15:35:24;
+					- Ports = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ ISysMLPort 
+							- _id = GUID 80762494-7094-4ca3-a705-d49b60565b7f;
+							- _myState = 10240;
+							- _name = "flowport_0";
+							- Stereotypes = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ IHandle 
+									- _m2Class = "IStereotype";
+									- _filename = "PredefinedTypes.sbs";
+									- _subsystem = "PredefinedTypes";
+									- _class = "";
+									- _name = "flowPort";
+									- _id = GUID e38cbf02-1c06-464c-927e-6e2c6c764315;
+								}
+							}
+							- _multiplicity = "1";
+							- _otherClass = { IClassifierHandle 
+								- _m2Class = "IClass";
+								- _id = GUID c276945e-0796-4774-9793-af59edd78a46;
+							}
+							- _inverse = { IHandle 
+								- _m2Class = "";
+							}
+							- _implicitClass = { IClass 
+								- _id = GUID c276945e-0796-4774-9793-af59edd78a46;
+								- _myState = 10240;
+								- _name = "flowport_0_implicitType";
+								- Stereotypes = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IHandle 
+										- _m2Class = "IStereotype";
+										- _filename = "PredefinedTypes.sbs";
+										- _subsystem = "PredefinedTypes";
+										- _class = "";
+										- _name = "Interface";
+										- _id = GUID 2a7b8a63-f54f-4379-bab0-02800a5084e1;
+									}
+								}
+								- weakCGTime = 7.16.2012::15:35:24;
+								- strongCGTime = 7.16.2012::15:35:24;
+								- _multiplicity = "";
+								- _itsStateChart = { IHandle 
+									- _m2Class = "";
+								}
+								- _classModifier = Unspecified;
+							}
+							- _direction = InOut;
+						}
+						{ ISysMLPort 
+							- _id = GUID 55e367dc-53aa-41e1-826a-33c487bbe46a;
+							- _myState = 10240;
+							- _name = "flowport_1";
+							- Stereotypes = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ IHandle 
+									- _m2Class = "IStereotype";
+									- _filename = "PredefinedTypes.sbs";
+									- _subsystem = "PredefinedTypes";
+									- _class = "";
+									- _name = "flowPort";
+									- _id = GUID e38cbf02-1c06-464c-927e-6e2c6c764315;
+								}
+							}
+							- _multiplicity = "1";
+							- _otherClass = { IClassifierHandle 
+								- _m2Class = "IClass";
+								- _id = GUID fb7ea152-ecd0-483a-a2bb-ff0b781757a7;
+							}
+							- _inverse = { IHandle 
+								- _m2Class = "";
+							}
+							- _implicitClass = { IClass 
+								- _id = GUID fb7ea152-ecd0-483a-a2bb-ff0b781757a7;
+								- _myState = 10240;
+								- _name = "flowport_1_implicitType";
+								- Stereotypes = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IHandle 
+										- _m2Class = "IStereotype";
+										- _filename = "PredefinedTypes.sbs";
+										- _subsystem = "PredefinedTypes";
+										- _class = "";
+										- _name = "Interface";
+										- _id = GUID 2a7b8a63-f54f-4379-bab0-02800a5084e1;
+									}
+								}
+								- weakCGTime = 7.16.2012::15:35:24;
+								- strongCGTime = 7.16.2012::15:35:24;
+								- _multiplicity = "";
+								- _itsStateChart = { IHandle 
+									- _m2Class = "";
+								}
+								- _classModifier = Unspecified;
+							}
+							- _direction = InOut;
+						}
+					}
+					- _multiplicity = "";
+					- _itsStateChart = { IHandle 
+						- _m2Class = "";
+					}
+					- _classModifier = Unspecified;
+				}
+			}
+			- weakCGTime = 7.16.2012::15:35:24;
+			- strongCGTime = 7.16.2012::15:35:24;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.1.1970::2:0:0;
+}
+

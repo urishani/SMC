@@ -1,0 +1,79 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ 		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=yui.2.2.1.css">
+<script type='text/javascript'>
+function toggle(but) {
+   var td = but.parentNode;
+   var id = td.childNodes[2];
+   var id = id.value;
+   var dv = td.childNodes[3];
+   but.disabled=true;
+   var curValue= but.innerHTML;
+   but.innerHTML="Busy...";
+   var newValue = "More...";
+   if (curValue=="More...")
+      newValue = "Less...";
+
+   var xmlhttp;
+   if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+       xmlhttp=new XMLHttpRequest();
+   } else {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   xmlhttp.onreadystatechange=function()  {
+       if (xmlhttp.readyState==4 && xmlhttp.status==200)   {
+           var resp = xmlhttp.responseText;
+           resp = resp.replace(/</g,'&lt;');
+           resp = resp.replace(/>/g,'&gt;');
+           dv.innerHTML= resp;
+           but.innerHTML=newValue;
+           but.disabled=false;
+	   } else if (xmlhttp.readyState == 4 && xmlhttp.status != 200)
+          dv.innerHTML = 'ERROR !! ';
+   }
+   var action = "/dm/smLogs?UpgradeLog=" + id + "&Action=" + curValue.substr(0,1);
+   xmlhttp.open("GET",action, true,null,null);
+   xmlhttp.setRequestHeader("Accept","text/plain");
+   xmlhttp.send("");
+}
+</script>
+<title>_title_</title>
+</head>
+<body>
+<h2>_title_</h2>
+<table class='dj_webkit com-ibm-team-workitem queryResultsTable' cellspacing="1" id='table'>
+    <tr class="com-ibm-team-workitem queryResults">
+       <th class="headerColumnUnsorted">Upgrade date</th>
+       <th class="headerColumnUnsorted">Details</th>
+</tr>
+_row_
+<tr  class="com-ibm-team-workitem visibleRow summary">
+<td>_date_</td>
+<td title="Details. Click on button to see more or less details">
+<A href='/dm/sm' onclick='toggle(this);return false'>More...</a><input hidden value='_id_'/><pre>_details_</pre>
+</td>
+</tr>
+_/row_
+</table>
+</doc>
+</html>

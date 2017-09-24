@@ -1,0 +1,34 @@
+@prefix oslc: <http://open-service.net/ns/core#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix smc: <http://com.ibm.ns/haifa/sm#>.
+# Catalog:
+<_host_/dm/sm/oslc_am>
+    a oslc:ServiceProviderCatalog;
+    dcterms:title "SMC OSLC AM Provider Catalog";
+    dcterms:description "SMC OSLC AM projects hosted on this service provider.";
+    oslc:domain <http://open-services.net/ns/am#>;
+    dcterms:publisher 
+       [ rdf:type oslc:Publisher;
+         dcterms:title "IBM Semantic Mediation Container - SMC";
+         oslc:label "SMC";
+         oslc:icon <_host_/dm/resources/graphics/icons/smc_favicon_32x32-01.png>;
+         dcterms:identifier "http://com.ibm.ns/haifa/smc/v1.13"
+       ];
+    oslc:oauthConfiguration
+       [ rdf:type oslc:OAuthConfiguration;
+         oslc:oauthRequestTokenURI <_oauth-request-token-uri_>;
+         oslc:authorizationURI <_oauth-authorize-uri_>;
+         oslc:oauthAccessTokenURI <_oauth-access-token-uri_>
+       ];
+# list all service providers urls:       
+    oslc:serviceProvider _serviceProviderUrl_     <_host_/dm/sm/repository/_accessName_> _comma_  _/serviceProviderUrl_
+ 
+ # End of the catalog.
+
+# Service providers info: _serviceProvider_
+<_host_/dm/sm/repository/_accessName_> 
+       a oslc:ServiceProvider;
+       dcterms:title "_name_";
+       dcterms:description "_description_";
+       smc:ontology <_ontologyNS_>._/serviceProvider_        

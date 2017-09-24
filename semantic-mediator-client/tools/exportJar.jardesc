@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<jardesc>
+    <jar path="com.ibm.haifa.smc.client/lib-ibm/com.ibm.haifa.smc.client-1.0.0.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/com.ibm.haifa.smc.client/tools/exportJar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=com.ibm.haifa.smc.client/src\/java"/>
+        <file path="/com.ibm.haifa.smc.client/.classpath"/>
+        <file path="/com.ibm.haifa.smc.client/.project"/>
+    </selectedElements>
+</jardesc>

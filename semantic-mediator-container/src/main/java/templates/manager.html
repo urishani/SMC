@@ -1,0 +1,763 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+<head>
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">    
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+		<script  type="text/javascript" src="/dm/resources/js/utils.js"></script>
+		<script  type="text/javascript" src="/dm/resources/js/manager.js">
+		</script>
+<style>
+	.ontology {}
+	.rule { }
+	.port { }
+	.mediator { }
+	.friend {  }
+	#mainTable td { padding-right: 1px; padding-left: 3px; border-right: 1px solid lightblue; }
+	#mainTable th { padding-right: 1px; padding-left: 3px; border-right: 1px solid lightblue; }
+	#commands td {border: 0px;}
+</style>
+<script type="text/javascript">
+		// File Name: manager.html
+
+	function oslc() {
+   		getResource("/dm/sm/oslc_am", function(c) {
+      	alert(c);
+   		}, 'application/rdf+xml');
+	}
+	var tagsD = _tagsData_;
+	
+	viewClass = function(name){
+		for(var i=0 ; i<document.styleSheets[0].rules.length ; i++)
+			if(!name || (document.styleSheets[0].rules[i].selectorText==="."+name))
+				document.styleSheets[0].rules[i].style.display = "";
+			else
+				document.styleSheets[0].rules[i].style.display = "none";
+	}
+	
+	function buildWithType(but) {
+	   var sel = but.parentElement.children[1];
+	   if (sel.hidden) {
+	      sel.hidden=false;
+	      return false;
+	   } else {
+	      sel.hidden=true;
+	      return true;
+	   }
+	}
+</script>
+
+<title>Semantic Mediation</title>
+</head>
+
+<body onload="onload(_ontologyVar_, _ruleSetVar_, _portVar_, _mediatorVar_, _friendsVar_,  
+     '_ontImgVar_',  '_operImgVar_', '_filterVar_', tagsD, '_project_')">
+<div id='not-in-dm-Title'>
+		<font size='+2'><b>
+		<img
+			src='/dm/resources/graphics/icons/DEVELOPMENT_Logo_icon.png' />
+		Semantic Mediation for <span style='color:blue' title='Project name. Its working folder path is: _projectRootPath_'>_metaProject_</span> [_databaseType_] _serverVersion_ 
+		</b></font>
+</div>
+<div style='overflow:hidden'>
+<table id='page'  border="0">
+	<tr class='about' valign='top'>
+	<td align='right' width='15%' id='sidebar'>
+	<table  border="0">
+		<tr>
+			<td align='left' valign='top'
+							title='Filters controlling which items are visible.'>
+							<font size='+1'><b>Filters:</b></font>
+		    <div style="border: solid 2px #ff1f00; padding: 4px">
+		    
+							<input type='checkbox' _showActive_ id='showActive'
+							name='showActive'
+							onclick='saveVar("showActive", this.checked?"checked":"", true)'
+							value='on'>Active items only <input type='button'
+							value='Clear all' onClick='clearAllFilters()'> <br>
+							<b>Tags:</b><input type='hidden' id='filter'
+							title='List of tags to filter by. Cannot be edited manually.'>
+							<div id='tags' style='overflow:visible'>
+								_tags_&nbsp;<font style='border: 1px solid red;' size='_tagSize_'>
+									<input _checked_ type='checkbox' onclick='updateTag(this)'
+									value='_tag_'>_tag_
+								</font><br>_/tags_
+							</div>
+			</div>&nbsp;
+		<tr><tr>
+		<td valign='top'>
+			<font size='+1'><b>Buttons Legend:</b></font>
+			<div style="border: solid 2px #0000ff; padding: 4px">
+							<button 
+							   class='button_image button_delete' 
+							   title='Delete (after confirmation) the item. Note: This applies only to archived items.'></button> - Delete<br>
+							<button style='background-color: yellow' class='button_image button_clear' title='Clear (after confirmation) content of the item'></button> - Clear	contents<br>
+							<button class='button_image button_edit' title='Edit and configure the item'></button> - Edit<br>
+							<butto class='button_image button_import' title='Import content from the internet'></button> - Import from internet<br>
+							<button class='button_image button_load' title='Upload content'></button> - upLoad data<br>
+							<button class='button_image button_show' title='Show content'></button> - Show content<br>
+							<button class='button_image button_action_post_' title='Exports a tool contents to its repository'></button> - POST as export<br>
+							<button class='button_image button_action_get_' title='Imports contents into a tool frolm its repository'></button> - GET as import<br>
+							<button class='button_image button_build' title='Build a derived item (context dependent)'></button> - Build<br>
+		</div>&nbsp;
+		<tr><td>
+			<font size='+1'><b>Notices:</b></font>
+			<div style="padding: 4px;">
+			_notes_
+            </div>
+        </td></tr>
+		</table>
+		<td style='width:25px;' valign='top' align='center'>
+			<div style='width:4px;height:60px;background-color:lightBlue'></div>
+			<div style='width:15px'>
+			<button id='shrinkExpandBut' class='button_left_arrow' onClick='shrink_expand(this)' title='Hide sidebar' width='15' height='30'/>&nbsp;</button>
+			</div>
+			<div style='width:4px;height:810px;background-color:lightBlue'></div>
+		<td valign='top'>
+			<table class='dj_webkit com-ibm-team-workitem queryResultsTable'
+					 border="0">
+					<tr><td>
+						<table border='0'><tr>
+							<td hidden=true><button onClick='return expandAll()'>Expand All</button>
+							<td hidden=true><button onClick='return collapseAll()'>Collapse All</button>
+							<td hidden=true><input type='button' onclick='refresh()' value='Refresh' />
+							<td><div style='height:30px;border:solid 1px #00ff00;overflow:hidden;margin:0;padding:0'>
+							<table><tr><td><font size='+2'><b>Diagrams:</b></font>
+		    					<font style='color:white; background-color:blue; style:bold;' 
+								title='You need Graphviz (http://www.graphviz.org) to be installed on the server with its executable dot command.'>
+       							&nbsp;?&nbsp;</font></b>
+							<td><form action='/dm/smGraph' target='_blank'>
+							<td><button name='OntologiesGraph' type='submit'
+								title='Shows ontologies dependencies graph based on the current filter. Using Graphviz, or RDF validator SaaS'
+								value='OntologiesGraph'><font size='+2'><b>Ontologies Graph</b></font></button>						
+							<td><button name='OperationGraph' type='submit'
+								title='Shows operational graph based on the current filter. Using Graphviz, or RDF validator SaaS'
+								value='OperationGraph'><font size='+2'><b>Operation Graph</b></font></button>
+								</form><td>
+								</table>
+							<form action='/dm/smLogs' target='_blank'><td>
+								<button name='ShowLog' type='submit' value=''><font size='+2'><b>Executions Log</b></font></button>
+							</form>
+							<td><a href='/dm/sm/oslc_am' title='Show OSLC provider information'><img width='30' height='30' src="http://open-services.net/css/images/logo-forflip.png"></a>
+								<font size='+2'><b>OSLC Compliant</b></font>
+							</td>
+							<td hidden=true>
+							    <form action='/dm/sm'>
+				                	<input hidden=true name='id' value='DATABASE'>
+				                	<input id='downloadButton' type='submit' name='action' value='Save' title='Save present configuration to the client disk'>
+            					</form>
+            				</td>
+							<td hidden=true><form action='/dm/sm/management'><button name='SaveConfiguration' title='Load a new configuration from a client saved image'></button></form></td>
+						</table>
+						<div style='width:1200px;border:solid 1px #ff0000'>
+						<font size='+2'><b>Messages:</b></font><font size='+2' color='red' id='messages'>_messages_</font>
+						</div><hr>
+					<tr><td valign='bottom' align='left'>
+						<table border='0'>
+						<tr>
+						<td><form action='/dm/sm'><button type='submit' 
+						 	title='Refresh page with a clean query line'>
+						 	<font size='+2' color='blue'><b>
+						 	Refresh
+						 	</b></font>
+						 	</button></form>
+						<td><font size='+2'><b>
+						 	Tabs:
+						 	</b></font>
+						<td><button id='toggle_Ont'
+							onclick='return toggle("Ont", this, 0, 1)'
+						 	title='Collapse ontologies section' style='DISPLAY: block'>
+						 	<font size='+2' color='blue'><b>
+						 	Ontologies
+						 	</b></font>
+						 	</button>
+						<td>&nbsp;|&nbsp;
+						<td><button id='toggle_Rul' onclick='return toggle("Rul", this, 0, 1)'
+						 	title='Collapse rulesets section' style='DISPLAY: block'>
+						 	<font size='+2' color='blue'><b>
+						 	Rule-sets
+						 	</b></font>
+						 	</button>
+						<td>&nbsp;|&nbsp;
+						<td><button id='toggle_Prt'
+							onclick='return toggle("Prt", this, 0, 1)'
+						 	title='Collapse ports section' style='DISPLAY: block'>
+						 	<font size='+2' color='blue'><b>
+						 	Repositories
+						 	</b></font>
+						 	</button>
+						<td>&nbsp;|&nbsp;
+						<td><button id='toggle_Mdt'
+							onclick='return toggle("Mdt", this, 0, 1)'
+						 	title='Collapse mediators section' style='DISPLAY: block'>
+						 	<font size='+2' color='blue'><b>
+						 	Mediators
+						 	</b></font>
+						 	</button>
+						<td>&nbsp;|&nbsp;
+						<td><button id='toggle_Frn'
+							onclick='return toggle("Frn", this, 0, 1)'
+						 	title='Collapse friends section' style='DISPLAY: block'>
+						 	<font size='+2' color='blue'><b>
+						 	Friends
+						 	</b></font>
+						 	</button>
+						<td>&nbsp;|&nbsp;
+						<td><button id='collapse_All'
+							onclick='return expandAll()'
+						 	title='Expand all sections' style='DISPLAY: block'>
+						 	<font size='+2' color='blue'><b>
+						 	All
+						 	</b></font>
+						 	</button>
+						 
+					</tr></table>
+					<tr>
+						<td valign='top'>
+							<div style='height:900px;overflow:scroll'>
+							<table id='mainTable'
+								class='dj_webkit com-ibm-team-workitem queryResultsTable main_table'
+								border='0'>
+								<form action='/dm/sm'>
+									<tr id='OntT' bgcolor='lightgray' class='ontology'>
+										<th colspan='14' title='Create a new ontology' >
+											<button class='button_imageB button_plusB' type='submit'></button> 
+											<input type='hidden' name='create' value='ontology' /> <input id='newOntTags'
+											type='hidden' name='createWithTags' value='_filterVar_' /> <font
+											size='+2' color='blue'><b>Ontology
+											<button _importDisabled_ type='submit' name='import'>Import from Friends</button>
+											<select _importDisabled_ name='importFromFriend'>
+											_friends4OntImport_
+											<option value='_id_'>_name_</option>
+											_/friends4OntImport_
+											</select>
+											</b></font>
+										</th>
+									</tr>
+								</form>
+								<tr id='Ont0' class='ontology'>
+									<th class='smTh' title='Actions possible on an item. See above for meanings'>Actions
+									<th class='smTh'
+										title='Unique identifier of a configuration item'>Id
+									<th class='smTh' colspan='1' title='Descriptive name of the item'>Name
+									<th class='smTh' colspan='1' title='Short name space prefix'>Prefix
+									<th class='smTh' colspan='3'
+										title='Base name-space URI of an ontology model'>Name
+										Space
+									<th colspan='2' class='smTh' title='Dependencies on other ontologies'>Dependencies
+									<th class='smTh' title='Version IRI of an ontology model (optional)'>Version
+									<th class='smTh' title='Tags assigned to the item'>Tags
+									<th class='smTh' 
+										title='Time item has been modified (hover to see time it was created)'>Modified
+									<th class='smTh' title='Status should be "green" for item to be applicable'>Status
+									<th class='smTh' 
+										title='Shows whether an item is archived - so it is candidate for deletion'>Arch
+									</th>
+								</tr>
+								_ontologies_
+								<form action='/dm/sm' x='ont'>
+									<tr id='_id_' class='ontology'>
+										<td><input type='hidden' name='id' value='_id_'>
+											<table id='commands'	 border="0">
+												<tr>
+													<td _deleteDisabled_>
+														<button type='submit' name='action' 
+															onClick='return (confirm("Are you sure to DELETE?"))'
+															title='Delete (after confirmation) the item [_deleteDisabled4t_]'
+															value='D' 
+															class='button_image button_delete'></button>
+													<td _editDisabled_>
+														<button type='submit' name='action' 
+														    title='Edit and configure the item'
+															value='E' 
+															class='button_image button_edit'></button>
+													<td _importDisabled_>
+														<button type='submit' name='action' 
+														    title='Import content from the internet'
+															value='I' 
+															class='button_image button_import'></button>
+													<td _loadDisabled_>
+														<button type='submit' name='action' 
+														    title='Upload content'
+															value='L' 
+															class='button_image button_load'></button>
+													<td _showDisabled_>
+														<button type='submit' name='action' 
+														    title='Show content'
+															value='ShowList' 
+															class='button_image button_show'></button>
+													<td _buildDisabled_>
+														<button type='submit' onclick='return buildWithType(this)' name='action' 
+														    title='Build a port of a certain type (default: repository)'
+															value='Build' 
+															class='button_image button_build'></button>
+														<select hidden=true name='portType' value='repository'>
+															<option value='repository'>repository</option>
+															<option value='post'>post</option>
+															<option value='get'>get</option>
+															<option value='pipe'>pipe</option>
+															<option value='export'>export</option>
+														</select>													
+												</tr>
+											</table></td>
+										<td>_id_
+										<td colspan='1'>_name_
+										<td colspan='1'>_prefix_
+										<td colspan='3'><a href='_modelInstanceNamespace_' title='URL to access the ontology. Click to get html view of this ontology'>_modelInstanceNamespace_</a>
+										<td colspan='2'>_dependencies_
+										<td>_version_
+										<td>_tags_
+										<td title='Created: _dateCreated_'>_dateModified_
+										<td align='center'><button disabled class='button_image icon-status-_status_'>
+										<td align='center'><button disabled class='button_image icon-_isArchived_'>
+									</tr>
+								</form>
+								_/ontologies_
+								<form action='/dm/sm'>
+									<tr id='RulT' bgcolor='lightgray' class='rule'>
+										<th colspan='14' title='Create a new rule-set'>
+											<button class='button_imageB button_plusB' type='submit'></button> <input type='hidden'
+											name='create' value='ruleSet'> <input id='newRulTags'
+											type='hidden' name='createWithTags' value='_filterVar_' /> <font
+											size='+2' color='blue'><b>Rule-set
+											<button _importDisabled_ type='submit' name='import'>Import from Friends</button>
+											<select _importDisabled_ name='importFromFriend'>
+											_friends4RulImport_
+											<option value='_id_'>_name_</option>
+											_/friends4RulImport_
+											</select>
+											</b></font>
+										</th>
+									</tr>
+								</form>
+								<tr id='Rul0' class='rule'>
+									<th rowspan='2' class='smTh' title='Actions possible on an item. See above for meanings'>Actions
+									<th rowspan='2' class='smTh' width='70'
+										title='Unique identifier of a configuration item'>Id
+									<th rowspan='2' class='smTh' colspan='1' title='Descriptive name of the item'>Name
+									<th rowspan='2' class='smTh' colspan='1'
+										title='Base name-space URI of an ontology model'>Name Space
+									<th colspan='4' class='smTh' title='Restrictions on the rule-set' align='center'
+										style='border-bottom'>Restrictions
+									<th rowspan='2' class='smTh' title='Dependencies on other ontologies'>Dependencies
+									<th rowspan='2' class='smTh' title='Version IRI of an ontology model (optional)'>Version
+									<th rowspan='2' class='smTh' title='Tags assigned to the item'>Tags
+									<th rowspan='2' class='smTh' 
+										title='Time item has been modified (hover to see time it was created)'>Modified
+									<th rowspan='2' class='smTh'
+									 	title='Status should be "green" for item to be applicable'>Status
+									<th rowspan='2' class='smTh' 
+										title='Shows whether an item is archived - so it is candidate for deletion'>Arch
+									</th>
+								</tr>
+								<tr id='Rul1' class='rule'>
+									<th class='smTh' title='API name (a link) to do mediation.'>API
+									<th class='smTh' title='End points ontology IDs'>From -&gt; To
+									<th class='smTh' title='Java intercepter which can interpret these rules'>Intercepter
+									<th class='smTh' title='Marks that these rules can work also in reverse To --> From '>Rev.
+								</tr>
+								_rules_
+								<form action='/dm/sm'>
+									<tr id='_id_' class='rule'>
+										<td><input type='hidden' name='id' value='_id_'>
+											<table id='commands'	 border="0">
+												<tr>
+													<td _deleteDisabled_>
+														<button type='submit' name='action' 
+															onClick='return (confirm("Are you sure to DELETE?"))'
+															title='Delete (after confirmation) the item [__deleteDisabled4t__]'
+															value='D' 
+															class='button_image button_delete'></button>
+													<td _editDisabled_>
+														<button type='submit' name='action' 
+															title='Edit and configure the item'
+															value='E' 
+															class='button_image button_edit'></button>
+													<td _importDisabled_>
+														<button type='submit' name='action' 
+															title='Import content from the internet'
+															value='I' 
+															class='button_image button_import'></button>
+													<td _loadDisabled_>
+														<button type='submit' name='action' 
+															title='Upload content'
+															value='L' 
+															class='button_image button_load'></button>
+													<td _showDisabled_>
+														<button type='submit' name='action' 
+															title='Show content'
+															value='ShowList' 
+															class='button_image button_show'></button>
+													<td _buildDisabled_>
+														<button type='submit' name='action' 
+														    title='Build a mediator for this rules set'
+															value='Build' 
+															class='button_image button_build'></button>
+												</tr>
+											</table></td>
+										<td>_id_
+										<td colspan='1'>_name_
+										<td colspan='1'><a href='_modelInstanceNamespace_' title='URL to access the rules ontology. Click to get html view of this ontology'>_modelInstanceNamespace_</a>
+										<td><a class='anchor-_hasNoAPI_-active' href='/dm/sm/rules/API/_apiAccessName_'>_apiAccessName_</a>
+										<span class='icon._hasAPI_.active'></span>
+										<td>_EndPointA_ -&gt; _EndPointB_
+										<td
+											title='Class: _interceptorClass_. Description: _interceptorDescription_. Legal:_interceptorIsLegal_.'>_interceptorName_
+										<td align='center' title='Rulese are reversible: _Reversible_'>
+										<img src='/dm/resources/graphics/icons/reversible_Reversible_-icon.png' height='25' width='30'>
+										<td>_dependencies_
+										<td>_version_
+										<td>_tags_
+										<td title='Created: _dateCreated_'>_dateModified_
+										<td align='center'><button disabled class='button_image icon-status-_status_'>
+										<td align='center'><button disabled class='button_image icon-_isArchived_'>
+									</tr>
+								</form>
+								_/rules_
+
+								<form action='/dm/sm'>
+									<tr id='PrtT' bgcolor='lightgray' class='port'>
+										<th colspan='14' title='To create a new repository - use an ontology' colspan='5'>
+											<button style='display:none' class='button_imageB button_plusB' type='submit'></button> 
+											<input style='display:none' id='newPrtTags' type='hidden' name='createWithTags' value='_filterVar_' /> 
+											<font size='+2'>
+											<select	style='display:none' name='portType' value='repository'>
+												<option>repository</option>
+												<option>post</option>
+												<option>get</option>
+												<option>pipe</option>
+												<option>export</option>
+											</select> <input hidden=true type='hidden' name='create' value='port'> 
+											<font color='blue'><b>Repositories</b></font></font>
+										</th>
+									</tr>
+								</form>
+								<tr id='Prt0' class='port'>
+									<th class='smTh' title='Actions possible on an item. See above for meanings'>Actions
+									<th class='smTh' title='Unique identifier of a configuration item'>Id
+									<th class='smTh' 
+										title='Whether a repository is in sync. with the latest model updates'>Sync.
+									<th class='smTh' title='Descriptive name of the port' colspan='1'>Name
+									<th class='smTh' 
+										title='API name (and the actual link) to be used by this port. (For REST, this is the name following the path dm/sm/tool/).'>API
+									<th class='smTh' 
+										title='Port type: restful post or get, remote, repository or a pipe w/no storage'
+										colspan='1'>Type
+									<th class='smTh' 
+										title='Marks the services possible for this port for tools'>Direct Access
+									<th colspan='2' class='smTh' 
+										title='ID of the ontology describing models passing through this port'>Ontology ID
+									<th class='smTh' title='Version number of this port item (optional)'>Version
+									<th class='smTh' title='Tags assigned to this item'>Tags
+									<th class='smTh' 
+										title='Time item has been modified (hover to see time it was created)'>Modified
+									<th class='smTh' title='Status should be "green" for item to be applicable'>Status
+									<th class='smTh' 
+										title='Shows whether an item is archived - so it is candidate for deletion'>Arch</th>
+									</th>
+								</tr>
+								_ports_
+								<form action='/dm/sm'>
+									<tr id='_id_' class='port'>
+										<td colspan='1'><input type='hidden' name='id'
+											value='_id_'>
+											<table id='commands'	 border="0">
+												<tr>
+													<td _deleteDisabled_>
+														<button type='submit' name='action' 
+															onClick='return (confirm("Are you sure to DELETE?"))'
+															title='Delete (after confirmation) the item [__deleteDisabled4t__]'
+															value='D' 
+															class='button_image button_delete'></button>
+													<td _editDisabled_>
+														<button type='submit' name='action' 
+															title='Edit and configure the item'
+															value='E' 
+															class='button_image button_edit'></button>
+													<td _showDisabled_>
+														<button type='submit' name='action' 
+															title='Show content'
+															_showHidden_ 
+															value='ShowList' 
+															class='button_image button_show'></button>
+													<td _clearHidden_>
+														<button id='_id_-port-clear' type='submit' 
+															style='background-color: yellow' name='action'
+															_clearDisabled_
+															onClick='return (confirm("Are you sure to CLEAR?"))'
+															title='Clear (after confirmation) content of the item'
+															value='C' 
+															class='button_image button_clear'></button>
+													<td _buildDisabled_>
+														<button type='submit' name='action' 
+															title='Build a TOOL to work with this repository'
+															value='Build' 
+															class='button_image button_build'></button>
+												</tr>
+											</table></td>
+										<td>_id_
+										<td id='_id_-port-sync' align='center'>_portSync_
+										<td colspan='1'>_name_
+										<td><a href='/dm/sm/tool/_accessName_'>_accessName_</a>
+										<td colspan='1'><table boundary='0'><tr><td class='icon-_type_' width='20px' height='20px'><td>_type_</table>
+										<td colspan='1' align='center' title='Access by tools with this port is for _accessibility_ only'>
+										   <img src='/dm/resources/graphics/icons/_accessibilityIcon_.png' height='20' width='25'>
+										<td colspan='2'>_ontologyId_
+										<td>_version_
+										<td>_tags_
+										<td title='Created: _dateCreated_'>_dateModified_
+										<td align='center'><button disabled class='button_image icon-status-_status_'>
+										<td align='center'><button disabled class='button_image icon-_isArchived_'>
+									</tr>
+								</form>
+								_/ports_
+
+								<tr id='Prt_T' bgcolor='lightgray' class='port'>
+									<th colspan='14' title='To create a new tool - use a repository' colspan='5'>
+										<font size='+2' color='blue'><b>Tools</b></font>
+									</th>
+								</tr>
+								<tr id='Prt_0' class='port'>
+									<th class='smTh' title='Actions possible on an item. See above for meanings'>Actions
+									<th colspan='2' class='smTh' title='Unique identifier of a configuration item'>Id
+									<th class='smTh' title='Descriptive name of the tool' colspan='1'>Name
+									<th class='smTh' 
+										title='Associated repsotitory of this tool to which it may be able to POST or GET contents.'>Associated Port
+									<th class='smTh' 
+										title='Port type: can only be a tool.'
+										colspan='1'>Type
+									<th class='smTh' 
+										title='Marks the services possible for this tool when working with its associated repository (derived from its associated repository).'>Access
+									<th colspan='2' class='smTh' 
+										title='ID of the ontology describing models contained in this tool (derived from its associated repository).'>Ontology ID
+									<th class='smTh' title='Version number of this port item (optional)'>Version
+									<th class='smTh' title='Tags assigned to this item'>Tags
+									<th class='smTh' 
+										title='Time item has been modified (hover to see time it was created)'>Modified
+									<th class='smTh' title='Status should be "green" for item to be applicable'>Status
+									<th class='smTh' 
+										title='Shows whether an item is archived - so it is candidate for deletion'>Arch</th>
+									</th>
+								</tr>
+								_tools_
+								<form action='/dm/sm'>
+									<tr id='_id_' class='port'>
+										<td colspan='1'><input type='hidden' name='id'
+											value='_id_'>
+											<table id='commands'	 border="0">
+												<tr>
+													<td _deleteDisabled_>
+														<button type='submit' name='action' 
+															onClick='return (confirm("Are you sure to DELETE?"))'
+															title='Delete (after confirmation) the item [__deleteDisabled4t__]'
+															value='D' 
+															class='button_image button_delete'></button>
+													<td _editDisabled_>
+														<button type='submit' name='action' 
+															title='Edit and configure the item'
+															value='E' 
+															class='button_image button_edit'></button>
+													<td _showDisabled_>
+														<button type='submit' name='action' 
+															title='Show content'
+															_showHidden_ 
+															value='ShowList' 
+															class='button_image button_show'></button>
+													<td _clearHidden_>
+														<button id='_id_-port-clear' type='submit' 
+															style='background-color: yellow' name='action'
+															_clearDisabled_
+															onClick='return (confirm("Are you sure to CLEAR?"))'
+															title='Clear (after confirmation) content of the item'
+															value='C' 
+															class='button_image button_clear'></button>
+													<td _postHidden_ _postDisabled_>
+														<button type='submit' name='action'
+															title='Post this tool model to its repository [_associatedRepositoryId_] for mediation'
+															value='P' 
+															class='button_image button__postDisabled_ button_action_post__postDisabled_'></button>
+													<td _getHidden_ _getDisabled_>
+														<button type='submit' name='action'
+															title='Get model into this tool from its mediated repository [_associatedRepositoryId_]'
+															value='G' 
+															class='button_image button__getDisabled_ button_action_get__getDisabled_'></button>
+												</tr>
+											</table></td>
+										<td colspan='2'>_id_
+										<td colspan='1'>_name_
+										<td>_associatedRepositoryId_
+										<td colspan='1'><table boundary='0'><tr><td class='icon-_type_' width='20px' height='20px'><td>_type_</table>
+										<td colspan='1' align='center' title='Access option with its repository is for _activeAccessibility_ only.'>
+										   <img src='/dm/resources/graphics/icons/_accessibilityIcon_.png' height='20' width='25'>
+										<td colspan='2'>_ontologyId_
+										<td>_version_
+										<td>_tags_
+										<td title='Created: _dateCreated_'>_dateModified_
+										<td align='center'><button disabled class='button_image icon-status-_status_'>
+										<td align='center'><button disabled class='button_image icon-_isArchived_'>
+									</tr>
+								</form>
+								_/tools_
+
+								<form action='/dm/sm'>
+									<tr id='MdtT' bgcolor='lightgray' class='mediator'>
+										<th colspan='14' title='To create a new mediator - use a rules-set'>
+											<button style='display:none' class='button_imageB button_plusB' type='submit'></button> <input type='hidden'
+											name='create' value='mediator'> <input
+											id='newMdtTags' type='hidden' name='createWithTags'
+											value='_filterVar_' /> <font size='+2' color='blue'><b>Mediators</b></font>
+										</th>
+									</tr>
+								</form>
+								<tr id='Mdt0' class='mediator'>
+									<th class='smTh' title='Actions possible on an item. See above for meanings'>Actions
+									<th class='smTh' title='Unique identifier of a mediator item'>Id
+									<th class='smTh' title='Descriptive name of the mediator' colspan='2'>Name
+									<th class='smTh' title='ID of the port describing input to this mediation'>In
+										Port ID
+									<th class='smTh' 
+										title='ID of the port describing output from this mediation'>Out
+										Port ID
+									<th class='smTh' title='Java intercepter for the rules, which will process models for this mediator'>Intercepter
+									<th colspan='2' class='smTh' title='ID of the mediation rule-set to be used'>Rule Set ID
+									<th class='smTh' title='Version number of this mediator item (optional)'>Version
+									<th class='smTh' title='Tags assigned to this item'>Tags
+									<th class='smTh' 
+										title='Time item has been modified (hover to see time it was created)'>Modified
+									<th class='smTh' title='Status should be "green" for item to be applicable'>Status
+									<th class='smTh' 
+										title='Shows whether an item is archived - so it is candidate for deletion'>Arch</th>
+								</tr>
+
+								_mediators_
+								<form action='/dm/sm'>
+									<tr id='_id_' class='mediator'>
+										<td><input type='hidden' name='id' value='_id_'>
+											<table id='commands'	 border="0">
+												<tr>
+													<td _deleteDisabled_>
+														<button type='submit' name='action' 
+															onClick='return (confirm("Are you sure to DELETE?"))'
+															title='Delete (after confirmation) the item [__deleteDisabled4t__]'
+															value='D' 
+															class='button_image button_delete'></button>
+													<td _editDisabled_>
+														<button type='submit' name='action' 
+															title='Edit and configure the item'
+															value='E' 
+															class='button_image button_edit'></button>
+													<td _testDisabled_>
+														<button type='submit' name='action' 
+															title='Test this item'
+															value='T' 
+															class='button_image button_test'></button>
+													<td _showDisabled_>
+														<button type='submit' name='action'
+															style='display: ' 
+															value='ShowMediator' 
+															title='Show content'
+															class='button_image button_show'></button>
+												</tr>
+											</table></td>
+										<td>_id_
+										<td colspan='2'>_name_
+										<td>_inputPortId_
+										<td>_outputPortId_
+										<td
+											title='Class: _interceptorClass_. Description: _interceptorDescription_. Legal:_interceptorIsLegal_.'>_interceptorName_
+										<td colspan='2'>_ruleSetId_
+										<td>_version_
+										<td>_tags_
+										<td title='Created: _dateCreated_'>_dateModified_
+										<td align='center'><button disabled class='button_image icon-status-_status_'>
+										<td align='center'><button disabled class='button_image icon-_isArchived_'>
+									</tr>
+								</form>
+								_/mediators_
+
+								<form action='/dm/sm'>
+									<tr id='FrnT' bgcolor='lightgray' class='friend'>
+										<th colspan='14' title='Create a new friend'><button
+												class='button_imageB button_plusB' type='submit'></button> <input type='hidden'
+											name='create' value='friend'> <input id='newFrnTags'
+											type='hidden' name='createWithTags' value='_filterVar_' /> <font
+											size='+2' color='blue'><b>Friends</b></font>
+										</th>
+									</tr>
+								</form>
+								<tr id='Frn0' class='friend'>
+									<th class='smTh' title='Actions possible on an item. See above for meanings'>Actions
+									<th class='smTh' title='Unique identifier of a friend item'>Id
+									<th class='smTh' title='Descriptive name of the friend' colspan='2'>Name
+									<th class='smTh' title='Username at the friend server'>User
+									<th class='smTh' title='Friend server IP address, including IP port'
+										colspan='4'>IP Address and Port
+									<th class='smTh' title='Version number of this friend item (optional)'>Version
+									<th class='smTh' title='Tags assigned to this item'>Tags
+									<th class='smTh' 
+										title='Time item has been modified (hover to see time it was created)'>Modified
+									<th class='smTh' 
+										title='If status is not OK, the server could not be reached, or the credentials are incorrect'>Status
+									<th class='smTh' 
+										title='Shows whether an item is archived - so it is candidate for deletion'>Arch</th>
+								</tr>
+
+								_friends_
+								<form action='/dm/sm'>
+									<tr id='_id_' class='friend'>
+										<td><input type='hidden' name='id' value='_id_'>
+											<table id='commands'	 border="0">
+												<tr>
+													<td _deleteDisabled_>
+													<button type='submit' name='action'		
+															onClick='return (confirm("Are you sure to DELETE?"))'
+															value='D' 
+															title='Delete (after confirmation) the item [__deleteDisabled4t__]'
+															class='button_image button_delete'></button>
+													<td _editDisabled_>
+													<button type='submit' name='action' 
+															value='E' 
+															title='Edit and configure the item'
+															class='button_image button_edit'></button>
+													<td _testDisabled_>
+													<button type='submit' name='action' 
+															value='T' 
+															title='Test this item'
+															class='button_image button_test'></button>
+												</tr>
+											</table></td>
+										<td>_id_
+										<td colspan='2'>_name_
+										<td>_user_
+										<td colspan='4'>_ipAddress_
+										<td>_version_
+										<td>_tags_
+										<td title='Created: _dateCreated_'>_dateModified_
+										<td align='center'><button disabled class='button_image icon-status-_status_'>
+										<td align='center'><button disabled class='button_image icon-_isArchived_'>
+									</tr>
+								</form>
+								_/friends_
+							</table>
+							</div>
+						</td>
+					</tr>
+				</table>
+	</table>
+</div>
+</body>
+</html>

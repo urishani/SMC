@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<rdf:RDF
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:updm="http://com.ibm.ns/rhapsody.updm/haifa/sm#"
+    xmlns:sm="http://com.ibm.ns/haifa/sm#"
+    xmlns:rhp_model="http://com.ibm.ns/rhapsody/haifa/sm#" > 
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-76cd6a76-0679-4f3b-ad72-4bafd4d2fcac">
+    <rhp_model:hasPortDirection>InputPort</rhp_model:hasPortDirection>
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In3</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>SysMLPort</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 76cd6a76-0679-4f3b-ad72-4bafd4d2fcac</rhp_model:GUID>
+    <dc:title>Control_In3</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c5f49543-d12f-4b6d-9d09-3c5c29ed66b0">
+    <rhp_model:hasLink rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e9e33bce-a063-41c7-95d2-6dbd7049607f"/>
+    <dc:title>SoS</dc:title>
+    <rhp_model:hasPart rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c768798d-d6be-4934-8b85-2dce578f1899"/>
+    <rhp_model:hasPart rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-b9de84aa-2d7b-4b08-94cf-f26fa82ed131"/>
+    <rhp_model:Metaclass>Class</rhp_model:Metaclass>
+    <rhp_model:hasLink rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-250a793c-5944-4a98-aea6-3534b9305e95"/>
+    <rhp_model:GUID>GUID c5f49543-d12f-4b6d-9d09-3c5c29ed66b0</rhp_model:GUID>
+    <rhp_model:hasLink rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-1a1beba9-028c-46e4-a999-459d11582767"/>
+    <rhp_model:hasLink rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-7d563700-0e4b-4ffe-a176-61ce7fd7bc13"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS</rhp_model:hasQualifiedName>
+    <rhp_model:hasPart rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-42df22a9-ebde-44c7-b037-ec166cd8317d"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody.updm/haifa/sm#System"/>
+    <rhp_model:hasLink rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-7638c2cc-9bb5-42e4-ab20-267876d19eb2"/>
+    <rhp_model:hasLink rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-db190796-b3fd-4d0a-93f5-28a3106f52fc"/>
+    <rhp_model:hasPart rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9dbed9aa-e9ec-41a3-b10f-22289de9a17d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-93f0811f-d761-4e35-9510-6dad3231b8d6">
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 93f0811f-d761-4e35-9510-6dad3231b8d6</rhp_model:GUID>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.NumberOfCars</rhp_model:hasQualifiedName>
+    <dc:title>NumberOfCars</dc:title>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:hasValue>0</rhp_model:hasValue>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-77ad53de-7ac4-4f19-9929-76484bdee191"/>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9dd63e0e-8eec-46da-b4c3-8bacad2d570b">
+    <rhp_model:hasPortDirection>OutputPort</rhp_model:hasPortDirection>
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out3</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>SysMLPort</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 9dd63e0e-8eec-46da-b4c3-8bacad2d570b</rhp_model:GUID>
+    <dc:title>Control_Out3</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-2f9a43de-8935-485c-8f8b-5471cb2aaa3d">
+    <rhp_model:hasPackage rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-34fbf0b7-30b0-4c1d-a95a-e359fef87607"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Package"/>
+    <dc:description>An Architectural Description is the main containment package of the Architecture.&#xD;
+It describes all the elements and information required to describe the architecture from the perspective of the stakeholders.&#xD;
+These stakeholders and other information can be captured in a set of tags that are owned by the Architectural Description. </dc:description>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Package</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 2f9a43de-8935-485c-8f8b-5471cb2aaa3d</rhp_model:GUID>
+    <dc:title>DoDAF20_Architecture</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-58b1eebe-9cb0-4c97-9bf0-8454442ed94a">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>SoS.itsTrafficControl_local_TDMA_sfs-&gt;forAll(tc | always [ tc.NumberOfCars &lt; 100 ] )</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::id002.Guarantee</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 58b1eebe-9cb0-4c97-9bf0-8454442ed94a</rhp_model:GUID>
+    <dc:title>Guarantee</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-539a9f6b-fdae-4b61-b7f0-66f137f21940">
+    <rhp_model:hasPort rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-8dd18c01-3622-47cc-8d64-57658eee56cf"/>
+    <dc:title>TrafficGrid_TDMA_sf</dc:title>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-fe26db65-94f0-4778-a8aa-760bcac86244"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody.updm/haifa/sm#System"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-fe97fb4e-6b68-46d0-ac53-691a4d5d01c2"/>
+    <rhp_model:GUID>GUID 539a9f6b-fdae-4b61-b7f0-66f137f21940</rhp_model:GUID>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf</rhp_model:hasQualifiedName>
+    <rhp_model:hasPort rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-802e77fb-7e81-4c09-933c-913e1cfa82e5"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-3d3dd58e-9f3a-404c-978c-65cdd3e1d835"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-d13014fb-c87d-4ff1-8c33-9b78a639f3da"/>
+    <rhp_model:Metaclass>Class</rhp_model:Metaclass>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-399ca00a-bf8e-4b70-9c89-fc0c2a408cbc"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-2a19705f-c3f9-4214-9193-8d0101846ba2"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-181648eb-81d7-45a2-9bb9-1e52dd4d16bc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-6614caf8-8934-4852-89c2-7ae9c01e8f3c">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out1.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 6614caf8-8934-4852-89c2-7ae9c01e8f3c</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-37397b21-1b83-4524-9961-8bf357d79313">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>always [true] </rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::id002.Assumption</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 37397b21-1b83-4524-9961-8bf357d79313</rhp_model:GUID>
+    <dc:title>Assumption</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-250a793c-5944-4a98-aea6-3534b9305e95">
+    <rhp_model:hasMultiplicity_1>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_1>
+    <rhp_model:GUID>GUID 250a793c-5944-4a98-aea6-3534b9305e95</rhp_model:GUID>
+    <rhp_model:hasMultiplicity_2>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_2>
+    <rhp_model:hasPort_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-8dd18c01-3622-47cc-8d64-57658eee56cf"/>
+    <rhp_model:hasEndPoint_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c768798d-d6be-4934-8b85-2dce578f1899"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ResourceInterface"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.resourceinterface_57</rhp_model:hasQualifiedName>
+    <rhp_model:hasPort_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-376239c2-3204-4886-a2aa-3c68e5d25302"/>
+    <dc:title>resourceinterface_57</dc:title>
+    <rhp_model:hasEndPoint_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-42df22a9-ebde-44c7-b037-ec166cd8317d"/>
+    <rhp_model:Metaclass>Link</rhp_model:Metaclass>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-3d3dd58e-9f3a-404c-978c-65cdd3e1d835">
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasValue>0.0</rhp_model:hasValue>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Grid_In</rhp_model:hasQualifiedName>
+    <dc:title>Grid_In</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-2c73e104-46d0-49bf-b0aa-bec276f6b7fb"/>
+    <rhp_model:GUID>GUID 3d3dd58e-9f3a-404c-978c-65cdd3e1d835</rhp_model:GUID>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-3059f81e-27b7-4fdc-8698-046094305bf9">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>0.1</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Version</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 3059f81e-27b7-4fdc-8698-046094305bf9</rhp_model:GUID>
+    <dc:title>Version</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-1a1beba9-028c-46e4-a999-459d11582767">
+    <dc:title>resourceinterface_54</dc:title>
+    <rhp_model:GUID>GUID 1a1beba9-028c-46e4-a999-459d11582767</rhp_model:GUID>
+    <rhp_model:hasPort_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-56a421a6-4efb-4d1f-bfd1-69afb8e9ca82"/>
+    <rhp_model:hasEndPoint_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-42df22a9-ebde-44c7-b037-ec166cd8317d"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c768798d-d6be-4934-8b85-2dce578f1899"/>
+    <rhp_model:hasPort_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-802e77fb-7e81-4c09-933c-913e1cfa82e5"/>
+    <rhp_model:Metaclass>Link</rhp_model:Metaclass>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.resourceinterface_54</rhp_model:hasQualifiedName>
+    <rhp_model:hasMultiplicity_1>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_1>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ResourceInterface"/>
+    <rhp_model:hasMultiplicity_2>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-be490840-e10a-474b-bce4-fe0c64846f6a">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.NumberOfStreets.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID be490840-e10a-474b-bce4-fe0c64846f6a</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-4dd8be1b-6fd7-4edb-8321-29433d0b1431">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>TrafficControl_local_TDMA_sf</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Name</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 4dd8be1b-6fd7-4edb-8321-29433d0b1431</rhp_model:GUID>
+    <dc:title>Name</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Stereotype"/>
+    <rhp_model:hasGUID>GUID 500c77f4-9496-4c88-bb9e-83ba47c2ebab</rhp_model:hasGUID>
+    <rhp_model:hasQualifiedName>Danse::Simulation::TRACEABLE</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Stereotype</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 500c77f4-9496-4c88-bb9e-83ba47c2ebab</rhp_model:GUID>
+    <dc:title>TRACEABLE</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-fa9ebd21-69e0-4644-a930-eb6f3e394701">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Car2_X_Position.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID fa9ebd21-69e0-4644-a930-eb6f3e394701</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-36b98f3a-1566-4ae6-916a-ca8ba83e7c28">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Car2_Y_Position.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 36b98f3a-1566-4ae6-916a-ca8ba83e7c28</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-802e77fb-7e81-4c09-933c-913e1cfa82e5">
+    <rhp_model:hasPortDirection>OutputPort</rhp_model:hasPortDirection>
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Grid_Out</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>SysMLPort</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 802e77fb-7e81-4c09-933c-913e1cfa82e5</rhp_model:GUID>
+    <dc:title>Grid_Out</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-b1c54fb9-ae30-4892-b864-5065fe520501">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.LengthOfStreets.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID b1c54fb9-ae30-4892-b864-5065fe520501</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-8dd18c01-3622-47cc-8d64-57658eee56cf">
+    <rhp_model:hasPortDirection>InputPort</rhp_model:hasPortDirection>
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Grid_In</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>SysMLPort</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 8dd18c01-3622-47cc-8d64-57658eee56cf</rhp_model:GUID>
+    <dc:title>Grid_In</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-fe97fb4e-6b68-46d0-ac53-691a4d5d01c2">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>https://danse.haifa.il.ibm.com:9444/dm/sm/blobs/SmFMU/resource/0003</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.URI</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID fe97fb4e-6b68-46d0-ac53-691a4d5d01c2</rhp_model:GUID>
+    <dc:title>URI</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e4d0b6da-0082-4796-b681-cdb75247f568">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In2.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID e4d0b6da-0082-4796-b681-cdb75247f568</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-42df22a9-ebde-44c7-b037-ec166cd8317d">
+    <rhp_model:hasType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-86c26d43-059d-4067-a86b-97d95743563c"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.Control1</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Object</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 42df22a9-ebde-44c7-b037-ec166cd8317d</rhp_model:GUID>
+    <dc:title>Control1</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-5c151321-7a43-4a11-bfea-afdd56b853a9">
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <dc:title>NumberOfStreets</dc:title>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:GUID>GUID 5c151321-7a43-4a11-bfea-afdd56b853a9</rhp_model:GUID>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-be490840-e10a-474b-bce4-fe0c64846f6a"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.NumberOfStreets</rhp_model:hasQualifiedName>
+    <rhp_model:hasValue>0</rhp_model:hasValue>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-7143df8b-469d-4d53-9bed-ada6f39f9d5c">
+    <rhp_model:GUID>GUID 7143df8b-469d-4d53-9bed-ada6f39f9d5c</rhp_model:GUID>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-fa9ebd21-69e0-4644-a930-eb6f3e394701"/>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Car2_X_Position</rhp_model:hasQualifiedName>
+    <rhp_model:hasValue>0</rhp_model:hasValue>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:title>Car2_X_Position</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-5249cc42-4be2-47e6-a7cf-a974b01a6a8a">
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.LengthOfStreets</rhp_model:hasQualifiedName>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-b1c54fb9-ae30-4892-b864-5065fe520501"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:GUID>GUID 5249cc42-4be2-47e6-a7cf-a974b01a6a8a</rhp_model:GUID>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasValue>0</rhp_model:hasValue>
+    <dc:title>LengthOfStreets</dc:title>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-f5e743c2-5aa1-40f2-9bcf-03aa26f39cf7">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Grid_Out.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID f5e743c2-5aa1-40f2-9bcf-03aa26f39cf7</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-df35cfe1-1b9d-454d-b7a5-f38c19cf7068">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In3.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID df35cfe1-1b9d-454d-b7a5-f38c19cf7068</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-8cd31bc6-2e28-4222-8eb9-25b73d5bb8b4">
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:hasValue>0</rhp_model:hasValue>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-36b98f3a-1566-4ae6-916a-ca8ba83e7c28"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Car2_Y_Position</rhp_model:hasQualifiedName>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:GUID>GUID 8cd31bc6-2e28-4222-8eb9-25b73d5bb8b4</rhp_model:GUID>
+    <dc:title>Car2_Y_Position</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-f49d6758-e2d7-43a6-b188-58a27044ab5a">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out3.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID f49d6758-e2d7-43a6-b188-58a27044ab5a</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-835461ea-437f-4ead-812c-c663b0ac6cbd">
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:GUID>GUID 835461ea-437f-4ead-812c-c663b0ac6cbd</rhp_model:GUID>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Car1_X_Position</rhp_model:hasQualifiedName>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c451d437-fb6d-4bb2-b5a4-722ab5287538"/>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:hasValue>0</rhp_model:hasValue>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <dc:title>Car1_X_Position</dc:title>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-3b1d92f7-99df-40eb-b745-e044a700c462">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>002</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::id002.GCSL_ID</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 3b1d92f7-99df-40eb-b745-e044a700c462</rhp_model:GUID>
+    <dc:title>GCSL_ID</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c451d437-fb6d-4bb2-b5a4-722ab5287538">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Car1_X_Position.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID c451d437-fb6d-4bb2-b5a4-722ab5287538</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-2a19705f-c3f9-4214-9193-8d0101846ba2">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>TrafficGrid_TDMA_sf</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Name</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 2a19705f-c3f9-4214-9193-8d0101846ba2</rhp_model:GUID>
+    <dc:title>Name</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-db190796-b3fd-4d0a-93f5-28a3106f52fc">
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.resourceinterface_56</rhp_model:hasQualifiedName>
+    <rhp_model:hasPort_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9c5a2a56-4f12-471a-889f-c806e02603cc"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ResourceInterface"/>
+    <rhp_model:hasMultiplicity_2>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_2>
+    <rhp_model:hasMultiplicity_1>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_1>
+    <rhp_model:hasEndPoint_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-b9de84aa-2d7b-4b08-94cf-f26fa82ed131"/>
+    <rhp_model:hasEndPoint_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-42df22a9-ebde-44c7-b037-ec166cd8317d"/>
+    <rhp_model:Metaclass>Link</rhp_model:Metaclass>
+    <rhp_model:hasPort_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-8dd18c01-3622-47cc-8d64-57658eee56cf"/>
+    <rhp_model:GUID>GUID db190796-b3fd-4d0a-93f5-28a3106f52fc</rhp_model:GUID>
+    <dc:title>resourceinterface_56</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-376239c2-3204-4886-a2aa-3c68e5d25302">
+    <rhp_model:hasPortDirection>OutputPort</rhp_model:hasPortDirection>
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out2</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>SysMLPort</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 376239c2-3204-4886-a2aa-3c68e5d25302</rhp_model:GUID>
+    <dc:title>Control_Out2</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-b5ab5813-37c9-49ce-8ffe-2cd8ae96e768">
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-6614caf8-8934-4852-89c2-7ae9c01e8f3c"/>
+    <rhp_model:hasValue>0.0</rhp_model:hasValue>
+    <rhp_model:GUID>GUID b5ab5813-37c9-49ce-8ffe-2cd8ae96e768</rhp_model:GUID>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out1</rhp_model:hasQualifiedName>
+    <dc:title>Control_Out1</dc:title>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-7d563700-0e4b-4ffe-a176-61ce7fd7bc13">
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.resourceinterface_55</rhp_model:hasQualifiedName>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ResourceInterface"/>
+    <rhp_model:hasPort_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-802e77fb-7e81-4c09-933c-913e1cfa82e5"/>
+    <rhp_model:hasPort_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-76cd6a76-0679-4f3b-ad72-4bafd4d2fcac"/>
+    <rhp_model:hasMultiplicity_2>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_2>
+    <rhp_model:Metaclass>Link</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 7d563700-0e4b-4ffe-a176-61ce7fd7bc13</rhp_model:GUID>
+    <dc:title>resourceinterface_55</dc:title>
+    <rhp_model:hasEndPoint_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-42df22a9-ebde-44c7-b037-ec166cd8317d"/>
+    <rhp_model:hasMultiplicity_1>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_1>
+    <rhp_model:hasEndPoint_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9dbed9aa-e9ec-41a3-b10f-22289de9a17d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-7638c2cc-9bb5-42e4-ab20-267876d19eb2">
+    <rhp_model:hasMultiplicity_1>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_1>
+    <rhp_model:GUID>GUID 7638c2cc-9bb5-42e4-ab20-267876d19eb2</rhp_model:GUID>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.resourceinterface_58</rhp_model:hasQualifiedName>
+    <rhp_model:hasPort_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9dd63e0e-8eec-46da-b4c3-8bacad2d570b"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ResourceInterface"/>
+    <rhp_model:hasEndPoint_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9dbed9aa-e9ec-41a3-b10f-22289de9a17d"/>
+    <rhp_model:hasMultiplicity_2>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_2>
+    <rhp_model:Metaclass>Link</rhp_model:Metaclass>
+    <rhp_model:hasEndPoint_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-42df22a9-ebde-44c7-b037-ec166cd8317d"/>
+    <rhp_model:hasPort_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-8dd18c01-3622-47cc-8d64-57658eee56cf"/>
+    <dc:title>resourceinterface_58</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e98d540e-7b0a-482e-b3b2-5695ee145fe7">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>Sabrina Rohrer</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Author</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID e98d540e-7b0a-482e-b3b2-5695ee145fe7</rhp_model:GUID>
+    <dc:title>Author</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-815e88bb-8b47-47d9-b4ea-f818562df34d">
+    <rhp_model:hasPortDirection>InputPort</rhp_model:hasPortDirection>
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In1</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>SysMLPort</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 815e88bb-8b47-47d9-b4ea-f818562df34d</rhp_model:GUID>
+    <dc:title>Control_In1</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e4fa2dba-9687-4c0e-8ce4-0f5479d2fa15">
+    <rhp_model:GUID>GUID e4fa2dba-9687-4c0e-8ce4-0f5479d2fa15</rhp_model:GUID>
+    <dc:title>Control_Out2</dc:title>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-5d377cdd-e54c-4c8a-a295-14d50fb7bd6a"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out2</rhp_model:hasQualifiedName>
+    <rhp_model:hasValue>0.0</rhp_model:hasValue>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-4f5ececd-e84a-48fa-b498-56841d41569e">
+    <rhp_model:Metaclass>Constraint</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 4f5ececd-e84a-48fa-b498-56841d41569e</rhp_model:GUID>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::id002</rhp_model:hasQualifiedName>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-58b1eebe-9cb0-4c97-9bf0-8454442ed94a"/>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-70da49e1-6738-463a-a76d-0e07f8fed02a"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-3b1d92f7-99df-40eb-b745-e044a700c462"/>
+    <dc:title>id002</dc:title>
+    <rhp_model:hasValue></rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Constraint"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-37397b21-1b83-4524-9961-8bf357d79313"/>
+    <rhp_model:hasHasAnchor rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c5f49543-d12f-4b6d-9d09-3c5c29ed66b0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-fe26db65-94f0-4778-a8aa-760bcac86244">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>Sabrina Rohrer</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Author</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID fe26db65-94f0-4778-a8aa-760bcac86244</rhp_model:GUID>
+    <dc:title>Author</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-f6ff31e3-f0ad-4f5a-9460-a6a2c40dec03">
+    <rhp_model:hasValue>0.0</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>Control_In3</dc:title>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In3</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:GUID>GUID f6ff31e3-f0ad-4f5a-9460-a6a2c40dec03</rhp_model:GUID>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-df35cfe1-1b9d-454d-b7a5-f38c19cf7068"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-05ff718a-4ec9-4d6d-a835-00dcbca63c2f">
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c2861095-5ae6-4806-b749-1cfca2102f63"/>
+    <dc:title>Car1_Y_Position</dc:title>
+    <rhp_model:GUID>GUID 05ff718a-4ec9-4d6d-a835-00dcbca63c2f</rhp_model:GUID>
+    <rhp_model:hasValue>0</rhp_model:hasValue>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Car1_Y_Position</rhp_model:hasQualifiedName>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-2c73e104-46d0-49bf-b0aa-bec276f6b7fb">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Grid_In.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 2c73e104-46d0-49bf-b0aa-bec276f6b7fb</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-1dd4ec94-2d66-415c-9db8-d9fe3ee6017f">
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In1</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>Control_In1</dc:title>
+    <rhp_model:hasValue>0.0</rhp_model:hasValue>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-356546e8-d7f2-41b8-97ae-f63a721d9d58"/>
+    <rhp_model:GUID>GUID 1dd4ec94-2d66-415c-9db8-d9fe3ee6017f</rhp_model:GUID>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-181648eb-81d7-45a2-9bb9-1e52dd4d16bc">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>0.1</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Version</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 181648eb-81d7-45a2-9bb9-1e52dd4d16bc</rhp_model:GUID>
+    <dc:title>Version</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c768798d-d6be-4934-8b85-2dce578f1899">
+    <rhp_model:hasType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-539a9f6b-fdae-4b61-b7f0-66f137f21940"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.Grid2</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Object</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID c768798d-d6be-4934-8b85-2dce578f1899</rhp_model:GUID>
+    <dc:title>Grid2</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-56a421a6-4efb-4d1f-bfd1-69afb8e9ca82">
+    <rhp_model:hasPortDirection>InputPort</rhp_model:hasPortDirection>
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In2</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>SysMLPort</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 56a421a6-4efb-4d1f-bfd1-69afb8e9ca82</rhp_model:GUID>
+    <dc:title>Control_In2</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-34fbf0b7-30b0-4c1d-a95a-e359fef87607">
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg</rhp_model:hasQualifiedName>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Package"/>
+    <updm:hasSystem rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-539a9f6b-fdae-4b61-b7f0-66f137f21940"/>
+    <dc:title>SystemViewPkg</dc:title>
+    <dc:description>System View Package&#xD;
+The System Views (SVs) are a set of views that describe resources that realise capability. The System Views describe resource functions, interactions between resources, and can also provide detailed SystemsNode interface models. Note that these views address the involvement of humans in both the operation of SystemsNodes and in carrying out functions in their own right. The SVs can be used to specify solutions to requirements specified in the OVs, or simply to provide more detail to the logical OV architecture. One of the primary uses of the SVs is in the development of SystemsNode solutions that satisfy the user requirements and hence the development of appropriate SystemsNode requirements. The SVs will primarily be developed and exploited within the organisations acquisition community and its associated supply chain.</dc:description>
+    <updm:hasSystem rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c5f49543-d12f-4b6d-9d09-3c5c29ed66b0"/>
+    <updm:hasSystem rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-86c26d43-059d-4067-a86b-97d95743563c"/>
+    <rhp_model:hasConstraint rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-4f5ececd-e84a-48fa-b498-56841d41569e"/>
+    <rhp_model:Metaclass>Package</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 34fbf0b7-30b0-4c1d-a95a-e359fef87607</rhp_model:GUID>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-5d377cdd-e54c-4c8a-a295-14d50fb7bd6a">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out2.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 5d377cdd-e54c-4c8a-a295-14d50fb7bd6a</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-70da49e1-6738-463a-a76d-0e07f8fed02a">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Stereotype"/>
+    <rhp_model:hasGUID>GUID 70da49e1-6738-463a-a76d-0e07f8fed02a</rhp_model:hasGUID>
+    <rhp_model:hasQualifiedName>Danse::GoalsAndContracts::GCSL::GCSL</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Stereotype</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 70da49e1-6738-463a-a76d-0e07f8fed02a</rhp_model:GUID>
+    <dc:title>GCSL</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-6b402093-8b75-43dc-85c7-c5505a558bd1">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpString"/>
+    <rhp_model:hasValue>https://danse.haifa.il.ibm.com:9444/dm/sm/blobs/SmFMU/resource/0002</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.URI</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 6b402093-8b75-43dc-85c7-c5505a558bd1</rhp_model:GUID>
+    <dc:title>URI</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e89c3ea3-1501-43ee-bbba-7896d55e25e8">
+    <rhp_model:hasPackage rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-2f9a43de-8935-485c-8f8b-5471cb2aaa3d"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#SysML"/>
+    <rhp_model:hasQualifiedName></rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Project</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID e89c3ea3-1501-43ee-bbba-7896d55e25e8</rhp_model:GUID>
+    <dc:title>DANSE_AGT_13_withGCSL_1Constraint_01</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-77ad53de-7ac4-4f19-9929-76484bdee191">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.NumberOfCars.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 77ad53de-7ac4-4f19-9929-76484bdee191</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-75145184-3031-4e0e-b5f0-333380136c74">
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasValue>0.0</rhp_model:hasValue>
+    <rhp_model:GUID>GUID 75145184-3031-4e0e-b5f0-333380136c74</rhp_model:GUID>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <dc:title>Control_In2</dc:title>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In2</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e4d0b6da-0082-4796-b681-cdb75247f568"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-c2861095-5ae6-4806-b749-1cfca2102f63">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Car1_Y_Position.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID c2861095-5ae6-4806-b749-1cfca2102f63</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-86c26d43-059d-4067-a86b-97d95743563c">
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf</rhp_model:hasQualifiedName>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-8cd31bc6-2e28-4222-8eb9-25b73d5bb8b4"/>
+    <rhp_model:Metaclass>Class</rhp_model:Metaclass>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-05ff718a-4ec9-4d6d-a835-00dcbca63c2f"/>
+    <rhp_model:hasPort rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-815e88bb-8b47-47d9-b4ea-f818562df34d"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody.updm/haifa/sm#System"/>
+    <rhp_model:hasPort rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-76cd6a76-0679-4f3b-ad72-4bafd4d2fcac"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-1dd4ec94-2d66-415c-9db8-d9fe3ee6017f"/>
+    <rhp_model:GUID>GUID 86c26d43-059d-4067-a86b-97d95743563c</rhp_model:GUID>
+    <dc:description>Block for the local control of the grid. It has got three flow ports for an exchange with the model in Matlab Simulink.</dc:description>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-399ca00a-bf8e-4b70-9c89-fc0c2a408cbc"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-5249cc42-4be2-47e6-a7cf-a974b01a6a8a"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-6b402093-8b75-43dc-85c7-c5505a558bd1"/>
+    <rhp_model:hasPort rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9dd63e0e-8eec-46da-b4c3-8bacad2d570b"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e98d540e-7b0a-482e-b3b2-5695ee145fe7"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-5c151321-7a43-4a11-bfea-afdd56b853a9"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e4fa2dba-9687-4c0e-8ce4-0f5479d2fa15"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-4dd8be1b-6fd7-4edb-8321-29433d0b1431"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-f6ff31e3-f0ad-4f5a-9460-a6a2c40dec03"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-835461ea-437f-4ead-812c-c663b0ac6cbd"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-7143df8b-469d-4d53-9bed-ada6f39f9d5c"/>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-3059f81e-27b7-4fdc-8698-046094305bf9"/>
+    <rhp_model:hasPort rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9c5a2a56-4f12-471a-889f-c806e02603cc"/>
+    <rhp_model:hasPort rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-376239c2-3204-4886-a2aa-3c68e5d25302"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-75145184-3031-4e0e-b5f0-333380136c74"/>
+    <rhp_model:hasPort rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-56a421a6-4efb-4d1f-bfd1-69afb8e9ca82"/>
+    <dc:title>TrafficControl_local_TDMA_sf</dc:title>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-61a0b837-41a5-4846-9d89-d99ea9fe3a6c"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-b5ab5813-37c9-49ce-8ffe-2cd8ae96e768"/>
+    <rhp_model:hasAttribute rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-93f0811f-d761-4e35-9510-6dad3231b8d6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-d13014fb-c87d-4ff1-8c33-9b78a639f3da">
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-f5e743c2-5aa1-40f2-9bcf-03aa26f39cf7"/>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID d13014fb-c87d-4ff1-8c33-9b78a639f3da</rhp_model:GUID>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+    <rhp_model:hasValue>0.0</rhp_model:hasValue>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficGrid_TDMA_sf.Grid_Out</rhp_model:hasQualifiedName>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <dc:title>Grid_Out</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9c5a2a56-4f12-471a-889f-c806e02603cc">
+    <rhp_model:hasPortDirection>OutputPort</rhp_model:hasPortDirection>
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasPortType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#FlowPort"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out1</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>SysMLPort</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 9c5a2a56-4f12-471a-889f-c806e02603cc</rhp_model:GUID>
+    <dc:title>Control_Out1</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-e9e33bce-a063-41c7-95d2-6dbd7049607f">
+    <rhp_model:hasEndPoint_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-b9de84aa-2d7b-4b08-94cf-f26fa82ed131"/>
+    <dc:title>resourceinterface_53</dc:title>
+    <rhp_model:Metaclass>Link</rhp_model:Metaclass>
+    <rhp_model:hasEndPoint_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-42df22a9-ebde-44c7-b037-ec166cd8317d"/>
+    <rhp_model:GUID>GUID e9e33bce-a063-41c7-95d2-6dbd7049607f</rhp_model:GUID>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#ResourceInterface"/>
+    <rhp_model:hasMultiplicity_2>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_2>
+    <rhp_model:hasPort_1 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-802e77fb-7e81-4c09-933c-913e1cfa82e5"/>
+    <rhp_model:hasMultiplicity_1>ExactlyOneMultiplicity</rhp_model:hasMultiplicity_1>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.resourceinterface_53</rhp_model:hasQualifiedName>
+    <rhp_model:hasPort_2 rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-815e88bb-8b47-47d9-b4ea-f818562df34d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-399ca00a-bf8e-4b70-9c89-fc0c2a408cbc">
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Stereotype"/>
+    <rhp_model:hasGUID>GUID 399ca00a-bf8e-4b70-9c89-fc0c2a408cbc</rhp_model:hasGUID>
+    <rhp_model:hasQualifiedName>Danse::Simulation::FMI</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Stereotype</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 399ca00a-bf8e-4b70-9c89-fc0c2a408cbc</rhp_model:GUID>
+    <dc:title>FMI</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-356546e8-d7f2-41b8-97ae-f63a721d9d58">
+    <rhp_model:hasMultiplicity>ExactlyOneMultiplicity</rhp_model:hasMultiplicity>
+    <rhp_model:hasTagType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpBoolean"/>
+    <rhp_model:hasValue>True</rhp_model:hasValue>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Tag"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_In1.TraceEnabled</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Tag</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 356546e8-d7f2-41b8-97ae-f63a721d9d58</rhp_model:GUID>
+    <dc:title>TraceEnabled</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-61a0b837-41a5-4846-9d89-d99ea9fe3a6c">
+    <rhp_model:GUID>GUID 61a0b837-41a5-4846-9d89-d99ea9fe3a6c</rhp_model:GUID>
+    <rhp_model:hasAttributeType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#RhpReal"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Attribute"/>
+    <rhp_model:hasStereotype rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-500c77f4-9496-4c88-bb9e-83ba47c2ebab"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::TrafficControl_local_TDMA_sf.Control_Out3</rhp_model:hasQualifiedName>
+    <rhp_model:hasTag rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-f49d6758-e2d7-43a6-b188-58a27044ab5a"/>
+    <rhp_model:hasValue>0.0</rhp_model:hasValue>
+    <rhp_model:Metaclass>Attribute</rhp_model:Metaclass>
+    <dc:title>Control_Out3</dc:title>
+    <rhp_model:hasVisibility>PublicVisibility</rhp_model:hasVisibility>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-b9de84aa-2d7b-4b08-94cf-f26fa82ed131">
+    <rhp_model:hasType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-539a9f6b-fdae-4b61-b7f0-66f137f21940"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.Grid1</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Object</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID b9de84aa-2d7b-4b08-94cf-f26fa82ed131</rhp_model:GUID>
+    <dc:title>Grid1</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://com.ibm.ns/rhapsody/haifa/sm#GUID-9dbed9aa-e9ec-41a3-b10f-22289de9a17d">
+    <rhp_model:hasType rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#GUID-539a9f6b-fdae-4b61-b7f0-66f137f21940"/>
+    <rdf:type rdf:resource="http://com.ibm.ns/rhapsody/haifa/sm#Object"/>
+    <rhp_model:hasQualifiedName>DoDAF20_Architecture::SystemViewPkg::SoS.Grid3</rhp_model:hasQualifiedName>
+    <rhp_model:Metaclass>Object</rhp_model:Metaclass>
+    <rhp_model:GUID>GUID 9dbed9aa-e9ec-41a3-b10f-22289de9a17d</rhp_model:GUID>
+    <dc:title>Grid3</dc:title>
+  </rdf:Description>
+</rdf:RDF>

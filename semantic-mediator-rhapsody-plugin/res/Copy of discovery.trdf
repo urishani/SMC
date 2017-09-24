@@ -1,0 +1,75 @@
+<#------------- Dumping RDF for query ${query} ------------>
+<#macro dumpRDF query>
+${model.getRDFHeader()}
+ 
+<#list model.queryElements("${query}") as element>
+${element.serialize()}
+
+</#list>
+${model.getRDFFooter()} 
+</#macro>
+<#------------- Propagating elements for query ${query} ------------>
+<#macro propagateElements query>
+<#assign rhpElements = model.getRhpElements("${query}")/>
+<#list rhpElements as rhpElement>
+${model.pushTraversalQueue(rhpElement)}
+</#list>
+<#list 1..999999 as iterationN>
+<#assign rhpElement = model.popTraversalQueue()!/>
+<#if model.isIRPModelElement(rhpElement)>
+<#assign metaClass = rhpElement.getMetaClass()/>
+<#if !model.hasElement(rhpElement)>
+<#assign element = model.getElement(rhpElement)/>
+<#------------ IRPModelElelment generic relations ----------------->
+<#--${model.addRelations(element, "constraint",            model.asCollection(rhpElement.getConstraints()))}
+${model.addRelations(element, "nested",                model.asCollection(rhpElement.getNestedElements()))}
+${model.addRelations(element, "reference",             model.asCollection(rhpElement.getReferences()))}
+${model.addRelation (element, "owner",                 rhpElement.getOwner())}-->
+<#if model.isIRPProject(rhpElement)>
+<#--${model.addRelations(element, "class",                 model.asCollection(rhpElement.getClasses()))}
+${model.addRelations(element, "associationClass",      model.asCollection(rhpElement.getAssociationClasses()))}
+${model.addRelations(element, "stereotype",            model.asCollection(rhpElement.getAllStereotypes()))}-->
+${model.addRelations(element, "package",               model.asCollection(rhpElement.getPackages()))}
+<#--${model.addRelations(element, "component",             model.asCollection(rhpElement.getComponents()))}-->
+<#elseif model.isIRPClass(rhpElement)>
+${model.addRelations(element, "part",                  model.getParts(rhpElement))}
+<#--${model.addRelations(element, "base",                  model.asCollection(rhpElement.getBaseClassifiers()))}-->
+${model.addRelations(element, "port",                  model.asCollection(rhpElement.getPorts()))}
+<#--${model.addRelations(element, "link",                  model.asCollection(rhpElement.getLinks()))}
+${model.addRelations(element, "inner",                 model.asCollection(rhpElement.getNestedClassifiers()))}
+${model.addRelations(element, "relation",              model.asCollection(rhpElement.getRelations()))}-->
+<#elseif model.isIRPInstance(rhpElement)>
+${model.addRelation (element, "type",                  rhpElement.getOtherClass())}
+<#--${model.addRelation (element, "partOf",                rhpElement.getOfClass())}
+${model.addRelations(element, "inLink",                model.asCollection(rhpElement.getInLinks()))}
+${model.addRelations(element, "outLink",               model.asCollection(rhpElement.getOutLinks()))}-->
+<#--elseif model.isIRPStereotype(rhpElement)>
+<#--${model.addRelations(element, "reference",             model.asCollection(rhpElement.getReferences()))}-->
+<#--elseif model.isIRPLink(rhpElement)>
+<#--${model.addRelation (element, "from",                  rhpElement.getFrom())}
+${model.addRelation (element, "to",                    rhpElement.getTo())}
+<#elseif model.isIRPDependency(rhpElement)>
+${model.addRelation (element, "dependent",             rhpElement.getDependent())}
+${model.addRelation (element, "dependsOn",             rhpElement.getDependsOn())}
+<#elseif model.isIRPFlow(rhpElement)>
+${model.addRelation (element, "end1",                  rhpElement.getEnd1())}
+${model.addRelation (element, "end2",                  rhpElement.getEnd2())}
+<#elseif model.isIRPAssociationClass(rhpElement)>
+${model.addRelation (element, "end1",                  rhpElement.getEnd1())}
+${model.addRelation (element, "end2",                  rhpElement.getEnd2())}
+${model.addRelation (element, "type",                  rhpElement.getOtherClass())}
+</#if>
+</#if>
+<#else><#break></#if>
+</#list>
+</#macro>
+
+
+<@propagateElements query=""/>
+<@dumpRDF query=""/>
+
+<#--list model.asCollection(rhpElement.getRelations()) as relation>
+  <#if model.isIRPInstance(relation)>
+    <#${model.addRelation(element, "part", relation)}>
+  </#if>
+</#list-->

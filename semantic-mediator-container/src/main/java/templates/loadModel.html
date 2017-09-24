@@ -1,0 +1,58 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+ 		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=yui.2.2.1.css">
+		<script>
+		// File Name: loadModel.html
+		</script>
+    </head>
+    <body>
+        <h1>Loading a [_type_] file/data for [_id_]</h1>
+        <form method='post' accept-charset='UTF-8' enctype='multipart/form-data'
+        action='/dm/sm/_type_'>
+            <input type='hidden' name='id' value='_id_'>
+            From file:
+            <input type='file' name='fileName' size='40'>
+           	<select style='background-color:LightGray' id='rdfContentType' name='rdfContentType' 
+					value='_contentType_'>
+					<option>text/turtle</option>
+					<option>application/rdf+xml</option>
+					<option>application/rdf+xml-ABBREV</option>
+					<option>application/n3</option>
+					<option>application/n-triples</option>
+				</select>	
+            <br>
+            Or as text here:
+            <br>
+            <textArea style='height:10em;width:100em;overflow:scroll;' name='model'>
+</textArea>
+<br>            <button type='submit' value='Upload'>
+                Upload
+            </button>
+            <br>
+        </form>
+        To cancel, go back or click this:
+        <form action='/dm/sm'>
+            <button type='submit' value='Cancel'>
+                Cancel
+            </button>
+    </body>
+</html>

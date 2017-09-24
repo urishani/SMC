@@ -1,0 +1,3 @@
+The eclipse.zip file contains a snapshot of the configuration as in My machine.
+Unzip it in the <RTC home>/jazz/client/eclipse/ folder in the RTC eclipse environment. There is where the 
+files version of configuration and repositories work.

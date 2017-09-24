@@ -1,0 +1,6 @@
+#Configuration data for IoSE GUI
+#Mon Jul 16 17:35:17 IDT 2012
+sii.user=test
+RDF_SERVER=https\://localhost\:9444/dm/sm/tool/rhapsody
+sii.pwd=test
+SII_SYSTEM_URI=https\://SHANI1-TP.haifa.ibm.com\:9444/dm/sm/repository/rhapsody/resource\#4

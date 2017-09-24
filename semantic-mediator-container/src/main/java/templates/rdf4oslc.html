@@ -1,0 +1,113 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+ 		<link type="text/css" type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+        <script  type="text/javascript" src="/dm/resources/js/rdf4oslc.js"></script>
+        <script  type="text/javascript" src="/dm/resources/js/utils.js"></script>
+        <script  type="text/javascript" src="/dm/resources/js/showGraph.js"></script>
+		<script>
+		// File Name: rdf4oslc.html
+		</script>
+    </head>
+    <body onLoad='onLoad("_id_", "_contentType_", "_host_", _canmodify_, "_version_", "_noBackLinks_")'>
+        <h1>RDF contents of _header_<br>
+        _versionInfo_</h1>
+        <span id='comments'><font color="red">Comments: </font>_comments_</span><br>
+        <font size='+1'><b>
+            <form action='/dm/sm'>
+                <input type='submit' value='List view'/>
+                <input type='hidden' name='action' value='showList'>
+                <input type='hidden' name='id' value='_id_'>
+            </form>
+        <table><tr>            
+            <td>Format of content:
+            <td><form action='_url_'>
+                <input hidden=true name='id' value='_id_'>
+                <input hidden=true name='version' value='_version_'>
+                <input hidden=true name='action' value='ShowRDF'>
+            	<select style='background-color:LightGray' id='contentType' name='contentType' onClick='if (setContentType(this)) form.submit();'
+					value='_contentType_'>
+					<option>text/turtle</option>
+					<option>application/rdf+xml</option>
+					<option>application/rdf+xml-ABBREV</option>
+					<option>application/n3</option>
+					<option>application/n-triples</option>
+				</select>	
+            </form>
+            </table> 
+        </b></font>
+        <font FACE= "Courier New">
+            <table border='1'>
+                <tr>
+                    <td colspan='2'>Click link to go, click <a href='javascript:none()'>[&rarr;]</a> to flow, and <a href='javascript:none()'>[&larr;]</a> to back follow.
+                    <div id='modify'><button onClick='return edit(this)'>Modify</button> &nbsp; Status Msg: <input id='messages' readonly type='text' width='50' value=' OK '></div>
+                    <br>
+                    <div id='textDiv'>
+                        <textarea rows='30' cols='100' id='text'>
+                        _rdf_
+                        </textarea>
+                    </div>
+                    <td  _hideGraphics_ rowspan='6' style='border: 2px solid blue;vertical-align:top' >
+                       <input  id='showGraph' class='button_imageB button_showGraph' style='vertical-align:top' type='button' onclick='showResourceGraph(this);' title='Show a Graph'>
+                       <input hidden=true class='button_imageB button_minusB' style='vertical-align:top' type='button' onclick='showGraph(this, 0.75);' title='Scale down'>
+                       <input hidden=true class='button_imageB button_plusB' style='vertical-align:top' type='button' onclick='showGraph(this, 1.33);' title='Scale up'>
+                       <input hidden=true class='button_imageB button_fullScreen' style='vertical-align:top' type='button' onclick='window.open(img_src);' title='Show the graph in full screen'>
+                       <br>
+                       <IMG hidden=true USEMAP="#G"><map id='G' name='G'></map>
+                    </td>
+                <tr>
+                        <td>1
+                        <br>
+                        &rarr;<td>Click link to go, click <a href='javascript:false'>[&rarr;]</a> to flow, and <a href='javascript:none()'>[&larr;]</a> to back follow:
+                        <br>
+                        <div id='popup0'></div>
+                <tr>
+                            <td>2
+                            <br>
+                            &rarr;&rarr;<td>Click link to go, click <a href='javascript:false'>[&rarr;]</a> to flow, and <a href='javascript:none()'>[&larr;]</a> to back follow:
+                            <br>
+                            <div id='popup1'></div>
+                <tr >
+                                <td>3
+                                <br>
+                                &rarr;&rarr;&rarr;<td>Click link to go, click <a href='javascript:false'>[&rarr;]</a> to flow, and <a href='javascript:none()'>[&larr;]</a> to back follow:
+                                <br>
+                                <div id='popup2'></div>
+                <tr >
+                                    <td>4
+                                    <br>
+                                    &rarr;&rarr;&rarr;&rarr;<td>Click link to go, click <a href='javascript:false'>[&rarr;]</a> to flow, and <a href='javascript:none()'>[&larr;]</a> to back follow:
+                                    <br>
+                                    <div id='popup3'></div>
+                <tr >
+                                        <td>5
+                                        <br>
+                                        &rarr;&rarr;&rarr;&rarr;&rarr;<td>Click link to go, click <a href='javascript:false'>[&rarr;]</a> to flow, and <a href='javascript:none()'>[&larr;]</a> to back follow:
+                                        <br>
+                                        <div id='popup4'></div>
+            </table> </font>
+            <div hidden=true id='editableRDF'>
+				<button onClick='return save(this)' style='background-color:lightgreen'>Save</button>
+				<button onClick='return cancel(this)' style='background-color:pink'>Cancel</button>
+				 &nbsp; Edit the following RDF text and save it, or cancel. Status Msg: <input type='text' readonly>
+                <br>
+                <textarea rows='20' spellcheck='false' style='width:100%'></textarea>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bso="http://www.sprint-iot.eu/bso/" xmlns:terms="http://purl.org/dc/terms/">
+	<bso:Component rdf:about="http://localhost:8080/rio-am/resource/2">
+		<terms:title>ATS</terms:title>
+		<terms:identifier>2</terms:identifier>
+		<terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-08-23T22:59:13.142+03:00</terms:modified>
+		<terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-08-23T22:59:13.142+03:00</terms:created>
+		<terms:creator rdf:resource="http://localhost:8080/rio-am/user/_UNKNOWN_USER_" />
+		<terms:contributor rdf:resource="http://localhost:8080/rio-am/user/_UNKNOWN_USER_" />
+		<bso:Component_part rdf:resource="http://localhost:8080/rio-am/resource/3" />
+		<bso:Component_part rdf:resource="http://localhost:8080/rio-am/resource/7" />
+		<bso:Component_part rdf:resource="http://localhost:8080/rio-am/resource/5" />
+		<terms:source rdf:resource="http://ibm.com/rhapsody/model/GUID-a60b9f0a-66ab-469c-a420-0db1a9815e53" />
+	</bso:Component>
+</rdf:RDF>

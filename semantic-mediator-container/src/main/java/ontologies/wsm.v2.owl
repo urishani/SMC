@@ -1,0 +1,842 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY base "http://www.wolfram.com/wsm-rdf/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.wolfram.com/wsm-rdf/"
+     xml:base="http://www.wolfram.com/wsm-rdf/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:base="http://www.wolfram.com/wsm-rdf/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.wolfram.com/wsm-rdf/">
+        <owl:imports rdf:resource="http://com.ibm.ns/haifa/sm#"/>
+        <owl:versionIRI rdf:resource="http://www.wolfram.com/wsm-rdf.v.2"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/ModelicaObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&base;ModelicaObjectProperty"/>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/baseClass -->
+
+    <owl:ObjectProperty rdf:about="&base;baseClass">
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/class -->
+
+    <owl:ObjectProperty rdf:about="&base;class">
+        <rdfs:label xml:lang="en">class</rdfs:label>
+        <rdfs:range rdf:resource="&base;MAbstractClass"/>
+        <rdfs:domain rdf:resource="&base;MDerives"/>
+        <rdfs:domain rdf:resource="&base;MExtends"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/connection -->
+
+    <owl:ObjectProperty rdf:about="&base;connection">
+        <rdfs:label xml:lang="en">connection</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MBlock"/>
+        <rdfs:domain rdf:resource="&base;MClass"/>
+        <rdfs:range rdf:resource="&base;MConnection"/>
+        <rdfs:domain rdf:resource="&base;MModel"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/derives -->
+
+    <owl:ObjectProperty rdf:about="&base;derives">
+        <rdfs:label xml:lang="en">derives</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MAbstractClass"/>
+        <rdfs:range rdf:resource="&base;MDerives"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/equation -->
+
+    <owl:ObjectProperty rdf:about="&base;equation">
+        <rdfs:label xml:lang="en">equation</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MAbstractClass"/>
+        <rdfs:domain rdf:resource="&base;MEquation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/extends -->
+
+    <owl:ObjectProperty rdf:about="&base;extends">
+        <rdfs:label xml:lang="en">extends</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MAbstractClass"/>
+        <rdfs:range rdf:resource="&base;MExtends"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/external -->
+
+    <owl:ObjectProperty rdf:about="&base;external">
+        <rdfs:label xml:lang="en">external</rdfs:label>
+        <rdfs:range rdf:resource="&base;MExternal"/>
+        <rdfs:domain rdf:resource="&base;MFunction"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/fromPart -->
+
+    <owl:ObjectProperty rdf:about="&base;fromPart">
+        <rdfs:label xml:lang="en">fromPart</rdfs:label>
+        <rdfs:range rdf:resource="&base;MComponent"/>
+        <rdfs:domain rdf:resource="&base;MConnection"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/fromPort -->
+
+    <owl:ObjectProperty rdf:about="&base;fromPort">
+        <rdfs:label xml:lang="en">fromPort</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MConnection"/>
+        <rdfs:range rdf:resource="&base;MConnectorComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/initialAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="&base;initialAlgorithm">
+        <rdfs:label xml:lang="en">initialAlgorithm</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MAbstractClass"/>
+        <rdfs:range rdf:resource="&base;MAlgorithm"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/items -->
+
+    <owl:ObjectProperty rdf:about="&base;items">
+        <rdfs:label xml:lang="en">items</rdfs:label>
+        <rdfs:range rdf:resource="&base;MEnumerationLiteral"/>
+        <rdfs:domain rdf:resource="&base;MEnumerationType"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/localClass -->
+
+    <owl:ObjectProperty rdf:about="&base;localClass">
+        <rdfs:label xml:lang="en">localClass</rdfs:label>
+        <rdfs:range rdf:resource="&base;MAbstractClass"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/part -->
+
+    <owl:ObjectProperty rdf:about="&base;part">
+        <rdfs:label xml:lang="en">part</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/parts -->
+
+    <owl:ObjectProperty rdf:about="&base;parts">
+        <rdfs:label xml:lang="en">parts</rdfs:label>
+        <rdfs:range rdf:resource="&base;MComponent"/>
+        <rdfs:domain rdf:resource="&base;MComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/ports -->
+
+    <owl:ObjectProperty rdf:about="&base;ports">
+        <rdfs:label xml:lang="en">ports</rdfs:label>
+        <rdfs:range rdf:resource="&base;MConnectorComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/toPart -->
+
+    <owl:ObjectProperty rdf:about="&base;toPart">
+        <rdfs:label xml:lang="en">toPart</rdfs:label>
+        <rdfs:range rdf:resource="&base;MComponent"/>
+        <rdfs:domain rdf:resource="&base;MConnection"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/toPort -->
+
+    <owl:ObjectProperty rdf:about="&base;toPort">
+        <rdfs:label xml:lang="en">toPort</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MConnection"/>
+        <rdfs:range rdf:resource="&base;MConnectorComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/type -->
+
+    <owl:ObjectProperty rdf:about="&base;type">
+        <rdfs:label xml:lang="en">type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/ModelicaDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&base;ModelicaDataProperty"/>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/annotation -->
+
+    <owl:DatatypeProperty rdf:about="&base;annotation">
+        <rdfs:label xml:lang="en">annotation</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&base;MAlgorithm"/>
+                    <rdf:Description rdf:about="&base;MComponent"/>
+                    <rdf:Description rdf:about="&base;MConnection"/>
+                    <rdf:Description rdf:about="&base;MDerives"/>
+                    <rdf:Description rdf:about="&base;MEquation"/>
+                    <rdf:Description rdf:about="&base;MExtends"/>
+                    <rdf:Description rdf:about="&base;MExternal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/arraySubscripts -->
+
+    <owl:DatatypeProperty rdf:about="&base;arraySubscripts">
+        <rdfs:label xml:lang="en">arraySubscripts</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&base;MComponent"/>
+                    <rdf:Description rdf:about="&base;MDerives"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/causality -->
+
+    <owl:DatatypeProperty rdf:about="&base;causality">
+        <rdfs:label xml:lang="en">causality</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&base;MComponent"/>
+                    <rdf:Description rdf:about="&base;MDerives"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/condition -->
+
+    <owl:DatatypeProperty rdf:about="&base;condition">
+        <rdfs:label xml:lang="en">condition</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&base;MComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/description -->
+
+    <owl:DatatypeProperty rdf:about="&base;description">
+        <rdfs:label xml:lang="en">description</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&base;MComponent"/>
+                    <rdf:Description rdf:about="&base;MConnection"/>
+                    <rdf:Description rdf:about="&base;MEnumerationLiteral"/>
+                    <rdf:Description rdf:about="&base;MEquation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/dynamicReference -->
+
+    <owl:DatatypeProperty rdf:about="&base;dynamicReference">
+        <rdfs:label xml:lang="en">dynamicReference</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/equation -->
+
+    <owl:DatatypeProperty rdf:about="&base;equation">
+        <rdfs:label xml:lang="en">equation</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/fromPartArraySubscripts -->
+
+    <owl:DatatypeProperty rdf:about="&base;fromPartArraySubscripts">
+        <rdfs:label xml:lang="en">fromPartArraySubscripts</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&base;MConnection"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/fromPortArraySubscripts -->
+
+    <owl:DatatypeProperty rdf:about="&base;fromPortArraySubscripts">
+        <rdfs:label xml:lang="en">fromPortArraySubscripts</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&base;MConnection"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/functionCall -->
+
+    <owl:DatatypeProperty rdf:about="&base;functionCall">
+        <rdfs:label xml:lang="en">functionCall</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&base;MExternal"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/identifier -->
+
+    <owl:DatatypeProperty rdf:about="&base;identifier">
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&base;MComponent"/>
+                    <rdf:Description rdf:about="&base;MEnumerationLiteral"/>
+                    <rdf:Description rdf:about="&base;MExternal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/initial -->
+
+    <owl:DatatypeProperty rdf:about="&base;initial">
+        <rdfs:label xml:lang="en">initial</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="&base;MEquation"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/isEncapsulated -->
+
+    <owl:DatatypeProperty rdf:about="&base;isEncapsulated">
+        <rdfs:label xml:lang="en">isEncapsulated</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="&base;MAbstractClass"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/isExpandable -->
+
+    <owl:DatatypeProperty rdf:about="&base;isExpandable">
+        <rdfs:label xml:lang="en">isExpandable</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="&base;MConnector"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/isFinal -->
+
+    <owl:DatatypeProperty rdf:about="&base;isFinal">
+        <rdfs:label xml:lang="en">isFinal</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="&base;MComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/isFlow -->
+
+    <owl:DatatypeProperty rdf:about="&base;isFlow">
+        <rdfs:label xml:lang="en">isFlow</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="&base;MTypeComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/isPartial -->
+
+    <owl:DatatypeProperty rdf:about="&base;isPartial">
+        <rdfs:label xml:lang="en">isPartial</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="&base;MAbstractClass"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/isProtected -->
+
+    <owl:DatatypeProperty rdf:about="&base;isProtected">
+        <rdfs:label xml:lang="en">isProtected</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="&base;MComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/language -->
+
+    <owl:DatatypeProperty rdf:about="&base;language">
+        <rdfs:label xml:lang="en">language</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&base;MExternal"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/modification -->
+
+    <owl:DatatypeProperty rdf:about="&base;modification">
+        <rdfs:label xml:lang="en">modification</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&base;MComponent"/>
+                    <rdf:Description rdf:about="&base;MDerives"/>
+                    <rdf:Description rdf:about="&base;MExtends"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/statement -->
+
+    <owl:DatatypeProperty rdf:about="&base;statement">
+        <rdfs:label xml:lang="en">statement</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&base;MAlgorithm"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/toPartArraySubscripts -->
+
+    <owl:DatatypeProperty rdf:about="&base;toPartArraySubscripts">
+        <rdfs:label xml:lang="en">toPartArraySubscripts</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&base;MConnection"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/toPortArraySubscripts -->
+
+    <owl:DatatypeProperty rdf:about="&base;toPortArraySubscripts">
+        <rdfs:label xml:lang="en">toPortArraySubscripts</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&base;MConnection"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/variability -->
+
+    <owl:DatatypeProperty rdf:about="&base;variability">
+        <rdfs:label xml:lang="en">variability</rdfs:label>
+        <rdfs:domain rdf:resource="&base;MComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&base;ModelicaDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MAbstractClass -->
+
+    <owl:Class rdf:about="&base;MAbstractClass">
+        <rdfs:label xml:lang="en">MAbstractClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MAlgorithm -->
+
+    <owl:Class rdf:about="&base;MAlgorithm">
+        <rdfs:label xml:lang="en">MAlgorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MBlock -->
+
+    <owl:Class rdf:about="&base;MBlock">
+        <rdfs:label xml:lang="en">MBlock</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MAbstractClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MBooleanType -->
+
+    <owl:Class rdf:about="&base;MBooleanType">
+        <rdfs:label xml:lang="en">MBooleanType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MClass -->
+
+    <owl:Class rdf:about="&base;MClass">
+        <rdfs:label xml:lang="en">MClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MComponent -->
+
+    <owl:Class rdf:about="&base;MComponent">
+        <rdfs:label xml:lang="en">MComponent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MConnection -->
+
+    <owl:Class rdf:about="&base;MConnection">
+        <rdfs:label xml:lang="en">MConnection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MConnector -->
+
+    <owl:Class rdf:about="&base;MConnector">
+        <rdfs:label xml:lang="en">MConnector</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MAbstractClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MConnectorComponent -->
+
+    <owl:Class rdf:about="&base;MConnectorComponent">
+        <rdfs:label xml:lang="en">MConnectorComponent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MDerives -->
+
+    <owl:Class rdf:about="&base;MDerives">
+        <rdfs:label xml:lang="en">MDerives</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MEnumerationBaseType -->
+
+    <owl:Class rdf:about="&base;MEnumerationBaseType">
+        <rdfs:label xml:lang="en">MEnumerationBaseType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MEnumerationLiteral -->
+
+    <owl:Class rdf:about="&base;MEnumerationLiteral">
+        <rdfs:label xml:lang="en">MEnumerationLiteral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MEnumerationType -->
+
+    <owl:Class rdf:about="&base;MEnumerationType">
+        <rdfs:label xml:lang="en">MEnumerationType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MEquation -->
+
+    <owl:Class rdf:about="&base;MEquation">
+        <rdfs:label xml:lang="en">MEquation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MExtends -->
+
+    <owl:Class rdf:about="&base;MExtends">
+        <rdfs:label xml:lang="en">MExtends</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MExternal -->
+
+    <owl:Class rdf:about="&base;MExternal">
+        <rdfs:label xml:lang="en">MExternal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;ModelicaClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MFunction -->
+
+    <owl:Class rdf:about="&base;MFunction">
+        <rdfs:label xml:lang="en">MFunction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MAbstractClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MIntegerType -->
+
+    <owl:Class rdf:about="&base;MIntegerType">
+        <rdfs:label xml:lang="en">MIntegerType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MModel -->
+
+    <owl:Class rdf:about="&base;MModel">
+        <rdfs:label xml:lang="en">MModel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MAbstractClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MPackage -->
+
+    <owl:Class rdf:about="&base;MPackage">
+        <rdfs:label xml:lang="en">MPackage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MAbstractClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MRealType -->
+
+    <owl:Class rdf:about="&base;MRealType">
+        <rdfs:label xml:lang="en">MRealType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MRecord -->
+
+    <owl:Class rdf:about="&base;MRecord">
+        <rdfs:label xml:lang="en">MRecord</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MAbstractClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MStringType -->
+
+    <owl:Class rdf:about="&base;MStringType">
+        <rdfs:label xml:lang="en">MStringType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MType -->
+
+    <owl:Class rdf:about="&base;MType">
+        <rdfs:label xml:lang="en">MType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MAbstractClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/MTypeComponent -->
+
+    <owl:Class rdf:about="&base;MTypeComponent">
+        <rdfs:label xml:lang="en">MTypeComponent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base;MComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/ModelicaClass -->
+
+    <owl:Class rdf:about="&base;ModelicaClass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/BooleanType -->
+
+    <owl:NamedIndividual rdf:about="&base;BooleanType">
+        <rdf:type rdf:resource="&base;MBooleanType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/IntegerType -->
+
+    <owl:NamedIndividual rdf:about="&base;IntegerType">
+        <rdf:type rdf:resource="&base;MIntegerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wolfram.com/wsm-rdf/RealType -->
+
+    <owl:NamedIndividual rdf:about="&base;RealType">
+        <rdf:type rdf:resource="&base;MRealType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

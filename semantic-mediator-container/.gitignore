@@ -1,0 +1,9 @@
+# patterns to be ignored 
+bin/**
+target/**
+Copy\ of\ pom.xml
+Database.json
+SM.logs
+SM.model.rdf
+SMCLogs.html*
+

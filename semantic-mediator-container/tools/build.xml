@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="com.ibm.dm.frontServices.sprint.sm" default="all" basedir="../../">
+  <property name="targetSprint" value="${basedir}/com.ibm.dm.frontServices.sprint.sm"/>
+  <property name="targetDanse" value="${basedir}/com.ibm.dm.frontServices.danse.sm"/>
+  <property name="targetGeneric" value="${basedir}/com.ibm.dm.frontServices.smc"/>
+  <property name="sourceName" value="com.ibm.dm.frontServices.sm"/>
+  <property name="source" value="${basedir}/${sourceName}"/>
+  <property name="build"	value="${source}/build"/>
+  <property name="danse"	value="${basedir}/com.ibm.dm.frontServices.danse.sm"/>
+  <property name="importer" value="ImportPackagesFromMavenRepository.xml"/>
+
+  <target name="all" depends="finalize" />
+
+  <target name="init">
+  	<delete dir="${build}"/>
+    <mkdir dir="${build}" />
+
+  	<delete dir="${targetSprint}/lib-ibm/"/>
+  	<delete dir="${targetDanse}/lib-ibm/"/>
+   	<delete dir="${targetGeneric}/lib-ibm/"/>
+  	<mkdir dir="${targetSprint}/lib-ibm/"/>
+  	<mkdir dir="${targetDanse}/lib-ibm/"/>
+  	<mkdir dir="${targetGeneric}/lib-ibm/"/>
+
+  	<delete dir="${targetSprint}/resources/"/>
+  	<delete dir="${targetDanse}/resources/"/>
+  	<delete dir="${targetGeneric}/resources/"/>
+  	<mkdir dir="${targetSprint}/resources/"/>
+  	<mkdir dir="${targetDanse}/resources/"/>
+  	<mkdir dir="${targetGeneric}/resources/"/>
+
+  	<delete dir="${targetSprint}/lib1"/>
+  	<delete dir="${targetDanse}/lib1"/>
+  	<delete dir="${targetGeneric}/lib1"/>
+  	<mkdir dir="${targetSprint}/lib1"/>
+  	<mkdir dir="${targetDanse}/lib1"/>
+  	<mkdir dir="${targetGeneric}/lib1"/>
+  </target>
+
+  <target name="makeJars" depends="init">
+   	<jar basedir="${source}/bin" destfile="${build}/${sourceName}.jar" excludes="\.*"/>
+  </target>
+
+  <target name="avoid">
+  	<copy todir="${targetSprint}/lib-ibm" file="${build}/${sourceName}.jar"/>
+  	<copy todir="${targetDanse}/lib-ibm" file="${build}/${sourceName}.jar"/>
+  	<copy todir="${targetSprint}/lib1"><fileset dir="${source}/lib1"/></copy>
+  	<copy todir="${targetDanse}/lib1"><fileset dir="${source}/lib1"/></copy>
+  	<copy todir="${targetSprint}" file="${source}/plugin.xml"/>
+  	<copy todir="${targetDanse}" file="${source}/plugin.xml"/>
+  	<delete file="${targetDanse}/build.xml"/>
+  	<delete file="${targetSprint}/build.xml"/>
+  	<copy tofile="${targetSprint}/tools/build.xml" file="${source}/tools/${importer}"/>
+  	<copy tofile="${targetDanse}/tools/build.xml" file="${source}/tools/${importer}"/>
+  	<copy tofile="${targetDanse}/META-INF/MANIFEST.MF" file="${source}/META-INF/MANIFEST.MF"/>
+  	<copy tofile="${targetSprint}/META-INF/MANIFEST.MF" file="${source}/META-INF/MANIFEST.MF"/>
+  	<copy todir="${targetSprint}/resources/">
+  		<fileset dir="${source}/resources/" excludes="**/DANSE*"/>
+  	</copy>
+  	<copy todir="${targetDanse}/resources/">
+  		<fileset dir="${source}/resources/" excludes="**/SPRINT*"/>
+  	</copy>
+  </target>
+
+  <target name="copyAll" depends="makeJars">
+  	<copy todir="${targetGeneric}/lib-ibm" file="${build}/${sourceName}.jar"/>
+  	<copy todir="${targetGeneric}/lib1"><fileset dir="${source}/lib1"/></copy>
+  	<copy todir="${targetGeneric}" file="${source}/plugin.xml"/>
+  	<delete file="${targetGeneric}/build.xml"/>
+  	<copy tofile="${targetGeneric}/tools/build.xml" file="${source}/tools/${importer}"/>
+  	<copy tofile="${targetGeneric}/META-INF/MANIFEST.MF" file="${source}/META-INF/MANIFEST.MF"/>
+  	<copy todir="${targetGeneric}/resources/">
+  		<fileset dir="${source}/resources/" excludes="**/SPRINT*,**/DANSE*"/>
+  	</copy>
+  </target>
+	
+  <target name='finalize' depends='copyAll'>
+   	<delete file="${build}/${sourceName}.jar"/>
+ </target>
+</project>

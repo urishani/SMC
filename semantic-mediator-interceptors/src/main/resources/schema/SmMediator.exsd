@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.ibm.dm.frontServices.sm" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="com.ibm.dm.frontServices.sm" id="SmMediator" name="SM Mediator Interceptor"/>
+      </appinfo>
+      <documentation>
+         Semantic Mediation Mediator is an Interceptor class to be used in configuring mediation networks.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="InterceptorClass"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="InterceptorClass">
+      <annotation>
+         <documentation>
+            Java class implementing a mediation algorithm and which implements the interception interface of SM.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Descriptive name of the interceptor
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="description" type="string">
+            <annotation>
+               <documentation>
+                  Description of the mediator algorithm, dependencies and rules provisioning type.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  A mediator interceptor that can be configured into a mediation network among models, using mediation rules to transform models from one ontology to another.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":com.ibm.dm.frontService.sm.intfc.ISmModuleContext"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="requiresLicense" type="boolean">
+            <annotation>
+               <documentation>
+                  Indicates whether the interceptor requires a license, in which case, when configuring it - a pop-up window will require the user to agree to use it only legally via an enforceable license, or voluntarily with unenforceable agreement.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="licenseText" type="string">
+            <annotation>
+               <documentation>
+                  Text to be displayed to a user when having a choice to select a licensed mediator to which she will accept by clicking the YES (or OK) button.
+To include line breaks, use the sequence \n (backslash n).
+Do not use the &lt; and character.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         [Enter extension point usage example here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiinfo"/>
+      </appinfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+
+</schema>

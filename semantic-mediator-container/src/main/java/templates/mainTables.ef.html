@@ -1,0 +1,454 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+
+<!-- saved from url=(0070)file:///C:/Users/eyalfe/AppData/Local/Temp/notesEA312D/mainTables.html -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+.ontology {}
+.rule { display:none; }
+.port { display:none; }
+.mediator { display:none; }
+.friend { display:none; }
+</style>
+<script>
+	// File Name: mainTables.ef.html
+
+	viewClass = function(name){
+		for(var i=0 ; i<document.styleSheets[0].rules.length ; i++)
+			if(document.styleSheets[0].rules[i].selectorText==="."+name)
+				document.styleSheets[0].rules[i].style.display = "";
+			else
+				document.styleSheets[0].rules[i].style.display = "none";
+	}
+</script>
+</head>
+<body>
+	<div>
+		<button onClick="viewClass('ontology')">Ontology</button>
+		<button onClick="viewClass('rule')">Rule</button>
+		<button onClick="viewClass('port')">Port</button>
+		<button onClick="viewClass('mediator')">Mediator</button>
+		<button onClick="viewClass('friend')">Friend</button>
+	</div>
+	_ontologies_ _/ontologies_ _rules_ _/rules_ _ports_ _/ports_
+
+
+
+	_mediators_ _/mediators_ _friends_ _/friends_
+	<table id="mainTable" class="dj_webkit com-ibm-team-workitem queryResultsTable"  border="1">
+		<form action="file:///C:/dm/sm"></form>
+		<tbody>
+			<tr bgcolor="lightgray" class="ontology">
+				<th colspan="4" title="Create a new ontology">
+					<button type="submit">New</button>
+					<input type="hidden" name="create" value="ontology">
+					<input id="newOntTags" type="hidden" name="createWithTags" value="_filterVar_"> 
+					<font size="+2" color="blue"><b>Ontology</b></font>
+				</th>
+				<th colspan="9">
+					<table style='width:100%' class="dj_webkit com-ibm-team-workitem queryResultsTable"  border="1">
+						<tbody>
+							<tr>
+								<td style="text-align: right; width: 50%"><font size="+2" color="blue"><b>Ontologies </b></font></td>
+								<td>
+									<button id="toggle_Ont" onclick="return toggle(&quot;Ont&quot;, this, 0, 1)" title="Collapse this section" style="DISPLAY: block">-</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</th>
+			</tr>
+
+			<tr class="ontology">
+				<th title="Actions possible on an item. See above for meanings">Actions</th>
+				<th width="70" title="Unique identifier of a configuration item">Id</th>
+				<th colspan="2" title="Descriptive name of the item">Name</th>
+				<th colspan="3" title="Base name-space URI of an ontology model">Name Space</th>
+				<th title="Dependencies on other ontologies">Dependencies</th>
+				<th title="Version IRI of an ontology model (optional)">Version</th>
+				<th title="Tags assigned to the item">Tags</th>
+				<th title="Time item has been modified (hover to see time it was created)">Modified</th>
+				<th title="Status should be &quot;ready&quot; for item to be applicable">Status</th>
+				<th title="Shows whether an item is archived - so it is candidate for deletion">Arch</th>
+				<th></th>
+			</tr>
+			<form action="file:///C:/dm/sm" x="ont" class="ontology"></form>
+			<tr id="_id_" class="ontology">
+				<td><input type="hidden" name="id" value="_id_">
+					<table class="dj_webkit com-ibm-team-workitem queryResultsTable"
+						 border="1">
+						<tbody>
+							<tr>
+								<td>
+									<button type="submit" name="action" _deletedisabled_=""
+										style="background-color: pink"
+										onclick="return (confirm(&quot;Are you sure to DELETE?&quot;))"
+										value="D">D</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _editdisabled_="" value="E">E</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _importdisabled_=""
+										value="I">I</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _loaddisabled_="" value="L">L</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _showdisabled_=""
+										value="ShowList">S</button>
+								</td>
+							</tr>
+						</tbody>
+					</table></td>
+				<td>_id_</td>
+				<td colspan="2">_name_</td>
+				<td colspan="3">_modelInstanceNamespace_</td>
+				<td>_dependencies_</td>
+				<td>_version_</td>
+				<td>_tags_</td>
+				<td title="Created: _dateCreated_">_dateModified_</td>
+				<td>_status_</td>
+				<td align="center">_isArchivedIcon_</td>
+			</tr>
+			<form action="file:///C:/dm/sm" class="rule"></form>
+			<tr bgcolor="lightgray" class="rule">
+				<th colspan="4" title="Create a new rule-set">
+					<button type="submit">New</button> <input type="hidden"
+					name="create" value="ruleSet"> <input id="newRulTags"
+					type="hidden" name="createWithTags" value="_filterVar_"> <font
+					size="+2" color="blue"><b>Rule</b></font></th>
+				<th colspan="9">
+					<table style='width:100%'
+						class="dj_webkit com-ibm-team-workitem queryResultsTable"
+						 border="1">
+						<tbody>
+							<tr>
+								<td style="text-align: right; width: 50%"><font size="+2"
+									color="blue"><b>Rules </b></font></td>
+								<td>
+									<button id="toggle_Rul"
+										onclick="return toggle(&quot;Rul&quot;, this, 0, 1)"
+										title="Collapse this section" style="DISPLAY: block">-</button>
+								</td>
+							</tr>
+						</tbody>
+					</table></th>
+				<th></th>
+			</tr>
+
+			<tr class="rule">
+				<th title="Actions possible on an item. See above for meanings">Actions</th>
+				<th width="70" title="Unique identifier of a configuration item">Id</th>
+				<th colspan="2" title="Descriptive name of the item">Name</th>
+				<th colspan="3" title="Base name-space URI of an ontology model">Name
+					Space</th>
+				<th title="Dependencies on other ontologies">Dependencies</th>
+				<th title="Version IRI of an ontology model (optional)">Version</th>
+				<th title="Tags assigned to the item">Tags</th>
+				<th title="Time item has been modified (hover to see time it was created)">Modified</th>
+				<th title="Status should be &quot;ready&quot; for item to be applicable">Status</th>
+				<th title="Shows whether an item is archived - so it is candidate for deletion">Arch</th>
+				<th></th>
+			</tr>
+			<form action="file:///C:/dm/sm"></form>
+			<tr id="_id_" class="rule">
+				<td><input type="hidden" name="id" value="_id_">
+					<table class="dj_webkit com-ibm-team-workitem queryResultsTable"
+						 border="1">
+						<tbody>
+							<tr>
+								<td>
+									<button type="submit" name="action" _deletedisabled_=""
+										style="background-color: pink"
+										onclick="return (confirm(&quot;Are you sure to DELETE?&quot;))"
+										value="D">D</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _editdisabled_="" value="E">E</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _importdisabled_=""
+										value="I">I</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _loaddisabled_="" value="L">L</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _showdisabled_=""
+										value="ShowList">S</button>
+								</td>
+							</tr>
+						</tbody>
+					</table></td>
+				<td>_id_</td>
+				<td colspan="2">_name_</td>
+				<td colspan="3">_modelInstanceNamespace_</td>
+				<td>_dependencies_</td>
+				<td>_version_</td>
+				<td>_tags_</td>
+				<td title="Created: _dateCreated_">_dateModified_</td>
+				<td>_status_</td>
+				<td align="center">_isArchivedIcon_</td>
+			</tr>
+			<form action="file:///C:/dm/sm"></form>
+			<tr bgcolor="lightgray" class="port">
+				<th title="Create a new port" colspan="4">
+					<button type="submit">New</button> <input id="newPrtTags"
+					type="hidden" name="createWithTags" value="_filterVar_"> <select
+					name="portType" value="post">
+						<option>post</option>
+						<option>get</option>
+						<option>pipe</option>
+						<option>repository</option>
+						<option>export</option>
+				</select> <input type="hidden" name="create" value="port"> <font
+					size="+2" color="blue"><b>Port</b></font></th>
+				<th colspan="9">
+					<table style='width:100%'
+						class="dj_webkit com-ibm-team-workitem queryResultsTable"
+						 border="1">
+						<tbody>
+							<tr>
+								<td style="text-align: right; width: 50%"><font size="+2"
+									color="blue"><b>Ports</b> </font></td>
+								<td>
+									<button id="toggle_Prt"
+										onclick="return toggle(&quot;Prt&quot;, this, 0, 1)"
+										title="Collapse this section" style="DISPLAY: block">-</button>
+								</td>
+							</tr>
+						</tbody>
+					</table></th>
+				<th></th>
+			</tr>
+
+			<tr id="Prt0" class="port">
+				<th title="Actions possible on an item. See above for meanings">Actions</th>
+				<th title="Unique identifier of a configuration item">Id</th>
+				<th title="Whether a repository is in sync. with the latest model updates">Sync.</th>
+				<th title="Descriptive name of the port" colspan="1">Name</th>
+				<th title="Access name to be used by this port. (For REST, this is the name following the path dm/sm/tool/)">Access
+					name</th>
+				<th title="Port type: restful post or get, remote, repository or a pipe w/no storage"
+					colspan="1">Type</th>
+				<th title="ID of the ontology describing models passing through this port">Ontology
+					ID</th>
+				<th title="Marks that the repository is enabled for direct access by tools">Is
+					Direct</th>
+				<th title="Version number of this port item (optional)">Version</th>
+				<th title="Tags assigned to this item">Tags</th>
+				<th title="Time item has been modified (hover to see time it was created)">Modified</th>
+				<th title="Status should be &quot;ready&quot; for item to be applicable">Status</th>
+				<th title="Shows whether an item is archived - so it is candidate for deletion">Arch</th>
+				<th></th>
+			</tr>
+			<form action="file:///C:/dm/sm" class="port"></form>
+			<tr id="_id_" class="port">
+				<td colspan="1"><input type="hidden" name="id" value="_id_">
+					<table class="dj_webkit com-ibm-team-workitem queryResultsTable"
+						 border="1">
+						<tbody>
+							<tr>
+								<td>
+									<button type="submit" name="action" _deletedisabled_=""
+										style="background-color: pink"
+										onclick="return (confirm(&quot;Are you sure to DELETE?&quot;))"
+										value="D">D</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _editdisabled_="" value="E">E</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _showdisabled_=""
+										_showhidden_="" value="ShowList">S</button>
+								</td>
+								<td>
+									<button id="_id_-port-clear" type="submit" _clearhidden_=""
+										style="background-color: yellow" name="action"
+										_cleardisabled_=""
+										onclick="return (confirm(&quot;Are you sure to CLEAR?&quot;))"
+										value="C">C</button>
+								</td>
+							</tr>
+						</tbody>
+					</table></td>
+				<td>_id_</td>
+				<td id="_id_-port-sync" align="center">_portSync_</td>
+				<td colspan="1">_name_</td>
+				<td>_accessName_</td>
+				<td colspan="1">_type_</td>
+				<td>_ontologyId_</td>
+				<td colspan="1" align="center">_isDirectIcon_</td>
+				<td>_version_</td>
+				<td>_tags_</td>
+				<td title="Created: _dateCreated_">_dateModified_</td>
+				<td>_status_</td>
+				<td align="center">_isArchivedIcon_</td>
+			</tr>
+			<form action="file:///C:/dm/sm" class="mediator"></form>
+			<tr bgcolor="lightgray" class="mediator">
+				<th colspan="4" title="Create a new mediator">
+					<button type="submit">New</button> <input type="hidden"
+					name="create" value="mediator"> <input id="newMdtTags"
+					type="hidden" name="createWithTags" value="_filterVar_"> <font
+					size="+2" color="blue"><b>Mediator</b></font></th>
+				<th colspan="9">
+					<table style='width:100%'
+						class="dj_webkit com-ibm-team-workitem queryResultsTable"
+						 border="1">
+						<tbody>
+							<tr>
+								<td style="text-align: right; width: 50%"><font size="+2"
+									color="blue"><b>Mediators </b></font></td>
+								<td>
+									<button id="toggle_Mdt"
+										onclick="return toggle(&quot;Mdt&quot;, this, 0, 1)"
+										title="Collapse this section" style="DISPLAY: block">-</button>
+								</td>
+							</tr>
+						</tbody>
+					</table></th>
+				<th></th>
+			</tr>
+
+			<tr id="Mdt0" class="mediator">
+				<th title="Actions possible on an item. See above for meanings">Actions</th>
+				<th title="Unique identifier of a mediator item">Id</th>
+				<th title="Descriptive name of the mediator" colspan="2">Name</th>
+				<th title="ID of the port describing input to this mediation">In
+					Port ID</th>
+				<th title="ID of the port describing output from this mediation">Out
+					Port ID</th>
+				<th title="ID of the mediation rule-set to be used">Rule Set ID</th>
+				<th title="Java interceptor for this mediator module implementation"
+					colspan="1">Interceptor</th>
+				<th title="Version number of this mediator item (optional)">Version</th>
+				<th title="Tags assigned to this item">Tags</th>
+				<th title="Time item has been modified (hover to see time it was created)">Modified</th>
+				<th title="Status should be &quot;ready&quot; for item to be applicable">Status</th>
+				<th title="Shows whether an item is archived - so it is candidate for deletion">Arch</th>
+			</tr>
+			<form action="file:///C:/dm/sm" class="mediator"></form>
+			<tr id="_id_" class="mediator">
+				<td><input type="hidden" name="id" value="_id_">
+					<table class="dj_webkit com-ibm-team-workitem queryResultsTable"
+						 border="1">
+						<tbody>
+							<tr>
+								<td>
+									<button type="submit" name="action" _deletedisabled_=""
+										style="background-color: pink"
+										onclick="return (confirm(&quot;Are you sure to DELETE?&quot;))"
+										value="D">D</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _editdisabled_="" value="E">E</button>
+								</td>
+								<td>
+									<button type="submit" name="action" _testdisabled_="" value="T">T</button>
+								</td>
+								<td>
+									<button type="submit" name="action"
+										style="display: _showDisabled_" value="ShowMediator">S</button>
+								</td>
+							</tr>
+						</tbody>
+					</table></td>
+				<td>_id_</td>
+				<td colspan="2">_name_</td>
+				<td>_inputPortId_</td>
+				<td>_outputPortId_</td>
+				<td>_ruleSetId_</td>
+				<td colspan="1"
+					title="Class: _interceptorClass_. Description: _interceptorDescription_. Legal:_interceptorIsLegal_.">_interceptorName_
+
+
+				</td>
+				<td>_version_</td>
+				<td>_tags_</td>
+				<td title="Created: _dateCreated_">_dateModified_</td>
+				<td>_status_</td>
+				<td align="center">_isArchivedIcon_</td>
+			</tr>
+			<form action="file:///C:/dm/sm" class="friend"></form>
+			<tr bgcolor="lightgray" class="friend">
+				<th colspan="4" title="Create a new friend"><button
+						type="submit">New</button> <input type="hidden" name="create"
+					value="friend"> <input id="newFrnTags" type="hidden"
+					name="createWithTags" value="_filterVar_"> <font size="+2"
+					color="blue"><b>Friend</b></font></th>
+				<th colspan="9"><table style='width:100%'>
+						<tbody>
+							<tr>
+								<td style="text-align: right; width: 50%"><font size="+2"
+									color="blue"><b>Friends </b></font></td>
+								<td><button id="toggle_Frn"
+										onclick="return toggle(&quot;Frn&quot;, this, 0, 1)"
+										title="Collapse this section" style="DISPLAY: block">-</button>
+								</td>
+							</tr>
+						</tbody>
+					</table></th>
+				<th></th>
+			</tr>
+
+			<tr id="Frn0" class="friend">
+				<th title="Actions possible on an item. See above for meanings">Actions</th>
+				<th title="Unique identifier of a friend item">Id</th>
+				<th title="Descriptive name of the friend" colspan="2">Name</th>
+				<th title="Username at the friend server">User</th>
+				<th title="Friend server IP address, including IP port" colspan="3">IP
+					Address &amp; Port</th>
+				<th title="Version number of this friend item (optional)">Version</th>
+				<th title="Tags assigned to this item">Tags</th>
+				<th title="Time item has been modified (hover to see time it was created)">Modified</th>
+				<th title="If status is not OK, the server could not be reached, or the credentials are incorrect">Status</th>
+				<th title="Shows whether an item is archived - so it is candidate for deletion">Arch</th>
+			</tr>
+			<form action="file:///C:/dm/sm" class="friend"></form>
+			<tr id="_id_" class="friend">
+				<td><input type="hidden" name="id" value="_id_">
+					<table>
+						<tbody>
+							<tr>
+								<td><button type="submit" name="action" _deletedisabled_=""
+										style="background-color: pink"
+										onclick="return (confirm(&quot;Are you sure to DELETE?&quot;))"
+										value="D">D</button></td>
+								<td><button type="submit" name="action" _editdisabled_=""
+										value="E">E</button></td>
+								<td><button type="submit" name="action" _testdisabled_=""
+										value="T">T</button></td>
+							</tr>
+						</tbody>
+					</table></td>
+				<td>_id_</td>
+				<td colspan="2">_name_</td>
+				<td>_user_</td>
+				<td colspan="3">_ipAddress_</td>
+				<td>_version_</td>
+				<td>_tags_</td>
+				<td title="Created: _dateCreated_">_dateModified_</td>
+				<td align="center">_status_</td>
+				<td align="center">_isArchivedIcon_</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

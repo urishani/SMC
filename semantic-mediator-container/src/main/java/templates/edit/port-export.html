@@ -1,0 +1,82 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+        <link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" type="text/css" rel="stylesheet"
+			href="/dm/smWebstyles?css=yui.2.2.1.css">    
+        <script  type="text/javascript" src="/dm/resources/js/utils.js"></script>
+	</head>
+<body>
+	<h1>
+		Edit Exporter Port for id [_id_]</h1> 
+        <font color='red'>Comment:</font> _comments_
+		<form>
+            <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+				<tr class="com-ibm-team-workitem queryResults">
+					<th class="headerColumnUnsorted">Field
+					<th class="headerColumnUnsorted">Value
+				</tr>
+				<tr>
+					<td>Version
+					<td><input size='40' type='text' value='_version_'
+						name='version' />
+				</tr>
+				<tr>
+					<td>Name
+					<td><input size='40' type='text' value='_name_' name='name' />
+				</tr>
+
+				<tr>
+					<td>Access Name
+					<td><input size='40' type='text' value='_accessName_'
+						name='accessName' />
+				</tr>
+
+				<tr>
+					<td>Friend Id
+					<td align='center'><select value='_selectedFriendId_'
+						name='friendId'> _friendId_
+							<option _selected_>_idName_</option>_/friendId_
+							<option _selectedNaNFriendId_>NaN</option>
+					</select>
+				</tr>
+
+				<tr>
+					<td>Ontology Id
+					<td><input size='40' type='text' value='_selectedOntologyId_'
+						name='selectedOntologyId' readonly />
+				</tr>
+
+				<tr>
+					<td>Tags
+					<td><input size='40' type='text' value='_tags_' name='tags' />
+				</tr>
+				<tr>
+					<td>Archived
+					<td align='center'><input _archived_ type='checkbox'
+						value='true' name='archived' />
+				</tr>
+			</table>
+ 			<br> <input type='submit' name='update' id='updateButton' value='Update'>
+ 				 <input	type='button' name='abort' value='Cancel' onClick='doCancel()'> 
+ 				 <input	type='hidden' name='id' value='_id_'>
+                 <input hidden=true name='initialize' value='_initialize_'/>;
+		</form>
+</body>
+</html>

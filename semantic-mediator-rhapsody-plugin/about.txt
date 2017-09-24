@@ -1,0 +1,13 @@
+To build the project and install it as a plugin on the Rhapsody 7.6 installed on this machine:
+Run tools/build.xml ... as Ant Build.
+
+The result is also the zip file in build/rhapsody.plugin.zip. This is the element to ship to customers to build
+and install on their Rhapsody clients.
+
+This zip contains all the instructions and components to do that. All OSS jars will be imported from the internet.
+
+Similarly, to install the plugin on Rhapsody 8.0.2 on your machine, do this build.xml on the Sm.Rhapsocy.dev.8.0.2 project.
+
+
+This ant file also updates the shared project  com.ibm.haifa.smc.rhapsody.plugin. This project is actually the source 
+of the customer installation zip file created in the build/ folder here.

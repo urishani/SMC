@@ -1,0 +1,405 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">    
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+        <script  type="text/javascript" src="/dm/resources/js/rdfList.js"></script>
+        <script  type="text/javascript" src="/dm/resources/js/showGraph.js"></script>
+        <script>
+		// File Name: rdfList.html
+         var sav =[];
+         var cont =[];
+
+
+         function load(a, frr, rr, radius)
+          {
+           var p = a.parentNode;
+           var tds = p.parentNode.cells;
+           var ntd = tds[0];
+           var td = tds[2];
+           sav[frr] = td.innerHTML;
+           var close = '<button onclick=   "myDone(this, \''   + frr + '\')">   Close</button>';
+           var graph = '<br><button onclick="showResourceGraph(this, \''   + rr  + '\', \'_id_\', 0)"  title="Show graph of resource" class="button_imageB button_showGraph"/>';
+           sav[ntd.innerHTML]=p.innerHTML; 
+           if (cont[frr]) {
+              td.innerHTML = cont[frr];
+              p.innerHTML = close + (!isAttachment?graph:"");
+              return false;
+           }
+           p.innerHTML= 'loading...';
+           var fxmlhttp, txmlhttp;
+           if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+              fxmlhttp=new XMLHttpRequest();
+              txmlhttp=new XMLHttpRequest();
+           } else {// code for IE6, IE5
+              fxmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+              txmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+           }
+           
+           function f(_r, _td, xmlhttp)  {
+              if (xmlhttp.readyState==4 && xmlhttp.status==200)   {
+                 var resp = xmlhttp.responseText;
+                 resp = resp.replace(/</g,'&lt;');
+                 resp = resp.replace(/>/g,'&gt;');
+                 resp = resp.replace(/&gt; , &lt;/g, '&gt;,<br>              &lt;');
+                 var iH = '<pre>' + resp + '</pre><img>';
+                 cont[_r] = iH;
+                 _td.innerHTML= iH;
+                 p.innerHTML = close + (!isAttachment?graph:"");
+               } else {
+            	   if (false) { //xmlhttp.readyState == 4 && xmlhttp.status != 200) {
+            		   p.innerHTML='ERROR !! ';
+            	   }   
+            	   if (xmlhttp.readyState == 4 && xmlhttp.status != 200) {
+            		   p.innerHTML='ERROR !! ';
+            	   } else {
+            		   x = 'WTF';   
+            	   }
+               }
+           }
+         
+           var query = frr;
+           if ("_version_" != "") {
+             if (query.indexOf("?") < 0)
+                query += "?";
+             else 
+                query += "&";
+             query += "version=_version_";
+           }
+           
+           fxmlhttp.open("GET", query, true);
+           fxmlhttp.setRequestHeader("Accept","text/turtle");
+           fxmlhttp.onreadystatechange= function() {f(frr, td, fxmlhttp);};
+           fxmlhttp.send();
+
+           return false;
+        }
+        
+        function myDone(a, rr) {
+           var p = a.parentNode;
+           var tds = p.parentNode.cells;
+           var ntd = tds[0];
+           var td = tds[2];
+           p.innerHTML = sav[ntd.innerHTML];
+           sav[ntd.innerHTML] = null;
+           td.innerHTML = sav[rr];
+           return false;
+        }  
+        
+        // Utility to set the 'hidden' property over an array of fields, given an array of values, and an optional array of skips.
+        // returning the original status of that property for the fields. 
+        function hidden(fields, values, skips) {
+           var hiddenStat = [];
+           for (var i=0; i < values.length; i++) {
+              hiddenStat[i] = fields[i].hidden;
+              if (skips && skips[i])
+                 continue;
+               fields[i].hidden = values[i];
+           }  
+           return hiddenStat; 
+        }
+        
+        // buttons are: /plus/del/edit/cancel/save/ and first 'cousine' of the button holds the text.
+        function editContents(but) { 
+        	var p = but.parentNode;
+        	var hiddenStat = hidden(p.children, [true,true,true,false,false]); // show the field to edit it, and only the C and S buttons.
+        	var tr = p.parentNode;
+        	var td = tr.children[1];
+        	var div = td.children[0];
+        	tr.saveContents=div;
+        	tr.saveHiddenStat = hiddenStat
+        	td.innerHTML='<input style="background-color:lightblue" value="' + div.textContent + '"/>';
+        }
+
+        function saveEditedContents(but) {
+        	var p = but.parentNode;
+        	var hiddenStat = hidden(p.children, [true,false,false,true,true]); // show the field to edit it, and only the C and S buttons.
+        	var tr = p.parentNode;
+        	var td = tr.children[1];
+        	var div = tr.saveContents;
+        	var input = td.childNodes[0];
+        	var newText = input.value;
+        	div.textContent=newText;
+        	td.replaceChild(div, td.childNodes[0]);
+        	// get the other params from hidden fields
+        	var rNum = p.children[5].value;
+        	var pred = p.children[6].value;
+        	savePredicate(rNum, pred, newText);        	
+        }
+
+        function delContents(but) {
+        	var p = but.parentNode;
+        	var hiddenStat = hidden(p.children, [false,true,true,true,true]); // show the field to edit it, and only the C and S buttons.
+        	var tr = p.parentNode;
+        	var td = tr.children[1];
+        	var div = document.createElement('div'); //tr.saveContents;
+        	div.hidden=true;
+        	td.replaceChild(div, td.childNodes[0]);
+        	// get the other params from hidden fields
+        	var rNum = p.children[5].value;
+        	var pred = p.children[6].value;
+        	savePredicate(rNum, pred); // having no text, the predicate will be removed.        	
+        }
+        
+        function cancelEditedContents(but) {
+        	var p = but.parentNode;
+        	var tr = p.parentNode;
+        	var td = tr.children[1];
+        	var div = tr.saveContents;
+        	var hiddenStat = tr.saveHiddenStat;
+        	hidden(p.children, hiddenStat);
+        	td.replaceChild(div, td.childNodes[0]);
+        }
+
+		function savePredicate(rNum, pred, newText) {
+			var id = '_id_';
+//			var encodedNewText = encodeURI(newText);
+		    var req = new XMLHttpRequest();
+		    var url = "/dm/sm/repository?action=updateResource&id=_id_"+
+		    		"&subject="+encodeURIComponent(rNum)+
+		    		(newText?"&newText="+encodeURIComponent(newText):"") + 
+		    		"&property="+encodeURIComponent(pred);
+//alert("url: [" + url + "]");
+		    req.open("GET", url, true, null, null);
+		    req.setRequestHeader('accept', 'text/plain');
+		    req.onreadystatechange = function() {
+		         var ok = false
+		         var result = "";
+		         if (this.readyState == 4) {
+		            if (this.status == 200) {
+		               result = this.responseText;
+		               ok = true;
+		            }
+		         }
+		         var msg = document.getElementById("messages");
+		         if (msg) {
+		               msg.innerHTML = ok? (" OK " + result) : ( "failed. ReadyState [" + this.readyState + "], status [" + this.status + "]");
+		 	     }
+		 	  }   
+		      req.send('');
+		}
+        </script>
+        <style>
+           .only4Port {display:block}
+        </style>
+    </head>
+    <body onLoad='onLoad("_id_", "_base_", "_query_", "_hasRefs_", _isTemp_, _enableSave_, "_collectionName_", _classes_, "_version_", "_portType_");
+         setupEditButton();'>
+        <h1>List of contents for _header_
+        <button hidden=true onClick='setupEditButton();this.disabled=true;return false'>
+            v
+        </button></h1>
+        <font color='red'>Comments:</font> _comments_<br>
+        <div id='luceneDiv'>
+           Text Search <button  id='runQuery' onClick='luceneQuery(this);'>Run Query</button>&nbsp;
+           <button disabled id='resetQuery' onClick='resetQuery(this);'>Reset Query</button>:
+           <br>&nbsp;&nbsp;
+           <textarea style='background-color:lightblue; border:1px solid blue' id='luceneQuery' rows='3' cols='100'></textarea>
+		</div>
+        <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+            <tr>
+                <td valign='top'>
+                <table>
+                <tr>
+                <td>
+                <form action='/dm/sm'>
+                    <input id ='doneButton' type='submit' value='Done'/>
+                    <input id = 'done_cancelButton' hidden = true type='submit' value='Done/Cancel'
+               			onClick='return (confirm("Are you sure to stop editing?"))'
+    				    title='Stop editing (after confirmation) this temporary repository _id_]'
+    				    style='background-color:pink'
+     				    onMouseOver='style="background-color: red; color:white"'
+    				    onMouseOut='style="background-color: pink; color:black"'>
+               </form>
+                <td>
+                <form action='/dm/sm'>
+                    <input type='hidden' name='id' value='_id_'>
+                    <button type='submit' name='action' value='ShowRDF'>Show RDF</button>
+                </form>
+                <td>
+                <form action='/dm/sm'>
+                    <input type='hidden' name='id' value='_id_'>
+                    <button type='submit' name='action' value='ShowList'>Refresh</button>
+                </form>
+                <td>
+				<form action='/dm/smGraph' target='_blank'>
+                    <input type='hidden' name='id' value='_id_'>
+                    <button type='submit' name='action' class='button_imageB button_showGraph' value='graph' title='Show Graph for the entire model'/>
+                </form>
+                <td>
+                <form action='/dm/sm/repository'>
+                    <button hidden=true type='submit' id='saveButton' name='action' value='saveEdit'
+                     title='Saves the temporary repository _id_ into the original repository using null mediation.'
+                     style='background-color:lightgreen'
+    				 onMouseOver='style="background-color: green; color:white"'
+    				 onMouseOut='style="background-color: lightgreen; color:black"'>
+                        Save
+                    </button>
+                    <input hidden=true name='id' value='_id_'>
+                </form>
+                </table>
+                <form action='/dm/sm' method='get'>
+                    <input type='hidden' name='id' value='_id_'>
+                    <input hidden=true name='action' value='Edit Repository'>
+                    <input hidden=true id='edit' type='submit' value='Edit Tool Model'>
+                </form>
+                <input hidden='true' type='button' id='attachmentsButton' onclick='enableUp()' value='Upload a new attachment'>
+                <br>
+                <div hidden='true' id='attachments' style='background-color:Beige; border:1px solid blue'>
+                    <h2>Attachment uploading:</h2>
+                    <form method='post' accept-charset='UTF-8' enctype='multipart/form-data'
+                    action='/dm/sm/repository/attachments'>
+                        From file:
+                        <input type='file' name='attachment-file' size='40'>
+                        <br>
+                        Attachment Type:
+                        <select name='set'>
+                            <option value='SmBlob'>Blob</option>
+                            <option value='SmFMU'>FMU</option>
+                            <option value='SmDiagram'>Diagram</option>
+                            <option value='SmPicture'>Picture</option>
+                            <option value='SmMovie'>Movie</option>
+                            <option value='SmStateChartXMI'>StateChartXMI</option>
+                        </select>
+                        Title:
+                        <input type='text' name='title' size='40'>
+                        <br>
+                        Description:<textArea style='height:5em;width:50em;overflow:scroll;' name='description'>
+						</textArea>
+						<br>
+						<input type='submit' value='submit'>
+                        <input type='button' value='Close' onclick='return disableDown()'>
+                    </form>
+                </div>
+                _numNS_ Namespaces:
+                <ul id='ul'>
+                    _prefixes_
+                    <li>
+                        _prefix_:=&lt;_ns_&gt;
+                        _/prefixes_
+                </ul>
+
+                <table><tr><td>
+                       <form action='/dm/sm'>
+                    	<b>_numRows_</b>  resources found. Showing <b>_fromRow_</b> to <b>_toRow_</b> resources.
+                    	<input type='hidden' name='id' value='_id_'> 
+                    	<input type='hidden' name='action' value='showList'>
+                    	<input type='hidden' name='fromRow' value='_toRow_'>
+                    	<input type='hidden' name='version' value='_version_'> 
+                    	<input type='submit' name='subAction' value='<<' _showPrevHidden_>
+                    	<input type='submit' name='subAction' value='showPrev' _showPrevHidden_>
+                    	<input type='submit' name='subAction' value='showNext' _showNextHidden_>
+                    	<input type='submit' name='subAction' value='>>' _showNextHidden_>
+                    	</form>
+                </table>
+
+                <div hidden='true' display='none' id='edit1'>
+                        <form action='/dm/sm/repository'>
+                            New individual:
+                            <button type='submit' class='button_image button_plus'></button>
+                            <input type='hidden' name='action' value='NewIndividual'>
+                            <input type='hidden' name='id' value='_id_'>
+                            <select id='classSelect' name='class'></select>
+                        </form>
+                        Messages: <text style='background-color:pink;border-color:blue;border-width:2px' size='100' value='' id='messages'>
+                </div>
+                <td>
+                <b>Model history (Select revision to compare with present model):<br>
+                [new]: Click revision to browse its content</b>
+                <br>
+                <form action='/dm/sm'>
+                    <button id='compare' type='submit' name='action' value='compare' disabled='disabled'>
+                        Compare Triples
+                    </button>
+                    <input type='submit' style='background-color:pink' onClick='return confirm("Confirm reset of all history");' name='ClearAllHistory' value='Clear Old versions'>
+                    <input type='submit' style='background-color:pink' onClick='return confirm("Confirm reset of history to only 5");' name='Clear5History' value='Reduce to 5 versions'>
+                    <input type='hidden' name='id' value='_id_'>
+                    <input type='hidden' name='domain' value='_domain_'>
+                    <div  style="border : solid 2px #ff0000; background : lightgray; color : blue; padding : 4px; height : 120px; overflow : auto; ">
+                        <input type="radio" name="version" value="current" onclick='doVersion1(this)'>
+                        <input type="radio" name="version2" value="current" checked onclick='doVersion2(this)'>
+                        <a _selectableCurrent_ href='?action=ShowList&id=_id_'>current [_currentDate_]</a>
+                        <span _fixedCurrent_>
+						<img src='/dm/resources/graphics/icons/right_arrow_nav.gif'>
+						current [_currentDate_]
+                        <img src='/dm/resources/graphics/icons/left_arrow_nav.gif'>
+                        </span>
+                        <a hidden='true' href='?action=ShowList&id=_id_&version=_currentDate_&changeSet=1'>_ChangeSet_</a>
+                        <br>
+                        _history_
+                        <input type="radio" name="version" value="_ver_" onclick='doVersion1(this)'>
+                        <input type="radio" name="version2" value="_ver_" onclick='doVersion2(this)'>
+                        <a _selectableItem_ href='?action=ShowList&id=_id_&version=_ver_&changeSet=0'>_versionDate_</a>
+                        <span _fixedItem_>
+                        <img src='/dm/resources/graphics/icons/right_arrow_nav.gif'>
+                        _versionDate_
+                        <img src='/dm/resources/graphics/icons/left_arrow_nav.gif'>
+                        </span>
+                        <a hidden='true' href='?action=ShowList&id=_id_&version=_version_&changeSet=1'>_changeSet_</a>                       
+                        <br>
+                        _/history_
+                    </div>
+                </form>
+                	
+                <tr> <td colspan='2'>
+                </table>
+                <table id='table' class='smTable dj_webkit com-ibm-team-workitem queryResultsTable' >
+                        <tr class="com-ibm-team-workitem queryResults">
+                            <th class="smTh headerColumnUnsorted">num
+                            <th hidden=true class="smTh headerColumnUnsorted only4_collectionName_">actions
+                            <th class="smTh headerColumnUnsorted" title='Click selectable resource to browse its RDF description'>resource
+                            <th class="smTh headerColumnUnsorted" title='rdf:type of the resource. Click selectable type to start SPARQL query wizard'>type
+						    _titles_
+							<th class="smTh headerColumnUnsorted" title='Shows objects for (any of) predicate(s) _predicate_'>_title_</th> 
+							_/titles_
+                        </tr>
+                        _rows_
+                        <form action='/dm/sm/repository'>
+                            <tr class='smRow_evenRow_' valign='center'>
+                                <td>_num_
+                                <td hidden=true class="only4_collectionName_">
+		                        <form action='/dm/sm/repository'>
+                                   <button type='submit' name='action'  _hiddenIfNotTemp_  _hiddenIfDeleted_ class='button_image button_delete'
+                                   value='D' title='Delete this resource from model'></button>
+                                   <button type='submit' name='action'  _hiddenIfNotTemp_  _shownIfDeleted_ class='button_image button_undelete'
+                                   value='UD' title='Undo delete of this resource from model'></button>
+                                   <input hidden='true' name='id' value='_id_'>
+                                   <input hidden='true' name='subject' value='_resource_'  title='Click selectable resource to browse its RDF description'>
+                                   <input hidden='true' name='type' value='_type_'  title='rdf:type of the resource. Click selectable type to start SPARQL query wizard'>
+                				   <button onClick='load(this, "_fullResource_", "_resource_", 0)'
+                				   title='See resource details inline with optional graph view'>Open</button>
+                                </form>
+                                <td title='Click the resource to start model browsing around it, with optional editing of content.'>_resource_ 
+                                <td>_type_ 
+								_contents_
+								<td align='left'><table><tr aligh='center' valign='center'><td>
+								<button _shownIfMissing_ _hiddenIfDeleted_ title='Create this property' _hiddenIfNotTemp_ onClick='editContents(this)' class='button_imageS button_plus_small'></button>
+								<button _hiddenIfMissing_ _hiddenIfDeleted_ title='Remove this property' _hiddenIfNotTemp_ onClick='delContents(this)' class='button_imageS button_delete_small'></button>
+								<button _hiddenIfMissing_ _hiddenIfDeleted_ title='Starts editing this property' _hiddenIfNotTemp_ _hideEditContents_ onClick='editContents(this)' style='height:12px;width:12px;font-size:75%'>E</button>
+								<button title='Cancels the edited property' hidden=true onClick='cancelEditedContents(this)' style='height:12px;width:12px;font-size:75%'>C</button>
+								<button title='Saves the edited property' hidden=true onClick='saveEditedContents(this)' style='height:12px;width:12px;font-size:75%'>S</button>
+                                <input hidden=true value='_resource_'>
+                                <input hidden=true value='_predicate_'>
+								</td><td><div>_content_</div></td></tr></table>
+								</td>
+								_/contents_
+                            </tr>
+                        _/rows_
+                    </table>
+    </body>
+</html>

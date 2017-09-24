@@ -1,0 +1,4 @@
+Add later:
+
+1. Pointer to usage sample
+2. Pointer to Javadoc

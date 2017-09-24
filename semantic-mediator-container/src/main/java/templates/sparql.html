@@ -1,0 +1,156 @@
+
+<!--
+  Copyright 2011-2016 IBM
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=ccm-style-2.css">
+		<link type="text/css" rel="stylesheet" href="/dm/smWebstyles?css=yui.2.2.1.css">    
+		<link type="text/css" rel="stylesheet" href="/dm/resources/graphics/css/sm.css">    
+		<script  type="text/javascript" src="/dm/resources/js/sparql.js"></script>
+		<script  type="text/javascript" src="/dm/resources/js/showGraph.js"></script>
+		<script  type="text/javascript" src="/dm/resources/js/utils.js"></script>
+	<script> // file sparql.html
+	</script>
+	
+    </head>
+    <body onload='onload("_base_", "_version_", "_moreOrLess_", "_id_");setupSave();setImg_src("id=_id_&query=");'>
+        <h1>SPARQL for domain [_domain_] _versionInfo_</h1>
+        <table>
+        <tr><td>
+        <form action='/dm/sm' method="get">
+            <input type='hidden' name='domainName' value='_domain_'>
+            <input type='hidden' name='id' value='_id_'>
+            <input type='hidden' name='version' value='_version_'>
+            Click
+            <button type='submit' name='action' value='ShowList'>
+                List
+            </button>
+            to go Back to [_domain_].
+        </form>
+        <tr><td>
+        <form action='/dm/sm/repository/_domain_/sparql' method='GET'>
+            <input type='hidden' name='id' value='_id_'>
+            <input type='hidden' name='version' value='_version_'>
+            <input type='hidden' name='resourceType' value='_resourceType_'>
+            <button type='submit' id='execute' onClick='setMoreless();'>
+                Execute SPARQL
+            </button>
+            <b><a href='http://jena.apache.org/tutorials/sparql.html'>SPARQL Tutorial</a></b>
+         <table border='0'>
+         <tr><td>
+            Name of query to 
+            <span style='background-color:lightGreen;'>
+            <input style='vertical-align:middle' type='checkbox' id='name_' name='save' value='on'> save</span>
+            on execute: 
+            <input id='saveName' type='text' style='width:200px' name='name' title='Enter a name and check "save on execute" so execution stores the query for future use' value='_name_'
+               onchange='changed(this, true)'> or 
+            <span style='background-color:lightPink'>
+            <input style='vertical-align:middle' id='delete' type='checkbox' name='deleteSaved'> delete</span>
+         <tr><td> 
+            <input hidden='true' type='checkbox' id='restore' name='restore' unchecked>
+            Pick a saved query to execute: <select id='saveSelect' onclick='setName(this)'>
+            _saved_
+            <option value='_item_'>_item_</option>
+            _/saved_
+            <option value='NaN'>NaN</option>
+            </select>
+          <tr><td><tr><td>
+          <tr><td style='border: 2px solid green; vertical-align:top'>
+            <b>Query Builder Helper:</b><input type='button' id='morelessButton' value='More...' onClick='moreLess(this)'>
+            <br> 
+            <table hidden='true' class='dj_webkit com-ibm-team-workitem queryResultsTable'  style='float:left'>
+                        <tr><td>
+                            [Make your selection and watch the query modified]
+                            <br>
+                            <input id='propresource' hidden='true' type='checkbox' name='resource' checked value='on'>
+                            orderBy
+                            <input id='sortresource' type='checkbox' onclick='doOrderBy(this);' name='sortresource' _resourceSortChecked_ value='on'>
+                            resource
+                            <input id='descresource' type='checkbox' onclick='doDESC("sortresource");' name='descresource' _resourceDescChecked_ _resourceDescDisabled_ value='on'>
+                            DESC()
+                            <br>
+                            <table class='dj_webkit com-ibm-team-workitem queryResultsTable' >
+                                 <tr>
+                                    <td colspan='3'> 
+                                    <input type='checkbox' onclick='usedBy(this);' id='UsedBy' name='usedByChecked' _usedByChecked_ value='on'>
+                                    Show used-by info
+                                _predicates_
+                                <tr>
+                                    <td> Use
+                                    <input type='checkbox' onclick='update(this);' id='prop_predicate_' name='_predicate_' _checked_ value='on'>
+                                    _predicate_ <td>
+                                    <input _sortChecked_ _sortDisabled_ id='sort_predicate_' type='checkbox' onclick='doOrderBy(this);' name='sort_predicate_' value='on'>
+                                    orderBy <td>
+                                    <input _descChecked_ _descDisabled_  id='desc_predicate_' type='checkbox' onclick='doDESC("sort_predicate_");' name='desc_predicate_' value='on'>
+                                    DESC()
+                                    _/predicates_
+                            </table>
+		    <tr><td style='vertical-align:top'>
+		       <table border='0'>
+		          <tr><td><font size='-2'><pre>_prefixes_</pre></font>
+		          <tr><td style='padding-left:10px'>
+			       Select  <input _distinctChecked_ type='checkbox' name='distinct' value='on'>DISTINCT 
+     			   <input _reducedChecked_ type='checkbox' name='reduced' value='on'>REDUCED 
+     			   <br>
+     			   <textarea id='select' cols='50' rows='1' name='select'> _select_ </textarea>
+     			   <br>
+     			   Where
+     			   <br>
+        		   <textarea id='where' cols='140' rows='4' name='where'>_where_</textarea>
+     			   <br>
+     			   Order By
+     			   <br>
+     			   <textarea id='orderBy' cols='50' rows='1' name='orderBy'>_orderBy_</textarea>
+     			   <br>
+     			   <input type='checkbox' id='offsetVal_' _offsetChecked_ name='offset' value='on'>OFFSET 
+     			   <input size='5' type='text' name='offsetVal' value='_offsetVal_' onchange='changed(this)'> 
+     			   <input type='checkbox' id='limitVal_' _limitChecked_ name='limit' value='on'>LIMIT 
+     			   <input size='5' type='text' name='limitVal' value='_limitVal_' onchange='changed(this)'>
+     			   <br><button type='submit' onClick='setMoreless();'>Execute SPARQL</button>
+     			   <input hidden=true id='morelessParam' name='moreOrLess' value='...Less'/>
+     			</table>
+     		</table>
+     		<td style='border: 2px solid blue;vertical-align:top' '>
+            <input class='button_imageB button_showGraph' style='vertical-align:top' type='button' onclick='showGraph(this);' title='Show a Graph'>
+            <input hidden='true' class='button_imageB button_minusB' style='vertical-align:top' type='button' onclick='showGraph(this, 0.75);' title='Scale down'>
+            <input hidden='true' class='button_imageB button_plusB' style='vertical-align:top' type='button' onclick='showGraph(this, 1.33);' title='Scale up'>
+            <input hidden='true' class='button_imageB button_fullScreen' style='vertical-align:top' type='button' onclick='window.open(img_src);' title='Show the graph in full screen'>
+            <br>
+            <IMG hidden='true' USEMAP="#G"><map id='G' name='G'></map>
+     			
+     </table>
+     </form>
+        <hr>
+        Results for resources of type [_resourceType_]:
+        <br>
+        _report_ <font color='red'>_error_</font>
+        <table id='table' class='smTable dj_webkit com-ibm-team-workitem queryResultsTable' >
+			<tr class="com-ibm-team-workitem queryResults">
+                <th class="smTh headerColumnUnsorted">#</th>
+                _headers_
+                <th class="smTh headerColumnUnsorted">_th_</th>
+                _/headers_
+            </tr>
+            _rows_
+            <tr class='smRow_evenRow_'>
+            	<td>_num_</td>
+                _values_
+                <td>_td_</td>
+                _/values_
+            </tr>
+            _/rows_
+        </table>
+    </body>
+</html>
