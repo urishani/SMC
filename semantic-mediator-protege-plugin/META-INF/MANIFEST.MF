@@ -4,15 +4,16 @@ Created-By: 1.0 (IBM Corporation)
 Bundle-ManifestVersion: 2
 Bundle-Name: SMC
 Bundle-SymbolicName: com.ibm.haifa.smc.repository-dev;singleton:=true
-Bundle-Version: 1.1.0.2016_07_31_0353
+Bundle-Version: ${major.version}.${minor.version}.${micro.version}.201
+ 7_09_25_0444
 Bundle-ClassPath: .,lib/commons-logging-1.1.1.jar,lib/gson-2.2.2.jar,l
  ib/httpclient-4.2.2.jar,lib/httpcore-4.2.2.jar,lib/httpmime-4.2.1.jar
  ,lib/xstream-1.4.1.jar,lib-ibm/com.ibm.haifa.smc.client-1.0.0.jar,cla
  sses/
 Bundle-Activator: org.protege.editor.core.plugin.DefaultPluginActivato
  r
-Require-Bundle: org.eclipse.equinox.registry,
- org.eclipse.equinox.common
+Require-Bundle: org.eclipse.equinox.registry,org.eclipse.equinox.commo
+ n
 Import-Package: javax.net,javax.net.ssl,javax.security.auth,javax.secu
  rity.auth.callback,javax.security.auth.kerberos,javax.security.auth.l
  ogin,javax.security.auth.spi,javax.security.auth.x500,javax.security.

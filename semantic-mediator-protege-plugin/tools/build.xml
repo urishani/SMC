@@ -142,7 +142,6 @@
        </fileset>
      </copy>
    	<copy todir="${classes}"><fileset dir="${pom.target.classes}"/></copy>
-    <copy todir="${genlib}"> <fileset dir="lib"/> </copy>
     <copy todir="${genlib}-ibm"> <fileset dir="lib-ibm"/> </copy>
     <copy todir="${build}">
        <fileset dir="." includes="*.xml"><exclude name="build.xml"/></fileset>
@@ -151,6 +150,7 @@
    	 <!-- the manifest doesn't belong here but this is good for IDE's -->
      <copy todir="${build}/META-INF"> <fileset dir="./META-INF"/> </copy>
    	 <delete file="./classes/bundle.version"/>
+   	 <mkdir dir="./classes"/>
 	 <touch file="./classes/bundle.version"/>
 	 <echo message="${bundle.version}" file="./classes/bundle.version"/>
      <copy todir="${classes}"> <fileset dir="./classes"/> </copy>
