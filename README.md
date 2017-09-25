@@ -150,4 +150,27 @@ Execute the java application
 
     java -jar dm-classes.jar
 
+# Tutorials
 
+## SMC Demonstration and Tutorial Videos:
+### Brief Overview
+
+A mediation demonstration (from the PSYMBIOSYS Youtube channel): https://www.youtube.com/watch?v=4ZkwSUSsxEg
+Detailed tutorials in 7 classes
+
+**Demo 1:** Installation of SMC on Docker: https://youtu.be/X0v-JcMncN4
+**Demo 2:** Working with the SMC - An Overview: https://youtu.be/zBCJJ_UcO2k
+**Demo 3:** Working with SMC - Creating Ontologies and edithing with Protege: https://youtu.be/2URWxyqgjXs
+**Demo 4:** Working with SMC - Creating Rules ontology and editing it with Protege: https://youtu.be/OcZQLtcFMPU
+**Demo 5:** Working with SMC - Creating Repositories, Tools and Mediators: https://youtu.be/hNoYUgqxWkc
+**Demo 6:** Working with SMC - Editing an RDF model in a Tool over the web: https://youtu.be/6j_45twP9Tw
+**Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+**Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+**Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+**Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+
+### Tutorials from DANSE - FP7 EU project on System of Systems (SoS):
+
+    1. A demonstration of semantic mediation among system design tools using the ibm semantic mediation container: Mediating UPDM-SysML-Modelica
+    2. DANSE tools education webinars: PART 1 of the DANSE tool-net, explaining the role of semantic mediation to the collaborative eco system of design tools for SoS. The semantic mediator here is an earlier version based on the IBM Jazz tools platform: DANSE Tools G - Tool-Net 1.mp4 - 22 MB.ds
+    3. Second part of the tools education webinar. Relevant to IBM SMC is the first part only: Tool-Net 2 DANSE Tools H - Tool-Net 2.mp4 - 33 MB
