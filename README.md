@@ -1,6 +1,23 @@
 # SMC
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
+
 ***Semantic Mediation Container*** is a web service tool to transform ontological (RDF) data sets based on their OWL ontologies and a bridging (OWL) ontology.
 This tool is originated from IBM, develolped during the SPRINT, DANSE and PSYMBIOSYS EU projects and used mainly to provide interoperability among system engineering modeling tools. During the PSYMBIOSYS project, this tool is being migrated to the open source community to be hosted on this Github repository.
+
+## Table of Contents
+- [Resources](#resources)
+- [Installation](#installation)
+  * [Install WAR file on a Web Server](#install-war)
+  * [Install (and run) SMC with Docker](#install-docker)
+    * [Build (and run) your docker image](#build-run)
+    * [Platform considerations](#platform-considerations)
+      * [Windows](#windows)
+      * [Mac](#mac)
+- [Tutorials](#tutorials)
+  * [SMC Demonstration and Tutorial Videos](#tutorial-video)
+    * [Brief Overview](#brief-overview)
+    * [Detailed tutorials in 7 classes](#7-classes)
+  * [Tutorials from DANSE - FP7 EU project on System of Systems (SoS)](#danse)
 
 # Resources
 The ***bin*** folder holds all binary resources that are described and used in the installation guide.
@@ -18,17 +35,17 @@ The next sections describe each option in more details.
 
 In addition, we now have a simple database of ontologies and models that are described in the product videos and presentations. It is nicer to start with that one, rather than the empty default one. To do that we use the MySMC.zip file resource, which simply needs to be unzip into the working directory of the server. That is easier if the service operates on your own workstation. Than define the system environment SMC_root=MySMC, and start the server.
 
-## Install WAR file on a Web Server
+## Install WAR file on a Web Server <a name="install-war"></a>
 
 The Apache Tomcat server (https://tomcat.apache.org/tomcat-8.0-doc/setup.html) can host and execute the SMC WAR file. Once the Web Server is installed, all you need is to copy the WAR file (dm.war) into the webapp/ folder at the Tomcat installation root.
 
 Alternatively, the Tomcat manager application can be configured on the server and used to upload and install that dm.war file.
 
-## Install (and run) SMC with Docker
+## Install (and run) SMC with Docker <a name="install-docker"></a>
 
 The IBM Semantic Mediation Contaioner (SMC) is a war (web application resource) file that can be deployed on Tomcat. The following is an installation procedure using Docker virtual machine that can run on any platform, windows, or unix:
 
-### Build (and run) your docker image
+### Build (and run) your docker image <a name="build-run"></a>
 
 You can install SMC very easily using docker.
 
@@ -101,10 +118,10 @@ You can simply install Tomcat and install dm.war using it management web interfa
 
 ### Platform considerations
 
-#### Windows: 
+#### Windows 
 Do not use the "sudo" prefix to the above commands.
 
-#### Mac:
+#### Mac
 
 No need to use the "sudo" prefix to the commands above when user had administrator priviledges.
 Use boot2docker - Set it up, than initialize environment shell variables:
@@ -132,7 +149,7 @@ You can try it with the open command:
 Which will open up the tomcat opening page.
     Note:Best way to address the service is with a real IP name so that SMC record a proper host name for its managed RDF resources.
 
-## Run from a command line (CLI)
+## Run from a command line (CLI) <a name="run-cli"></a>
 
 To execute from a command line, unzip the WAR file, add the dm-classes.jar file resource, and execute as a java application.
 
@@ -150,4 +167,28 @@ Execute the java application
 
     java -jar dm-classes.jar
 
+# Tutorials
 
+## SMC Demonstration and Tutorial Videos  <a name="tutorial-video"></a>
+### Brief Overview
+
+A mediation demonstration (from the PSYMBIOSYS Youtube channel): https://www.youtube.com/watch?v=4ZkwSUSsxEg
+
+### Detailed tutorials in 7 classes <a name="7-classes"></a>
+
+   1. Installation of SMC on Docker: https://youtu.be/X0v-JcMncN4
+   2. Working with the SMC - An Overview: https://youtu.be/zBCJJ_UcO2k
+   3. Working with SMC - Creating Ontologies and edithing with Protege: https://youtu.be/2URWxyqgjXs
+   4. Working with SMC - Creating Rules ontology and editing it with Protege: https://youtu.be/OcZQLtcFMPU
+   5. Working with SMC - Creating Repositories, Tools and Mediators: https://youtu.be/hNoYUgqxWkc
+   6. Working with SMC - Editing an RDF model in a Tool over the web: https://youtu.be/6j_45twP9Tw
+   7. Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+   8. Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+   9. Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+   10. Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+
+## Tutorials from DANSE - FP7 EU project on System of Systems (SoS) <a name="danse"></a>
+
+1. A demonstration of semantic mediation among system design tools using the ibm semantic mediation container: [Mediating UPDM-SysML-Modelica](https://www.youtube.com/watch?v=SAEzSqsARC4)
+2. DANSE tools education webinars: PART 1 of the DANSE tool-net, explaining the role of semantic mediation to the collaborative eco system of design tools for SoS. The semantic mediator here is an earlier version based on the IBM Jazz tools platform: [DANSE Tools G - Tool-Net 1.mp4 - 22 MB.ds](http://danse-ip.eu/home/mp4/danse%20tools%20g%20-%20tool-net%201342b.mp4?download=157:danse-tool-training-webinar-g)
+3. Second part of the tools education webinar. Relevant to IBM SMC is the first part only: [Tool-Net 2 DANSE Tools H - Tool-Net 2.mp4 - 33 MB](http://danse-ip.eu/home/mp4/danse%20tools%20h%20-%20tool-net%2021824.mp4?download=158:danse-tool-training-webinar-h)
