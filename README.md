@@ -158,16 +158,16 @@ Execute the java application
 A mediation demonstration (from the PSYMBIOSYS Youtube channel): https://www.youtube.com/watch?v=4ZkwSUSsxEg
 Detailed tutorials in 7 classes
 
-**Demo 1:** Installation of SMC on Docker: https://youtu.be/X0v-JcMncN4
-**Demo 2:** Working with the SMC - An Overview: https://youtu.be/zBCJJ_UcO2k
-**Demo 3:** Working with SMC - Creating Ontologies and edithing with Protege: https://youtu.be/2URWxyqgjXs
-**Demo 4:** Working with SMC - Creating Rules ontology and editing it with Protege: https://youtu.be/OcZQLtcFMPU
-**Demo 5:** Working with SMC - Creating Repositories, Tools and Mediators: https://youtu.be/hNoYUgqxWkc
-**Demo 6:** Working with SMC - Editing an RDF model in a Tool over the web: https://youtu.be/6j_45twP9Tw
-**Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
-**Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
-**Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
-**Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+   * **Demo 1:** Installation of SMC on Docker: https://youtu.be/X0v-JcMncN4
+   * **Demo 2:** Working with the SMC - An Overview: https://youtu.be/zBCJJ_UcO2k
+   * **Demo 3:** Working with SMC - Creating Ontologies and edithing with Protege: https://youtu.be/2URWxyqgjXs
+   * **Demo 4:** Working with SMC - Creating Rules ontology and editing it with Protege: https://youtu.be/OcZQLtcFMPU
+   * **Demo 5:** Working with SMC - Creating Repositories, Tools and Mediators: https://youtu.be/hNoYUgqxWkc
+   * **Demo 6:** Working with SMC - Editing an RDF model in a Tool over the web: https://youtu.be/6j_45twP9Tw
+   * **Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+   * **Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+   * **Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
+   * **Demo 7:** Working with SMC - Performing a mediation from a Tool and Tracing it: https://youtu.be/KvITTl-wJ6E
 
 ### Tutorials from DANSE - FP7 EU project on System of Systems (SoS):
 
