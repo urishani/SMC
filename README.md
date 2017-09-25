@@ -189,6 +189,6 @@ A mediation demonstration (from the PSYMBIOSYS Youtube channel): https://www.you
 
 ## Tutorials from DANSE - FP7 EU project on System of Systems (SoS) <a name="danse"></a>
 
-    1. A demonstration of semantic mediation among system design tools using the ibm semantic mediation container: [Mediating UPDM-SysML-Modelica](https://www.youtube.com/watch?v=SAEzSqsARC4)
-    2. DANSE tools education webinars: PART 1 of the DANSE tool-net, explaining the role of semantic mediation to the collaborative eco system of design tools for SoS. The semantic mediator here is an earlier version based on the IBM Jazz tools platform: [DANSE Tools G - Tool-Net 1.mp4 - 22 MB.ds](http://danse-ip.eu/home/mp4/danse%20tools%20g%20-%20tool-net%201342b.mp4?download=157:danse-tool-training-webinar-g)
-    3. Second part of the tools education webinar. Relevant to IBM SMC is the first part only: [Tool-Net 2 DANSE Tools H - Tool-Net 2.mp4 - 33 MB](http://danse-ip.eu/home/mp4/danse%20tools%20h%20-%20tool-net%2021824.mp4?download=158:danse-tool-training-webinar-h)
+1. A demonstration of semantic mediation among system design tools using the ibm semantic mediation container: [Mediating UPDM-SysML-Modelica](https://www.youtube.com/watch?v=SAEzSqsARC4)
+2. DANSE tools education webinars: PART 1 of the DANSE tool-net, explaining the role of semantic mediation to the collaborative eco system of design tools for SoS. The semantic mediator here is an earlier version based on the IBM Jazz tools platform: [DANSE Tools G - Tool-Net 1.mp4 - 22 MB.ds](http://danse-ip.eu/home/mp4/danse%20tools%20g%20-%20tool-net%201342b.mp4?download=157:danse-tool-training-webinar-g)
+3. Second part of the tools education webinar. Relevant to IBM SMC is the first part only: [Tool-Net 2 DANSE Tools H - Tool-Net 2.mp4 - 33 MB](http://danse-ip.eu/home/mp4/danse%20tools%20h%20-%20tool-net%2021824.mp4?download=158:danse-tool-training-webinar-h)
