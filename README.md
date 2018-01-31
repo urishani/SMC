@@ -1,8 +1,18 @@
 # SMC
 [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
 
-***Semantic Mediation Container*** is a web service tool to transform ontological (RDF) data sets based on their OWL ontologies and a bridging (OWL) ontology.
-This tool is originated from IBM, develolped during the SPRINT, DANSE and PSYMBIOSYS EU projects and used mainly to provide interoperability among system engineering modeling tools. During the PSYMBIOSYS project, this tool is being migrated to the open source community to be hosted on this Github repository.
+the ***Semantic Mediation Container*** 
+IBM Semantic Mediation Container is an open source semantic mediation engine developed at IBM Research - Haifa. The short name is SMC, and it provides API services to transform RDF models having OWL ontologies from one ontology to another. As a platform, it will hold OWL ontologies and associated RDF models for them, as well as OWL "bridge" ontologies which define the rules by which the semantic mediation engine transforms the models. RDF models stored on the SMC platform are served as OSLC service providers for linking and accessing their contents, as well as performing interactive SPARQL queries over them. Engineering design tools with the proper adapters can export their managed models in RDF to the platform and these export can trigger an automatic model transformation to another RDF model. Tools can also import an RDF model from the platform into a managed model by the tool. An example of such mediation is impleented for a SysML tool (IBM Rhapsody) and a Modelica tool so they could exchange models, modify the models and share it again, continuously.
+
+Web GUI interface allows to manage the contents of the SMC which can consist of OWL ontologies and RDF models from design tools. The GUI tools will also display interactively RDF graphs of the models, or table views of their elements and properties, create new resources or alter existing resources in these graphs, edit OWL ontologies with associated Protege plugin, perform SPARQL queries, and test mediation steps.
+
+OSLC API allows to access according to the OSLC standard the resources within RDF graphs stored on the platform.
+
+Semantic mediation API allows the simple submission of RDF models for a mediation transformation with immediate return of a resulting RDF transformed graph. The API supported by the platform is documented with SWAGGER style web GUI.
+
+The binary resoruces of the sorftware are packages as a web WAR file, and can be launched by web servers such as Tomcat. A Docker container can be easily build with an Ubuntu and Tomcat images, and a ready made such image is also stored over the docker hub repository.
+Plugins and adapters for the IBM Rhapsody design tool and for Protege are also included.
+
 
 ## Table of Contents
 - [Resources](#resources)
