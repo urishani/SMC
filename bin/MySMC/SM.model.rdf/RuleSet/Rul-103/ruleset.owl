@@ -1,0 +1,28 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sml="http://psymbiosys.eu/ontologies/sml#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:uml="http://psymbiosys.eu/ontologies/uml#"
+    xmlns:umlsml="http://psymbiosys.eu/rules/uml_sml#"
+    xmlns:smc="http://com.ibm.ns/haifa/sm#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://psymbiosys.eu/ontologies/sml#hasBlock">
+    <owl:equivalentProperty rdf:resource="http://psymbiosys.eu/ontologies/uml#hasClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://psymbiosys.eu/ontologies/sml#Part">
+    <owl:equivalentClass rdf:resource="http://psymbiosys.eu/ontologies/uml#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://psymbiosys.eu/ontologies/sml#hasPart">
+    <owl:equivalentProperty rdf:resource="http://psymbiosys.eu/ontologies/uml#hasObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://psymbiosys.eu/ontologies/sml#Block">
+    <owl:equivalentClass rdf:resource="http://psymbiosys.eu/ontologies/uml#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://psymbiosys.eu/rules/uml_sml#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://psymbiosys.eu/ontologies/sml#"/>
+    <owl:imports rdf:resource="http://psymbiosys.eu/ontologies/uml#"/>
+    <owl:versionInfo rdf:resource="http://psymbiosys.eu/rules/uml_sml.v0"/>
+  </rdf:Description>
+</rdf:RDF>

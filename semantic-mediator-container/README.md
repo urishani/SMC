@@ -1,8 +1,7 @@
 # SMC - Semantic Mediation Container
 
 [![License badge](https://img.shields.io/hexpm/l/plug.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Documentation badge](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://semantic.mediation.container.readthedocs.org/en/latest/SMC-InstallationAndAdminGuide/index.html)
-[![Docker badge](https://img.shields.io/docker/pulls/fiware/proactivetechnologyonline.svg)](https://hub.docker.com/r/smc/semanticmediationcontainer/)
+[![Docker badge](https://img.shields.io/docker/pulls/urishani/semanticmediationcontainer.svg)](https://hub.docker.com/r/smc/semanticmediationcontainer/)
 [![Support badge]( https://img.shields.io/badge/support-sof-yellowgreen.svg)](http://stackoverflow.com/questions/tagged/semantic-mediation-container)
 
 * [Introduction](#introduction)
@@ -13,17 +12,23 @@
 * [Support](#support)
 
 ## Introduction
-IBM Proactive Technology Online is an open source complex event processing engine developed at IBM Research - Haifa. It provides language primitives for defining,
-submitting, and executing event processing networks. The goal of the system is to respond to raw events and identify meaningful events within contexts. 
-The system comes with a set of built-in operators (such as sequence, all, etc.) for determining CEP patterns. 
-It also has extendable APIs for adding additional custom operators. The system comes with existing source/sink adapters, allowing it to extract raw events from files or pull 
-them from RESTful services. It also provides extendable APIs for adding more adapter types. 
+IBM Semantic Mediation Container is an open source semantic mediation engine developed at IBM Research - Haifa. The short name is SMC, and it provides API services to transform RDF models having OWL ontologies from one ontology to another. As a platform, it will hold OWL ontologies and associated RDF models for them, as well as OWL "bridge" ontologies which define the rules by which the semantic mediation engine transforms the models. RDF models stored on the SMC platform are served as OSLC service providers for linking and accessing their contents, as well as performing interactive SPARQL queries over them. Engineering design tools with the proper adapters can export their managed models in RDF to the platform and these export can trigger an automatic model transformation to another RDF model. Tools can also import an RDF model from the platform into a managed model by the tool. An example of such mediation is impleented for a SysML tool (IBM Rhapsody) and a Modelica tool so they could exchange models, modify the models and share it again, continuously.
+
+Web GUI interface allows to manage the contents of the SMC which can consist of OWL ontologies and RDF models from design tools. The GUI tools will also display interactively RDF graphs of the models, or table views of their elements and properties, create new resources or alter existing resources in these graphs, edit OWL ontologies with associated Protege plugin, perform SPARQL queries, and test mediation steps.
+
+OSLC API allows to access according to the OSLC standard the resources within RDF graphs stored on the platform.
+
+Semantic mediation API allows the simple submission of RDF models for a mediation transformation with immediate return of a resulting RDF transformed graph. The API supported by the platform is documented with SWAGGER style web GUI.
+
+The binary resoruces of the sorftware are packages as a web WAR file, and can be launched by web servers such as Tomcat. A Docker container can be easily build with an Ubuntu and Tomcat images, and a ready made such image is also stored over the docker hub repository.
+Plugins and adapters for the IBM Rhapsody design tool and for Protege are also included.
 
 [Top](#smc-semantic-mediation-container)
 
 ## Overall description
 
-This project is part of [FIWARE](https://www.fiware.org/).
+This project was developed through 3 EU HP7 and H2020 projects, in particularly SPRINT ([http://www.sprint-iot.eu/] (http://www.sprint-iot.eu/)), DANSE ([http://www.danse-ip.eu/home] (http://www.danse-ip.eu/home)) and PSYMBIOSYS.
+
 * [For more information about this project see] (http://catalogue.fiware.org/enablers/complex-event-processing-cep-proactive-technology-online) - The FIWARE catalogue. 
   * In the catalogue you can find several ways to use the Proactive Technology Online Generic Enabler instance (creating instance, using existing instances, downloads the code). 
 * [To install the Proactive Technology Online] (http://proactive-technology-online.readthedocs.org/en/latest/Proton-InstallationAndAdminGuide/index.html) - An installation guide at ReadTheDocs. This guide includes running instructions and sanity checks procedures. 
@@ -39,45 +44,143 @@ This project is part of [FIWARE](https://www.fiware.org/).
 [Top](#smc-semantic-mediation-container)
 
 ## Build and Install
-There are several options:
-* The Proton standalone version:
-  * The Proton J2SE version,  is which is just a simple Java app running the Proton engine. This can be found under ProtonJ2SE project.
-  * The Proton web version provides a RESTful interface for sending events, as well as the admin app for managing Proton apps; Those are 
-the ProtonOnWebServer and ProtonOnWebServerAdmin projects, respectively.
-This version of the engine is adapted to run on a web server. It allows users to push RESTful events to the engine in addition to pulling 
-**RESTful events** options provided by the REST adapter. This version also provides REST APIs for managing the engine’s instance lifecycle, and to manage the definition repository.
-* The Proton web UI,  provides an authoring environment for Proton applications; Those are the AuthoringTool and AuthoringToolWebServer projects.
-* Puppet installation script. Download and unzip the puppet.zip file. This folder is used for installation of the web version on new ubuntu machine with or without puppet installed on it. To run without puppet installed, run the script miscalleneous/CEP_Install_via_puppet.sh
-* The Proton on STORM version, which allows to run the engine in a distributed manner on multiple machines using the STORM infrastructure.
+Installation Options
 
-**To work with artifacts** 
+The service works as a web service. A web-server is required to run it and that can be achieved in several ways.
 
-All build artifacts are in the [Proton github repository] (https://github.com/ishkin/Proton/tree/master/mvn-repo/com/ibm/hrl/proton). These can be used as dependencies in maven builds. 
-In case you would like to work with simple artifacts, you can find these [here](https://github.com/ishkin/Proton/tree/master/artifacts)
+* Install the war file on a web server such as Apache Tomcat.
+* Do the same, but through a Docker container
+* Execute it from a command line (cli) where an internal web server will be launched and execute the service.
 
-For standalone engines, use the [ProtonJ2SE artifact] (https://github.com/ishkin/Proton/tree/master/artifacts/ProtonJ2SE.zip). This is a .zip distribution, with ProtonJ2SE executable jar, launch script, sample, and docs directory. 
+The next sections describe each option in more details.
 
-For instructions on how to configure and install IBM Proactive Technology Online on Tomcat (web version), see the [Proton on Tomcat guide] (https://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/CEP_GE_-_IBM_Proactive_Technology_Online_Installation_and_Administration_Guide)
+In addition, we now have a simple database of ontologies and models that are described in the product videos and presentations. It is nicer to start with that, rather than the empty default one. To do that we use the MySMC.zip file resource, which simply needs to be unzip into the working directory of the server. That is easier if the service operates on your own workstation. Than define the system environment SMC_root=MySMC, and start the server.
 
-[Top](#smc-semantic-mediation-container)
+### Install WAR file on a Web Server
+
+The Apache Tomcat server (https://tomcat.apache.org/tomcat-8.0-doc/setup.html) can host and execute the SMC WAR file. Once the Web Server is installed, all you need is to copy the WAR file (dm.war) into the webapp/ folder at the Tomcat installation root.
+
+Alternatively, the Tomcat manager application can be configured on the server and used to upload and install that dm.war file.
+
+### Install (and run) SMC with Docker
+
+The IBM Semantic Mediation Contaioner (SMC) is a war (web application resource) file that can be deployed on Tomcat. The following is an installation procedure using Docker virtual machine that can run on any platform, windows, or unix:
+
+#### Build (and run) your docker image
+
+You can install SMC very easily using docker.
+Follow these steps:
+
+* Update /etc/hosts to add the current machine as a hostname. Note: on mac or windows, no need for "sudo" in the lines below.
+
+* Install docker.
+
+* Start the docker daeomon - either during the docker installation, or with the command
+
+	sudo docker daemon & # THIS NEEDS TO BE RUN ONLY ONCE, IN THE BACKGROUND 
+
+Or you can use the "Docker Quickstart Terminal" application.
+
+* Navigate to a folder where you’d like the docker files to be placed. 
+* Create a Dockerfile file with the following content (simply cut/paste that into the file and save it):
+
+	# Start with tomcat based on Ubuntu
+    FROM tomcat
+    RUN apt-get update && apt-get install -y wget bash curl
+    RUN apt-get install -y wget bash curl graphviz
+    # we need graphviz for the dot command to be used by the SMC graphing diagrams
+	#If the tomcat-users.xml exists, you can customise that before making this image	 
+    # ADD tomcat-users.xml /usr/local/tomcat/conf
+    # Installing the SMC war file from the PSYMBIOSYS wiki pages
+    # Download the dm.war file from:
+    # http://demos.txt.it:8096/intranet/wp3/wp3-platform/semantic-mediation-container/resources/smc-war-file/at_download/file
+    ADD dm.war /usr/local/tomcat/webapps
+    EXPOSE 8080 
+    # instruct docker to start the tomcat when launched:
+    ENTRYPOINT ["/usr/local/tomcat/bin/catalina.sh", "run"]
+As commented in the quote above, use the generated dm.war file, or take it from the /bin folder, to the local directory.
+
+* Build the Docker Image from the Dockerfile:
+
+  	sudo docker build –t smc . 
+You can view your images with the command
+
+    docker images
+
+* Run the docker image you just generated:
+
+     sudo docker run --privileged=true --name=smc --cap-add SYS_PTRACE -p 8080:8080 -it -d -v="/Users/shani/MySMC:/usr/local/tomcat/MySMC" -e="SMC_name=MySMC" smc
+
+The option -e="SMC_name=MySMC" sets an environment variable which indicates the name in the dashboard title of the project being managed in this execution. Here, it is set to "MySMC". The default is "Database". In a new version (v2.03) this will also indicate a folder where the project is saved during the session and which can continue to be used in follow up image resumption or re-runs.
+
+Another option you can use is -e="SMC_root=MySMCfolder" will distinguish the working folder from the project name. Default folder will be same as project name, as long as that name is a proper string for a file name. on the SMC dashboard, hovering over the project name will display folder path being used.
+
+The -v parameter maps a folder in the host machine to the project folder so that its contents are saved also after the image executions stops. Assume you keep the project in a folder MySMC/ on your current file system, you can set this option: -v="/Users/shani/MySMC:/usr/local/tomcat/MySMC". The image will continue to use the same project data and configuration over multiple restarts.
+
+Note: On Mac, path should be within /Users, on Windows, it should be in C:\Users (which on -v option should be specified as /c/Users. See more here: https://docs.docker.com/engine/userguide/containers/dockervolumes/
+
+* View the running images with this command, and possibly run a bash terminal inside it:
+
+     sudo docker ps # That will provide <container_id> for the proton image. 
+     sudo docker exec -it <container_id> bash
+
+ * Try it.
+ Find the correct <ip> of your docker container on your network and try http://<ip>:8080. That will display the tomcat welcome screen.
+ To see the SMC dashboard go with your browser to this URL: http://<ip>:8080/dm/sm
+
+You can simply install Tomcat and install dm.war using it management web interface, or simply save the dm.war file in the /webapps folder under its main installation folder. When you run tomcat, the SMC application will be instantiated.
+
+#### Platform considerations
+
+**Windows:** Do not use the "sudo" prefix to the above commands.
+
+**Mac:** No need to use the "sudo" prefix to the commands above when user had administrator priviledges.
+If needed, use boot2docker - Set it up, than initialize environment shell variables:
+
+After starting (running) the image on the docker vm, you can check the tomcat with:
+
+	open "http://localhost:8080"
+
+Which will open up the tomcat opening page.
+ 	open "http://localhost:8080/dm/sm"
+ 	
+will take you to the SMC web dashboard.
+
+#### Run from a command line (CLI)
+
+To execute from a command line, unzip the WAR file, add the dm-classes.jar file resource, and execute as a java application.
+
+Create a new folder and copy the dm.war and dm-classes.jar file into it. Change directory to that working folder.
+	unzip dm.war file
+	jar -xvf dm.war
+
+ Optionally, you can also unzip the MySMC.zip file here so that you have a simple database to start play with
+ 
+ 	jar -xvf MySMC.zip
+
+Execute the java application
+
+   java -jar dm-classes.jar
+
+
+[[Top](#smc-semantic-mediation-container)
 
 ## API Reference Documentation
-
-Detailed online documentation for installation, testing, web authoring of rules and web APIs are located in https://readthedocs.org/projects/proactive-technology-online/builds/
-Documentations is also available under the /documentation folder, and includes the Proton's User Guide (explaining the language building blocks and use of the authoring tool use) and Programmer's Guide (explaining possible extension points to the Proton's programming model)
 
 [Top](#smc-semantic-mediation-container)
 
 ## License
-IBM Proactive Technology Online is licenced under the Apache Licence Version 2.0. For more information see the LICENCE.md
+The IBM Semantic Mediation Container is licenced under the Apache Licence Version 2.0. For more information see the LICENCE.md
 
 [Top](#smc-semantic-mediation-container)
 
 ## Support 
+Support can be obtained thorugh stackoverflow by tagging questions with semantic-mediation-container.
+
 For working with source code, note that the projects are maven projects. 
 They can be built using the "clean install" targets by running the mvn command on the parent pom (located in the "Proton”) directory. 
-This command will build all the Proton projects.
+This command will build all the SMC projects.
 
-In addition, by executing the "mvn deploy" 	command of the same parent pom after performing clean install, the target jars will be installed into a local repository named "mvn-repo" (/Proton/maven-repo).
+In addition, by executing the "mvn deploy" 	command of the same parent pom after performing clean install, the target jars will be installed into a local repository named "mvn-repo" (/target/maven-repo).
 
 [Top](#smc-semantic-mediation-container)

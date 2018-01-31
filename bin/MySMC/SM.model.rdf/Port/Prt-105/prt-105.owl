@@ -1,0 +1,38 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:sml="http://psymbiosys.eu/ontologies/sml#"
+    xmlns:smc="http://com.ibm.ns/haifa/sm#"
+    xmlns:oslc="http://open-services.net/ns/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:j.0="http://com.ibm.semantic.mediation/config/property#"
+    xmlns:base="http://localhost:8080/dm/sm/repository/prt-105/resource/">
+  <rdf:Description rdf:about="http://com.ibm.semantic.mediation/config">
+    <j.0:counter>5</j.0:counter>
+    <j.0:domain>prt-105</j.0:domain>
+  </rdf:Description>
+  <sml:Block rdf:about="http://localhost:8080/dm/sm/repository/prt-105/resource/0004">
+    <dcterms:description>class B in the exmple</dcterms:description>
+    <dcterms:title>B</dcterms:title>
+    <sml:hasPart>
+      <sml:Part rdf:about="http://localhost:8080/dm/sm/repository/prt-105/resource/0005">
+        <sml:hasBlock>
+          <sml:Block rdf:about="http://localhost:8080/dm/sm/repository/prt-105/resource/0003">
+            <dcterms:description>class A in the example</dcterms:description>
+            <dcterms:title>A</dcterms:title>
+            <sml:hasPart>
+              <sml:Part rdf:about="http://localhost:8080/dm/sm/repository/prt-105/resource/0002">
+                <sml:hasBlock rdf:resource="http://localhost:8080/dm/sm/repository/prt-105/resource/0004"/>
+                <dcterms:title>aB++</dcterms:title>
+                <dcterms:description>instance of class B</dcterms:description>
+              </sml:Part>
+            </sml:hasPart>
+          </sml:Block>
+        </sml:hasBlock>
+        <dcterms:description>instance of class A </dcterms:description>
+        <dcterms:title>aA</dcterms:title>
+      </sml:Part>
+    </sml:hasPart>
+  </sml:Block>
+</rdf:RDF>

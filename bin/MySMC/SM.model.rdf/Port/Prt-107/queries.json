@@ -1,0 +1,1 @@
+{"":{"queryParams":{"offsetVal":"0","distinctChecked":"","limitVal":"0","limitChecked":"","offsetChecked":"","reducedChecked":""},"orderBy":"","select":"?resource","name":"","where":"{\r\n   ?resource a uml:Class .\r\n}"}}
