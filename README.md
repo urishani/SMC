@@ -7,7 +7,7 @@
 the ***Semantic Mediation Container*** 
 IBM Semantic Mediation Container is an open source semantic mediation engine developed at IBM Research - Haifa. The short name is SMC, and it provides API services to transform RDF models having OWL ontologies from one ontology to another. 
 
-This project was developed through 3 EU HP7 and H2020 projects, in particularly [SPRINT](http://www.sprint-iot.eu/), [DANSE] (http://www.danse-ip.eu/home) and PSYMBIOSYS (http://www.psymbiosys.eu/)
+This project was developed through 3 EU HP7 and H2020 projects, in particularly [SPRINT](http://www.sprint-iot.eu/), [DANSE](http://www.danse-ip.eu/home) and [PSYMBIOSYS](http://www.psymbiosys.eu/)
 
 As a platform, it will hold OWL ontologies and associated RDF models for them, as well as OWL "bridge" ontologies which define the rules by which the semantic mediation engine transforms the models. RDF models stored on the SMC platform are served as OSLC service providers for linking and accessing their contents, as well as performing interactive SPARQL queries over them. Engineering design tools with the proper adapters can export their managed models in RDF to the platform and these export can trigger an automatic model transformation to another RDF model. Tools can also import an RDF model from the platform into a managed model by the tool. An example of such mediation is impleented for a SysML tool (IBM Rhapsody) and a Modelica tool so they could exchange models, modify the models and share it again, continuously.
 
