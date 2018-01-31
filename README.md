@@ -1,5 +1,8 @@
 # SMC
 [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
+[![License badge](https://img.shields.io/hexpm/l/plug.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Docker badge](https://img.shields.io/docker/pulls/urishani/semanticmediationcontainer.svg)](https://hub.docker.com/r/urishani/semanticmediationcontainer/)
+[![Support badge]( https://img.shields.io/badge/support-sof-yellowgreen.svg)](http://stackoverflow.com/questions/tagged/semantic-mediation-container)
 
 the ***Semantic Mediation Container*** 
 IBM Semantic Mediation Container is an open source semantic mediation engine developed at IBM Research - Haifa. The short name is SMC, and it provides API services to transform RDF models having OWL ontologies from one ontology to another. 
