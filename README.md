@@ -1,5 +1,5 @@
 # SMC
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]
 [![License badge](https://img.shields.io/hexpm/l/plug.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Docker badge](https://img.shields.io/docker/pulls/urishani/semanticmediationcontainer.svg)](https://hub.docker.com/r/urishani/semanticmediationcontainer/)
 [![Support badge]( https://img.shields.io/badge/support-sof-yellowgreen.svg)](http://stackoverflow.com/questions/tagged/semantic-mediation-container)
