@@ -92,8 +92,9 @@ Create a Dockerfile file with the following content (simply cut/paste that into 
     # ADD tomcat-users.xml /usr/local/tomcat/conf
 
     # Installing the SMC war file from the PSYMBIOSYS wiki pages
-    # Download the dm.war file from:
-    # http://demos.txt.it:8096/intranet/wp3/wp3-platform/semantic-mediation-container/resources/smc-war-file/at_download/file
+    # Download the dm.war file from github:
+    # https://github.com/urishani/SMC/blob/master/bin/dm.war
+    
     ADD dm.war /usr/local/tomcat/webapps
 
     EXPOSE 8080 
