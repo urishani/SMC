@@ -68,7 +68,7 @@ You can install SMC very easily using docker.
 
 Follow these steps:
 
--    Update /etc/hosts to add the current machine as a hostname. Note: on mac or windows, no need for "sudo" in the lined below.
+-    Update /etc/hosts to add the current machine as a hostname. Note: on mac or windows, no need for "sudo" in the lines below.
 
 -    Install docker.
 
