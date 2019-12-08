@@ -91,8 +91,7 @@ Create a Dockerfile file with the following content (simply cut/paste that into 
     # If the tomcat-users.xml exists, you can customise that before making this image
     # ADD tomcat-users.xml /usr/local/tomcat/conf
 
-    # Installing the SMC war file from the PSYMBIOSYS wiki pages
-    # Download the dm.war file from github:
+    # Installing the SMC war file from github:
     # https://github.com/urishani/SMC/blob/master/bin/dm.war
     
     ADD dm.war /usr/local/tomcat/webapps
